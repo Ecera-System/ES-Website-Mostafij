@@ -1,0 +1,14 @@
+.scrollBar::-webkit-scrollbar {
+    width: 0.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0.5rem;
+}
+
+.card:hover .scrollBar::-webkit-scrollbar-thumb {
+    background: #00c0e2;
+}
