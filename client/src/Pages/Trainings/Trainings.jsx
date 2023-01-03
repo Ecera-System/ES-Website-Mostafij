@@ -259,7 +259,7 @@ const Trainings = () => {
             </div>
         </section>
         <section className='py-10'>
-            <h1 className='text-center text-[40px] italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-500 mb-5'>
+            <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-500 mb-5'>
                 Training Highlights
             </h1>
             <div className='bg-gradient-to-r from-pink-500/10 to-cyan-500/10'>
@@ -412,7 +412,7 @@ const Trainings = () => {
         </section>
         <section className='pt-16'>
             <div className='md:w-4/5 w-11/12 mx-auto'>
-                <h1 className='text-center md:text-[40px] text-3xl italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     How will your training work?
                 </h1>
                 <img src={untitledProcess} alt="" className='w-full h-auto my-10' />
@@ -507,7 +507,7 @@ const Trainings = () => {
             </div>
         </section>
         <section className='pt-10'>
-            <h1 className='text-center md:text-[40px] text-3xl italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+            <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                 Schedule a call
             </h1>
             <div

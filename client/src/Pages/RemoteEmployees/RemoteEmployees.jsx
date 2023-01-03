@@ -20,14 +20,14 @@ const RemoteEmployees = () => {
         <ContactSideButton />
         <section
             style={{ backgroundImage: `url(${banner})` }}
-            className='w-full h-[500px] bg-no-repeat bg-center bg-fixed bg-[#141d38]'
+            className='w-full xl:h-[500px] md:h-[400px] h-80 bg-no-repeat bg-center bg-fixed bg-[#141d38]'
         >
             <div className='w-full h-full flex items-center justify-center text-center'>
                 <div>
-                    <h1 className='text-5xl font-semibold text-white uppercase'>
+                    <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
                         Remote Employees
                     </h1>
-                    <p className='text-gray-300 text-lg italic font-medium py-3'>
+                    <p className='text-gray-300 md:text-lg text-base italic font-medium py-3'>
                         Hire Dedicated Remote Employees
                     </p>
                     <p className='text-gray-300 text-lg font-medium pt-10 pb-5'>
@@ -37,44 +37,44 @@ const RemoteEmployees = () => {
             </div>
         </section>
         <section className='py-14'>
-            <h1 className='text-center text-[40px] italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+            <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                 See How It Works ?
             </h1>
-            <div className='w-4/5 mx-auto grid grid-cols-4 gap-5 mt-5'>
-                <div className='border rounded-lg p-6 shadow-md'>
+            <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 md:w-3/5 sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-5'>
+                <div className='border rounded-lg p-6 md:text-start text-center shadow-md'>
                     <img src={img1} alt="" className='w-[124px] h-[124px] mx-auto' />
-                    <h4 className='text-xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>Step 1</h4>
-                    <p className='text-base font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 my-2'>
+                    <h4 className='text-xl font-bold uppercase text-blue-600'>Step 1</h4>
+                    <p className='text-base font-medium uppercase text-blue-600 my-2'>
                         Share us your requirements
                     </p>
                     <p className=''>
                         As Though You Are Making A Local Hire...
                     </p>
                 </div>
-                <div className='border rounded-lg p-6 shadow-md'>
+                <div className='border rounded-lg p-6 md:text-start text-center shadow-md'>
                     <img src={img2} alt="" className='w-[124px] h-[124px] mx-auto' />
-                    <h4 className='text-xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>Step 2</h4>
-                    <p className='text-base font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 my-2'>
+                    <h4 className='text-xl font-bold uppercase text-blue-600'>Step 2</h4>
+                    <p className='text-base font-medium uppercase text-blue-600 my-2'>
                         We select our skilled IT staff
                     </p>
                     <p className=''>
                         You pick the right staff after assessing them
                     </p>
                 </div>
-                <div className='border rounded-lg p-6 shadow-md'>
+                <div className='border rounded-lg p-6 md:text-start text-center shadow-md'>
                     <img src={img3} alt="" className='w-[124px] h-[124px] mx-auto' />
-                    <h4 className='text-xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>Step 3</h4>
-                    <p className='text-base font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 my-2'>
+                    <h4 className='text-xl font-bold uppercase text-blue-600'>Step 3</h4>
+                    <p className='text-base font-medium uppercase text-blue-600 my-2'>
                         Dedicated staff will work exclusively for you
                     </p>
                     <p className=''>
                         They will work on full time basis from our office
                     </p>
                 </div>
-                <div className='border rounded-lg p-6 shadow-md'>
+                <div className='border rounded-lg p-6 md:text-start text-center shadow-md'>
                     <img src={img4} alt="" className='w-[124px] h-[124px] mx-auto' />
-                    <h4 className='text-xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>Step 4</h4>
-                    <p className='text-base font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 my-2'>
+                    <h4 className='text-xl font-bold uppercase text-blue-600'>Step 4</h4>
+                    <p className='text-base font-medium uppercase text-blue-600 my-2'>
                         We manage the entire operations
                     </p>
                     <p className=''>
@@ -85,11 +85,11 @@ const RemoteEmployees = () => {
         </section>
         <section className='py-14 static'>
             <div className='w-full h-96 bg-gradient-to-r from-blue-600 to-cyan-500'>
-                <h1 className='text-center text-[40px] italic font-mono text-gray-100 pt-28'>
+                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-gray-100 pt-24'>
                     We Provide virtual employee
                 </h1>
             </div>
-            <div className='w-4/5 mx-auto -mt-36 grid grid-cols-3 gap-8'>
+            <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 sm:w-4/5 w-11/12 mx-auto -mt-36 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8'>
                 <div className='text-center bg-gray-100 rounded-lg p-6 shadow-md hover:scale-105 duration-300 ease-linear'>
                     <div className='text-[65px] text-blue-600'>
                         <i className="fa-solid fa-laptop-code"></i>
@@ -157,13 +157,13 @@ const RemoteEmployees = () => {
             </div>
         </section>
         <section className='py-14'>
-            <div className='w-4/5 mx-auto'>
-                <h1 className='text-center text-[40px] italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+            <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 md:w-3/4 sm:w-4/5 w-11/12 mx-auto'>
+                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     Why you should hire a virtual employee
                 </h1>
-                <div className='grid grid-cols-2 items-center gap-x-10 mt-10'>
-                    <div>
-                        <h4 className='text-2xl font-semibold text-gray-600 mb-8'>
+                <div className='flex lg:flex-row flex-col-reverse items-center gap-10 mt-10'>
+                    <div className='lg:w/1/2 w-full'>
+                        <h4 className='text-2xl font-semibold text-gray-600 lg:mb-8 mb-5'>
                             First, what exactly is a virtual employee?
                         </h4>
                         <p className='text-gray-500 text-base'>
@@ -177,36 +177,36 @@ const RemoteEmployees = () => {
                             <li>Our agile teams will grow and shrink as your business needs change</li>
                         </ul>
                     </div>
-                    <div className='w-full rounded-xl shadow-[0px_5px_20px_0px_rgba(0,0,20,0.45)] overflow-hidden'>
+                    <div className='lg:w/1/2 w-full rounded-xl shadow-[0px_5px_20px_0px_rgba(0,0,20,0.45)] overflow-hidden'>
                         <img src={sa} alt="" className='max-w-full h-auto' />
                     </div>
                 </div>
             </div>
         </section>
-        <section className='py-14'>
-            <div className='w-4/5 mx-auto p-16 bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-between gap-10 rounded-xl'>
+        <section className='py-10'>
+            <div className='2xl:w-[1200px] md:w-4/5 w-11/12 mx-auto md:p-16 p-8 bg-gradient-to-r from-blue-600 to-cyan-500 flex lg:flex-row flex-col items-center lg:justify-between justify-center gap-10 rounded-xl'>
                 <div>
-                    <h1 className='w-full text-4xl italic text-white'>
+                    <h1 className='w-full lg:text-4xl text-2xl italic text-white'>
                         Trust in your employees is essential for remote work success.
                     </h1>
-                    <h1 className='w-full text-4xl italic text-white mt-4'>
+                    <h1 className='w-full lg:text-4xl text-2xl italic text-white mt-4'>
                         It also forms the underlying foundation of a great virtual culture.
                     </h1>
                 </div>
                 <Link
                     to={"/contact"}
-                    className='inline-block text-center w-80 text-lg font-medium hover:bg-white border-2 border-white text-white hover:text-cyan-600 duration-300 py-2 ml-10 rounded-lg'
+                    className='inline-block text-center sm:w-80 w-full text-lg font-medium hover:bg-white border-2 border-white text-white hover:text-cyan-600 duration-300 py-2 lg:ml-10 rounded-lg'
                 >
                     Meet with us
                 </Link>
             </div>
         </section>
         <section className='py-14'>
-            <div className='w-4/5 mx-auto'>
-                <h1 className='text-center text-[40px] italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+            <div className='2xl:w-[1200px] lg:w-4/5 md:w-3/4 sm:w-4/5 w-11/12 mx-auto'>
+                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     Why choose us?
                 </h1>
-                <div className='grid grid-cols-2 items-start gap-x-10 mt-10'>
+                <div className='grid lg:grid-cols-2 grid-cols-1 items-start gap-10 mt-10'>
                     <div className='w-full rounded-xl shadow-[0px_5px_20px_0px_rgba(0,0,20,0.45)] overflow-hidden'>
                         <img src={choose} alt="" className='max-w-full h-auto' />
                     </div>

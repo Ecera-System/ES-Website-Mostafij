@@ -324,7 +324,7 @@ const AboutUs = () => {
             >
                 <div className='z-10 xl:w-2/5 lg:w-1/2 md:w-3/5 sm:w-4/5 w-11/12'>
                     <h2 className='text-lg font-medium text-center text-gray-100 uppercase mb-2'>ABOUT ECERASYSTEM</h2>
-                    <h1 className='text-center md:text-4xl text-3xl font-mono italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                    <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                         We offer innovative technology solutions.
                     </h1>
                     <p className='mt-6 text-base text-gray-100'>

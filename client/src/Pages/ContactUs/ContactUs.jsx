@@ -27,7 +27,7 @@ const ContactUs = () => {
                 </p>
             </section>
             <section className='py-10 xl:w-4/5 md:w-11/12 w-[95%] mx-auto'>
-                <h1 className='text-center text-[40px] italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>Get In Touch</h1>
+                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>Get In Touch</h1>
                 <p className='text-xl font-medium text-center text-gray-600'>
                     Give us a call or send us an email and we will get back to you.
                 </p>

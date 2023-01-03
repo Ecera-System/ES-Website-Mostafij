@@ -31,7 +31,7 @@ const Footer = () => {
             </ul>
         </div> */}
         <footer className='w-full bg-[#021D40]'>
-            <div className='w-11/12 mx-auto'>
+            <div className='2xl:w-[1200px] w-11/12 mx-auto'>
                 <div className='w-full py-10 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-2 items-start gap-6'>
                     {/* <ul className='flex flex-col gap-5'>
                         <li className='flex gap-x-3 items-center'>
@@ -125,10 +125,11 @@ const Footer = () => {
                             >Pay Invoice</Link>
                         </li>
                         <li>
-                            <Link
+                            <a
+                                href={'https://ecerasystem.com/training/'}
+                                target='blank'
                                 className='text-gray-400 text-base hover:underline hover:text-white duration-300'
-                                to={'/trainings'}
-                            >Trainings</Link>
+                            >Trainings</a>
                         </li>
                     </ul>
                     <ul className='flex flex-col gap-3'>

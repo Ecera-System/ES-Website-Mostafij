@@ -28,14 +28,14 @@ const WebDevelopment = () => {
         <div className='w-full'>
             <section
                 style={{ backgroundImage: `url(${banner})` }}
-                className='w-full h-[500px] bg-cover bg-no-repeat bg-fixed relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#031859]/60'
+                className='w-full xl:h-[500px] md:h-[400px] h-80 bg-cover bg-no-repeat bg-fixed relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#031859]/60'
             >
-                <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-center z-10'>
+                <div className='relative w-full h-full px-5 flex items-center justify-center text-center z-10'>
                     <div>
-                        <h1 className='text-5xl font-semibold text-white uppercase'>
+                        <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
                             Website designers and developers
                         </h1>
-                        <p className='text-gray-300 text-lg italic font-medium py-3'>
+                        <p className='text-gray-300 sm:text-lg text-base italic font-medium py-3'>
                             How can our team help to transform your next big idea? We’d love to hear from you.
                         </p>
                         <p className='text-gray-200 text-lg font-medium pt-10 pb-5'>
@@ -50,14 +50,14 @@ const WebDevelopment = () => {
                     </div>
                 </div>
             </section>
-            <section className='w-3/4 mx-auto mt-20'>
-                <h1 className='text-center text-[40px] italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+            <section className='md:w-3/4 sm:w-4/5 w-11/12 mx-auto mt-20'>
+                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     One Web Design Codebase To Rule Every Platform!
                 </h1>
-                <p className='text-gray-500 text-base text-center mx-32 my-10'>
+                <p className='text-gray-500 text-base text-center lg:mx-10 mt-5 mb-10'>
                     Our talented web designers punctiliously build fully cross platform,inter-operability websites for our customers. The target audience can access your websites from any device they own. We are a complete team of designers, developers, and strategists, building the websites required by the customers.
                 </p>
-                <div className='grid grid-cols-3 gap-10 pt-5'>
+                <div className='grid lg:grid-cols-3 grid-cols-1 gap-10 pt-5 lg:text-start text-center'>
                     <div>
                         <img src={custom1} alt="" className='mx-auto w-44 h-auto' />
                         <h4 className='text-xl font-medium text-center text-teal-500 py-3'>
@@ -87,11 +87,11 @@ const WebDevelopment = () => {
                     </div>
                 </div>
             </section>
-            <section className='w-3/4 mx-auto my-20'>
-                <h1 className='text-center text-[40px] italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+            <section className='md:w-3/4 sm:w-4/5 w-11/12 mx-auto my-20'>
+                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     Fix your corporate systems by picking right web specialists
                 </h1>
-                <p className='text-gray-500 text-base font-medium text-center mx-32 my-10'>
+                <p className='text-gray-500 md:text-lg text-base text-center lg:mx-10 mt-5 mb-10'>
                     Indirect employee has talented web designers in the designing and development industry with a strong business orientation. We maintain our competitive edge with unique design and a highly qualified team of website designers, who are focused on business goals and corporate branding.
                 </p>
                 <h2 className='text-3xl font-bold text-center text-gray-600 pt-5'>
@@ -104,11 +104,11 @@ const WebDevelopment = () => {
                     </svg>
                     You can click and view the features
                 </h2>
-                <div className='flex items-start justify-between mt-5'>
-                    <div className='w-3/5 border-4 border-white drop-shadow-[5px_10px_20px_rgba(0,0,255,0.45)]'>
+                <div className='flex lg:flex-row flex-col lg:items-start items-center justify-between lg:gap-0 gap-10 mt-5'>
+                    <div className='lg:w-3/5 w-full border-4 border-white drop-shadow-[0px_5px_15px_rgba(0,0,255,0.45)]'>
                         <img src={img} alt="" className='w-full h-auto' />
                     </div>
-                    <ul className='w-2/5 pl-16 flex flex-col gap-y-5 text-lg font-medium text-gray-500'>
+                    <ul className='lg:w-2/5 w-full lg:pl-16 pl-10 flex flex-col gap-y-5 text-lg font-medium text-gray-500'>
                         <li
                             onClick={() => setImg(feature1)}
                             className={`flex items-center gap-x-3 cursor-pointer hover:scale-105 hover:text-cyan-500 duration-300 ease-linear ${img === feature1 && 'text-cyan-500 scale-105'}`}

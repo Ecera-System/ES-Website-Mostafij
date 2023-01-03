@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
@@ -6,14 +6,23 @@ import banner from '../../Images/packages-bg.jpg';
 import './packages.css'
 import Footer from '../Shared/Footer/Footer';
 import { Link } from 'react-router-dom';
+import offerArea from '../../Images/es-offers/offer-area.png';
+import logoBg from '../../Images/es-offers/logo-bg.png';
+import webTab from '../../Images/es-offers/web-tab-sprite.jpg';
 
 const PackOffers = () => {
+    const [openAns1, setOpenAns1] = useState(true);
+    const [openAns2, setOpenAns2] = useState(false);
+    const [openAns3, setOpenAns3] = useState(false);
+    const [openAns4, setOpenAns4] = useState(false);
+
+
     return (<>
         <PageTitle title='Ecera System Offers'></PageTitle>
         <Header />
         <ContactSideButton />
         <div>
-            <section className='py-12 bg-no-repeat bg-center text-center'
+            <section className='w-full py-12 bg-no-repeat bg-center bg-cover text-center'
                 style={{ backgroundImage: `url(${banner})` }}
             >
                 <h1 className='md:text-3xl text-2xl font-semibold text-yellow-400'>
@@ -49,23 +58,151 @@ const PackOffers = () => {
                     </ul>
                 </div>
             </section>
-            <section className='py-16 w-4/5 mx-auto'>
-                <h1 className='text-center text-[40px] italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+            <section
+                className='py-16 bg-no-repeat bg-right-top bg-contain'
+                style={{ backgroundImage: `url(${offerArea})` }}
+            >
+                <div className='xl:w-1/2 lg:w-3/5 md:w-4/5 w-11/12 mx-auto'>
+                    <h1 className='text-center md:text-5xl md:leading-snug text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                        We Don't Just Build Websites, We Build Websites That Sells
+                    </h1>
+                    <p className='md:text-lg text-base font-medium text-gray-500 text-center mt-2'>
+                        Every business has certain requirement, and our experts design and develop websites accourding to your business’ needs.
+                    </p>
+                </div>
+                <div
+                    className='w-full bg-no-repeat bg-left-top md:py-28 py-10'
+                    style={{ backgroundImage: `url(${logoBg})` }}
+                >
+                    <div className='xl:w-[1200px] lg:w-11/12 md:w-3/5 w-11/12 mx-auto grid lg:grid-cols-2 grid-cols-1 lg:items-start lg:gap-0 gap-10'>
+                        <div className='xl:w-[570px] lg:w-full md:w-[570px] md:block hidden mx-auto h-[480px] rounded-tl-[40%] rounded-br-[40%] overflow-hidden'>
+                            <div
+                                className={`bg-no-repeat bg-left-top w-full h-[600px] duration-1000 ease-linear ${(openAns1 && '[background-position-y:0px!Important]') ||
+                                    (openAns2 && '[background-position-y:-750px!Important]') ||
+                                    (openAns3 && '[background-position-y:-1500px!Important]') ||
+                                    (openAns4 && '[background-position-y:-3500px!Important]')
+                                    }`}
+                                style={{ backgroundImage: `url(${webTab})` }}
+                            />
+                        </div>
+                        <ul className='flex flex-col gap-5 mt-5 lg:pl-12'>
+                            <li>
+                                <button
+                                    className={`flex items-center text-3xl font-bold text-gray-700 hover:text-blue-700 duration-300 ${openAns1 && 'text-blue-700'}`}
+                                    onClick={() => {
+                                        setOpenAns1(!openAns1);
+                                        setOpenAns2(false);
+                                        setOpenAns3(false);
+                                        setOpenAns4(false);
+                                    }}
+                                >
+                                    E-Commerce Websites
+                                    {
+                                        openAns1 ?
+                                            <i class="fa-solid fa-caret-up mt-1 ml-3"></i>
+                                            : <i class="fa-solid fa-caret-down mt-1 ml-3"></i>
+                                    }
+                                </button>
+                                {
+                                    openAns1 &&
+                                    <p className='text-base text-gray-600 mt-5'>
+                                        One of the foremost fronts of business these days is websites and online platforms to perform sales and product displays. This is why we often recommend our customers with products to sell, to go for our e-commerce website services. Our well-designed e-commerce websites help you achieve your sales targets in no time.
+                                    </p>
+                                }
+                            </li>
+                            <li>
+                                <button
+                                    className={`flex items-center text-3xl font-bold text-gray-700 hover:text-blue-700 duration-300 ${openAns2 && 'text-blue-700'}`}
+                                    onClick={() => {
+                                        setOpenAns2(!openAns2);
+                                        setOpenAns1(false);
+                                        setOpenAns3(false);
+                                        setOpenAns4(false);
+                                    }}
+                                >
+                                    CMS Websites
+                                    {
+                                        openAns2 ?
+                                            <i class="fa-solid fa-caret-up mt-1 ml-3"></i>
+                                            : <i class="fa-solid fa-caret-down mt-1 ml-3"></i>
+                                    }
+                                </button>
+                                {
+                                    openAns2 &&
+                                    <p className='text-base text-gray-600 mt-5'>
+                                        We deal with CMS websites. Our experts understand how CMS or a 'content management system' allows you to control and manage the content within your website - without technical training. Over the past several years, we have been assisting businesses to keep up the pace by developing a CMS that drives more business and is simple to use.
+                                    </p>
+                                }
+                            </li>
+                            <li>
+                                <button
+                                    className={`flex items-center text-3xl font-bold text-gray-700 hover:text-blue-700 duration-300 ${openAns3 && 'text-blue-700'}`}
+                                    onClick={() => {
+                                        setOpenAns3(!openAns3);
+                                        setOpenAns1(false);
+                                        setOpenAns2(false);
+                                        setOpenAns4(false);
+                                    }}
+                                >
+                                    Custom Websites
+                                    {
+                                        openAns3 ?
+                                            <i class="fa-solid fa-caret-up mt-1 ml-3"></i>
+                                            : <i class="fa-solid fa-caret-down mt-1 ml-3"></i>
+                                    }
+                                </button>
+                                {
+                                    openAns3 &&
+                                    <p className='text-base text-gray-600 mt-5'>
+                                        There are millions of websites online on the world wide web today and even then each has its separate purpose and essence. We, at The Designs Zone understand the individual personality of each website and work on it accordingly. Our custom-built web solutions are personalized and offer unique functionalities that are harder to attain through websites that follow some predefined platform.
+                                    </p>
+                                }
+                            </li>
+                            <li>
+                                <button
+                                    className={`flex items-center text-3xl font-bold text-gray-700 hover:text-blue-700 duration-300 ${openAns4 && 'text-blue-700'}`}
+                                    onClick={() => {
+                                        setOpenAns4(!openAns4);
+                                        setOpenAns1(false);
+                                        setOpenAns2(false);
+                                        setOpenAns3(false);
+                                    }}
+                                >
+                                    Responsive Websites
+                                    {
+                                        openAns4 ?
+                                            <i class="fa-solid fa-caret-up mt-1 ml-3"></i>
+                                            : <i class="fa-solid fa-caret-down mt-1 ml-3"></i>
+                                    }
+                                </button>
+                                {
+                                    openAns4 &&
+                                    <p className='text-base text-gray-600 mt-5'>
+                                        We create easy to use and responsive websites by adapting proper codes for multiple formats. Our web developers integrate special CSS and HTML codes that makes website automatically identify the viewer’s device and resize, shrink or enlarge pages and will look good on all devices.
+                                    </p>
+                                }
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section className='py-16 2xl:w-[1200px] xl:w-4/5 md:w-11/12 sm:w-4/5 w-11/12 mx-auto'>
+                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     Pick A Suitable Package According To Your Needs
                 </h1>
-                <p className='text-lg font-medium text-center text-gray-500 lg:mx-32 my-5'>
+                <p className='md:text-lg text-base font-medium text-center text-gray-500 lg:mx-32 my-5'>
                     We are well aware of the competition. That is the reason why we have a fair pricing model. We ensure quality over quantity on each order.
                 </p>
-                <div className='grid grid-cols-3 gap-6 pt-10'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 pt-10'>
                     <div className='card shadow-[0px_5px_15px_0px_rgba(0,0,20,0.5)] p-6 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600'>
                         <div>
-                            <h1 className='text-6xl font-bold text-white mb-5'>
+                            <h1 className='md:text-6xl text-5xl font-bold text-white mb-5'>
                                 $10.00
                             </h1>
                         </div>
                         <hr />
                         <div className='my-3 relative'>
-                            <h1 className='text-3xl font-semibold text-white'>
+                            <h1 className='md:text-3xl text-2xl font-semibold text-white'>
                                 Web Design- <br /> Free
                             </h1>
                             <div className='absolute top-1/2 -translate-y-1/2 -right-6 bg-black text-white font-medium text-center px-5 py-1'>
@@ -164,13 +301,13 @@ const PackOffers = () => {
                     </div>
                     <div className='card shadow-[0px_5px_15px_0px_rgba(0,0,20,0.5)] p-6 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600'>
                         <div>
-                            <h1 className='text-6xl font-bold text-white mb-5'>
+                            <h1 className='md:text-6xl text-5xl font-bold text-white mb-5'>
                                 $200.00
                             </h1>
                         </div>
                         <hr />
                         <div className='my-3 relative'>
-                            <h1 className='text-3xl font-semibold text-white'>
+                            <h1 className='md:text-3xl text-2xl font-semibold text-white'>
                                 Web Design- <br /> Plus
                             </h1>
                             <div className='absolute top-1/2 -translate-y-1/2 -right-6 bg-black text-white font-medium text-center px-5 py-1'>
@@ -277,13 +414,13 @@ const PackOffers = () => {
                     </div>
                     <div className='card shadow-[0px_5px_15px_0px_rgba(0,0,20,0.5)] p-6 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600'>
                         <div>
-                            <h1 className='text-6xl font-bold text-white mb-5'>
+                            <h1 className='md:text-6xl text-5xl font-bold text-white mb-5'>
                                 $400.00
                             </h1>
                         </div>
                         <hr />
                         <div className='my-3 relative'>
-                            <h1 className='text-3xl font-semibold text-white'>
+                            <h1 className='md:text-3xl text-2xl font-semibold text-white'>
                                 Web Design- <br /> Pro
                             </h1>
                             <div className='absolute top-1/2 -translate-y-1/2 -right-6 bg-black text-white font-medium text-center px-5 py-1'>
@@ -407,16 +544,16 @@ const PackOffers = () => {
                 </div>
             </section>
             <section className='py-12 w-full bg-[#290259]'>
-                <div className='w-4/5 mx-auto grid grid-cols-2 items-center'>
-                    <div>
+                <div className='2xl:w-[1200px] sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-2 grid-cols-1 gap-10 items-center'>
+                    <div className='lg:text-start text-center'>
                         <h1 className='text-4xl font-bold text-white'>
                             Call Us & Discuss
                         </h1>
-                        <h2 className='text-2xl font-medium text-gray-300 mt-4'>
+                        <h2 className='md:text-2xl text-xl font-medium text-gray-300 mt-4'>
                             Your Project With Our Experts Today
                         </h2>
                     </div>
-                    <div className='flex justify-between gap-6'>
+                    <div className='flex sm:flex-row flex-col justify-between gap-6'>
                         <a
                             href='tel:+1 2486771972'
                             className='py-3 w-full text-center rounded-full border-2 border-cyan-400 text-cyan-400 text-lg font-medium'
@@ -434,8 +571,8 @@ const PackOffers = () => {
                 </div>
             </section>
             <section className='py-16 bg-gray-100'>
-                <div className='sm:w-4/5 w-[94%] mx-auto'>
-                    <h1 className='text-center text-[40px] italic font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                <div className='2xl:w-[1200px] sm:w-4/5 w-[94%] mx-auto'>
+                    <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                         Our Easy 4 Steps Design Process
                     </h1>
                     <div className='my-10'>

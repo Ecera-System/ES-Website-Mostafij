@@ -20,8 +20,8 @@ const Home = () => {
             <BusinessSlider />
             <DriveResults />
             <EceraWork />
-            <ContactUs_Section />
             <ClientTestimonials />
+            <ContactUs_Section />
         </main>
         <Footer />
     </>);

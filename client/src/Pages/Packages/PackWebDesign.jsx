@@ -25,7 +25,7 @@ const PackWebDesign = () => {
                 </p>
             </div>
             <div className='w-full h-full py-16 bg-gradient-to-r from-pink-100 to-blue-100'>
-                <div className='md:w-3/4 sm:w-4/5 w-[98%] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-start gap-8'>
+                <div className='2xl:w-[1200px] md:w-3/4 sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-start gap-8'>
                     <div className='w-full bg-white p-6 rounded-md  border-t-4 border-blue-600 shadow-[0px_5px_20px_0px_rgba(0,0,20,0.1)] hover:-translate-y-3 hover:scale-105 duration-300 ease-linear'>
                         <p className='text-sm font-medium text-gray-500 uppercase'>
                             Web design - basic
