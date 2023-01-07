@@ -1,32 +1,31 @@
 import React from 'react';
 import certification1 from '../../../Images/Certification_icons/certification1.png';
 import certification2 from '../../../Images/Certification_icons/certification2.png';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (<>
         {/* <div className='w-full bg-[#0F5996]'>
             <ul className='list-none w-full flex items-center justify-center flex-wrap gap-x-10 gap-y-5 text-gray-200 p-5'>
                 <li className='hover:underline duration-300'>
-                    <Link to={'/about'}>About Us</Link>
+                    <a href={'/about'}>About Us</a>
                 </li>
                 <li className='hover:underline duration-300'>
-                    <Link to={'/contact'}>Contact Us</Link>
+                    <a href={'/contact'}>Contact Us</a>
                 </li>
                 <li className='hover:underline duration-300'>
-                    <Link to={'/careers'}>Careers</Link>
+                    <a href={'/careers'}>Careers</a>
                 </li>
                 <li className='hover:underline duration-300'>
-                    <Link to={'/blog'}>Blog</Link>
+                    <a href={'/blog'}>Blog</a>
                 </li>
                 <li className='hover:underline duration-300'>
-                    <Link to={'/invoice'}>Pay Invoice</Link>
+                    <a href={'/invoice'}>Pay Invoice</a>
                 </li>
                 <li className='hover:underline duration-300'>
-                    <Link to={'faq'}>FAQ</Link>
+                    <a href={'faq'}>FAQ</a>
                 </li>
                 <li className='hover:underline duration-300'>
-                    <Link to={'trainings'}>Trainings</Link>
+                    <a href={'trainings'}>Trainings</a>
                 </li>
             </ul>
         </div> */}
@@ -79,12 +78,12 @@ const Footer = () => {
                                     </h2>
                                 </li>
                                 <li>
-                                    <Link
-                                        to="/remote-employees"
+                                    <a
+                                        href="/remote-employees"
                                         className='text-gray-400 text-base hover:underline hover:text-white duration-300'
                                     >
                                         Hire Developers
-                                    </Link>
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -96,33 +95,33 @@ const Footer = () => {
                             </h2>
                         </li>
                         <li>
-                            <Link
+                            <a
                                 className='text-gray-400 text-base hover:underline hover:text-white duration-300'
-                                to={'/about'}
+                                href={'/about'}
                             >
                                 About Us
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
+                            <a
                                 className='text-gray-400 text-base hover:underline hover:text-white duration-300'
-                                to={'/careers'}
+                                href={'/careers'}
                             >
                                 Careers
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
+                            <a
                                 className='text-gray-400 text-base hover:underline hover:text-white duration-300'
-                                to={'/blog'}
+                                href={'/blog'}
                             >
                                 Blog
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
-                                className='text-gray-400 text-base hover:underline hover:text-white duration-300' to={'/invoice'}
-                            >Pay Invoice</Link>
+                            <a
+                                className='text-gray-400 text-base hover:underline hover:text-white duration-300' href={'/invoice'}
+                            >Pay Invoice</a>
                         </li>
                         <li>
                             <a
@@ -139,10 +138,10 @@ const Footer = () => {
                             </h2>
                         </li>
                         <li>
-                            <Link
-                                to={'/contact'}
+                            <a
+                                href={'/contact'}
                                 className='text-gray-400 text-base hover:underline hover:text-white duration-300'
-                            >Contact Us</Link>
+                            >Contact Us</a>
                         </li>
                         <li>
                             <a href="/" className='text-gray-400 text-base hover:underline hover:text-white duration-300'>
@@ -155,18 +154,18 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <Link
-                                to={'faq'}
+                            <a
+                                href={'faq'}
                                 className='text-gray-400 text-base hover:underline hover:text-white duration-300'
-                            >FAQ</Link>
+                            >FAQ</a>
                         </li>
                         <li>
-                            <Link
-                                to="/terms-of-services"
+                            <a
+                                href="/terms-of-services"
                                 className='text-gray-400 text-base hover:underline hover:text-white duration-300'
                             >
                                 Terms of Services
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                     <ul className='flex flex-col gap-2'>

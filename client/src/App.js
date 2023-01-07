@@ -19,28 +19,28 @@ import PayInvoice from "./Pages/PayInvoice/PayInvoice";
 import Trainings from "./Pages/Trainings/Trainings";
 import TermsOfServices from "./Pages/TermsOfServices/TermsOfServices";
 
-function App() {
+function App() {  
   return (
     <Routes>
-      <Route path='/' element={<Home />}></Route>
-      <Route path='/get-estimate' element={<GetEstimate />}></Route>
-      <Route path='/website-development' element={<WebDevelopment />}></Route>
-      <Route path='/digital-marketing' element={<DigitalMarketing />}></Route>
-      <Route path='/remote-employees' element={<RemoteEmployees />}></Route>
-      <Route path='/IT-consultancy' element={<ITConsultancy />}></Route>
-      <Route path='/package/web-design' element={<PackWebDesign />}></Route>
-      <Route path='/package/digital-marketing' element={<PackDigitalMarketing />}></Route>
-      <Route path='/package/in-INR' element={<PackageInINR />}></Route>
-      <Route path='/package/offers' element={<PackOffers />}></Route>
+      <Route path='/' element={<Home />} />
+      <Route path='/get-estimate' element={<GetEstimate />} />
+      <Route path='/website-development' element={<WebDevelopment />} />
+      <Route path='/digital-marketing' element={<DigitalMarketing />} />
+      <Route path='/remote-employees' element={<RemoteEmployees />} />
+      <Route path='/IT-consultancy' element={<ITConsultancy />} />
+      <Route path='/package/web-design' element={<PackWebDesign />} />
+      <Route path='/package/digital-marketing' element={<PackDigitalMarketing />} />
+      <Route path='/package/in-INR' element={<PackageInINR />} />
+      <Route path='/package/offers' element={<PackOffers />} />
 
-      <Route path='/about' element={<AboutUs />}></Route>
-      <Route path='/contact' element={<ContactUs />}></Route>
-      <Route path='/blog' element={<BlogPage />}></Route>
-      <Route path='/faq' element={<FAQ />}></Route>
-      <Route path='/careers' element={<Careers />}></Route>
-      <Route path='/invoice' element={<PayInvoice />}></Route>
+      <Route path='/about' element={<AboutUs />} />
+      <Route path='/contact' element={<ContactUs />} />
+      <Route path='/blog' element={<BlogPage />} />
+      <Route path='/faq' element={<FAQ />} />
+      <Route path='/careers' element={<Careers />} />
+      <Route path='/invoice' element={<PayInvoice />} />
       {/* <Route path='/trainings' element={<Trainings />}></Route> */}
-      <Route path='/terms-of-services' element={<TermsOfServices />}></Route>
+      <Route path='/terms-of-services' element={<TermsOfServices />} />
 
       <Route path='/*' element={<NotFound />}></Route>
     </Routes>

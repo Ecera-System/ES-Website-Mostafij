@@ -25,7 +25,7 @@ const Header = () => {
             <TopNavigation></TopNavigation>
 
             {/* =====================Main Navigation===================== */}
-            <nav className={`w-full bg-white ${scroll ? 'fixed top-0 left-0 right-0 z-50 shadow-md' : ''}`}>
+            <nav className={`w-full bg-white ${scroll ? 'fixed top-0 left-0 right-0 z-40 shadow-md' : ''}`}>
                 <div className='2xl:w-[1200px] xl:w-full mx-auto flex items-center justify-between lg:px-14 sm:px-6 px-3 py-2'>
 
                     {/* ===========Right Logo=========== */}

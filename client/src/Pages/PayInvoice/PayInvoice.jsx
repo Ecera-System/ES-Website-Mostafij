@@ -1,117 +1,84 @@
 import React, { useState } from 'react';
 import PageTitle from '../Shared/PageTitle';
 import { Link } from 'react-router-dom';
-import eceraLogo from '../../Images/Nav_logo/ecera-logo.png';
+import axios from 'axios';
 import Footer from '../Shared/Footer/Footer';
+import Header from '../Shared/Header/Header';
 
 const PayInvoice = () => {
-    const [scroll, setScroll] = useState(false);
-    const [openMenu, setOpenMenu] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-    window.addEventListener('scroll', () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > 10) {
-            setScroll(true);
-        }
-        else {
-            setScroll(false);
-        }
-    });
+    const searchQuery = window.location.search;
+    const query = new URLSearchParams(searchQuery);
+    const queryObj = Object.fromEntries(query);
+
+    // <-- Payment button -->
+    const stripePayButton = async () => {
+        setLoading(true);
+        await axios.post(`${process.env.REACT_APP_API_V1_URL}/payment/create-checkout-session`, {
+            serviceName: 'Web Design and Services',
+            price: 200000,
+            source: 'Pay Invoice',
+            paymentMethod: 'Stripe'
+        })
+            .then(res => {
+                if (res?.data?.url) {
+                    window.location = res?.data?.url;
+                    setLoading(false);
+                };
+            })
+            .catch(err => {
+                err && console.log(err);
+                setLoading(false);
+            });
+    };
 
     return (<>
-        <PageTitle title='Invoice Payment for Web Design and Services - ES'></PageTitle>
-        <section className='text-center bg-gradient-to-r from-violet-700 to-blue-600'>
-            <header className='w-full h-[72px] text-gray-600'>
-                <nav className={`w-full flex items-center justify-between lg:px-14 px-5 py-2 duration-200 ease-out fixed left-0 top-0 z-50 ${scroll ? 'bg-white shadow-md' : 'bg-transparent text-gray-50'}`}>
-                    {/* ===========Right Logo=========== */}
-                    <div>
-                        <Link to={'/'}>
-                            <img
-                                className='w-14 h-14'
-                                src={eceraLogo}
-                                alt="ecera logo"
-                            />
-                        </Link>
+        {
+            queryObj?.canceled && <div className='fixed top-0 left-0 z-50 w-full h-full bg-black/60 flex justify-center items-center' >
+                <div className='sm:w-96 w-11/12 h-auto text-center bg-white p-8 rounded-lg'>
+                    <div className='block text-center'>
+                        <i class="fa-solid fa-circle-xmark text-5xl text-red-600"></i>
                     </div>
-
-                    {/* ========================Left Menu items======================== */}
-                    {/* ===========Desktop view=========== */}
-                    <ul className='hidden lg:flex items-center gap-x-8 text-base font-medium'>
-                        {/* <li className={`py-4 cursor-pointer duration-300 relative group/services ${scroll ? 'hover:text-blue-600' : 'hover:text-blue-400'}`}>
-                            MERN
-                        </li>
-                        <li className={`py-4 cursor-pointer duration-300 relative group/packages ${scroll ? 'hover:text-blue-600' : 'hover:text-blue-400'}`}>
-                            H1B visa process
-                        </li>
-                        <li className={`py-4 cursor-pointer duration-300 relative group/packages ${scroll ? 'hover:text-blue-600' : 'hover:text-blue-400'}`}>
-                            Invoice Payment for Web Design ans services
-                        </li> */}
-                        <li className=''>
-                            <Link
-                                to='#'
-                                className={`${scroll ? 'py-3 px-6 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white' : 'py-[10px] px-[22px] border-2 box-border border-white'} text-base rounded-lg `}
-                            >
-                                Login
-                            </Link>
-                        </li>
-                    </ul>
-
-                    {/* ===========Mobile view=========== */}
+                    <h2 className='text-3xl font-medium text-gray-600 py-5'>Payment Cancelled</h2>
+                    <p className='text-base font-medium text-gray-600 mb-4'>
+                        Unable to process payment
+                    </p>
                     <button
-                        className={`lg:hidden block text-2xl`}
-                        onClick={() => setOpenMenu(!openMenu)}
+                        onClick={() => {
+                            window.location.search = ''
+                        }}
+                        className='w-full py-2 rounded text-center bg-slate-500 hover:bg-slate-600 duration-300 text-white text-lg font-medium'
                     >
-                        <i className="fa-solid fa-bars"></i>
+                        OK
                     </button>
-
-                    {/* Side Menu */}
-                    <aside className={`lg:hidden w-full h-full fixed top-0 ${openMenu ? 'right-0' : '-right-[1024px]'} z-50 duration-300 ease-linear bg-black/50`}>
-                        <ul className='sm:w-[420px] w-[90%] h-full absolute top-0 right-0 bg-white flex flex-col items-start font-medium'>
-                            <li className='px-10 py-3'>
-                                <button
-                                    className='text-3xl text-gray-500 hover:text-gray-700 duration-300'
-
-                                    onClick={() => setOpenMenu(!openMenu)}
-                                >
-                                    <i className="fa-solid fa-xmark"></i>
-                                </button>
-                            </li>
-                            {/* <li className='w-full text-start normal-case cursor-pointer px-10 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'>
-                                <a
-                                    href='#'
-                                    className='w-full h-full'
-                                >
-                                    MERN
-                                </a>
-                            </li>
-                            <li className='w-full text-start normal-case cursor-pointer px-10 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'>
-                                <a
-                                    href='#'
-                                    className='w-full h-full'
-                                >
-                                    H1B visa process
-                                </a>
-                            </li>
-                            <li className='w-full text-start normal-case cursor-pointer px-10 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'>
-                                <a
-                                    href='#'
-                                    className='w-full h-full'
-                                >
-                                    Invoice Payment for Web Design ans services
-                                </a>
-                            </li> */}
-                            <li className='w-full h-full px-10'>
-                                <a
-                                    href='#'
-                                    className='inline-block w-full rounded-lg normal-case cursor-pointer py-3 my-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-base duration-300'
-                                >
-                                    Login
-                                </a>
-                            </li>
-                        </ul>
-                    </aside>
-                </nav>
-            </header>
+                </div>
+            </div>
+        }
+        {
+            queryObj?.success && <div className='fixed top-0 left-0 z-50 w-full h-full bg-black/60 flex justify-center items-center' >
+                <div className='sm:w-96 w-11/12 h-auto text-center bg-white p-8 rounded-lg'>
+                    <div className='block text-center'>
+                        <i class="fa-solid fa-circle-check text-5xl text-emerald-500"></i>
+                    </div>
+                    <h2 className='text-3xl font-medium text-gray-600 py-5'>Payment Successful!</h2>
+                    <p className='text-base font-medium text-gray-600 mb-4'>
+                        Thank you for your payment
+                    </p>
+                    <button
+                        onClick={() => {
+                            window.location.search = ''
+                        }}
+                        className='w-full py-2 rounded text-center bg-emerald-500 hover:bg-emerald-600 duration-300 text-white text-lg font-medium'
+                    >
+                        OK
+                    </button>
+                </div>
+            </div>
+        }
+        <PageTitle title='Invoice Payment for Web Design and Services - ES'></PageTitle>
+        <Header></Header>
+        <section className='text-center bg-gradient-to-r from-violet-700 to-blue-600'>
             <div className='md:py-32 py-20 md:w-3/4 w-4/5 mx-auto'>
                 <h1 className='md:text-6xl text-3xl text-center text-white'>
                     Invoice Payment for Web Design and Services
@@ -122,27 +89,21 @@ const PayInvoice = () => {
                 </p>
             </div>
         </section>
-        <section className='py-16'>
-            <div className='xl:w-3/5 lg:w-4/5 md:w-11/12 w-64 mx-auto grid md:grid-cols-4 grid-cols-1 md:gap-10 gap-5'>
+        <section className='h-80 flex items-center justify-center'>
+            <div className='md:w-[420px] w-64 mx-auto flex md:flex-row flex-col items-center justify-center md:gap-10 gap-5'>
                 <button
-                    className='text-base font-medium py-2 w-full rounded text-white bg-[#1DBF73] hover:bg-[#19A463] duration-300'
+                    onClick={stripePayButton}
+                    disabled={loading}
+                    className='text-lg font-medium py-3 w-full rounded text-white bg-blue-600 hover:bg-blue-700 duration-300'
                 >
-                    Payment (USD)
+                    {
+                        loading ? 'Loading...' : 'Pay with Stripe'
+                    }
                 </button>
                 <button
-                    className='text-base font-medium py-2 w-full rounded text-white bg-[#1DBF73] hover:bg-[#19A463] duration-300'
+                    className='text-lg font-medium py-3 w-full rounded text-white bg-blue-600 hover:bg-blue-700 duration-300'
                 >
-                    Payment (USA)
-                </button>
-                <button
-                    className='text-base font-medium py-2 w-full rounded text-white bg-[#1DBF73] hover:bg-[#19A463] duration-300'
-                >
-                    Payment (INDIA)
-                </button>
-                <button
-                    className='text-base font-medium py-2 w-full rounded text-white bg-[#1DBF73] hover:bg-[#19A463] duration-300'
-                >
-                    Pay in USD
+                    Pay with Razorpay
                 </button>
             </div>
         </section>
