@@ -4,54 +4,9 @@ import certification2 from '../../../Images/Certification_icons/certification2.p
 
 const Footer = () => {
     return (<>
-        {/* <div className='w-full bg-[#0F5996]'>
-            <ul className='list-none w-full flex items-center justify-center flex-wrap gap-x-10 gap-y-5 text-gray-200 p-5'>
-                <li className='hover:underline duration-300'>
-                    <a href={'/about'}>About Us</a>
-                </li>
-                <li className='hover:underline duration-300'>
-                    <a href={'/contact'}>Contact Us</a>
-                </li>
-                <li className='hover:underline duration-300'>
-                    <a href={'/careers'}>Careers</a>
-                </li>
-                <li className='hover:underline duration-300'>
-                    <a href={'/blog'}>Blog</a>
-                </li>
-                <li className='hover:underline duration-300'>
-                    <a href={'/invoice'}>Pay Invoice</a>
-                </li>
-                <li className='hover:underline duration-300'>
-                    <a href={'faq'}>FAQ</a>
-                </li>
-                <li className='hover:underline duration-300'>
-                    <a href={'trainings'}>Trainings</a>
-                </li>
-            </ul>
-        </div> */}
         <footer className='w-full bg-[#021D40]'>
             <div className='2xl:w-[1200px] w-11/12 mx-auto'>
                 <div className='w-full py-10 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-2 items-start gap-6'>
-                    {/* <ul className='flex flex-col gap-5'>
-                        <li className='flex gap-x-3 items-center'>
-                            <img className='w-8 h-8' src={logo} alt="" />
-                            <h1 className='text-gray-100 text-2xl font-semibold'>
-                                Ecera System
-                            </h1>
-                        </li>
-                        <li>
-                            <h4 className='text-gray-100 text-lg font-medium'>Address:</h4>
-                            <p className='text-base text-gray-400 ml-2'>
-                                33405 Colony Park Drive Farmington Hills MI 48331
-                            </p>
-                        </li>
-                        <li>
-                            <h4 className='text-gray-100 text-lg font-medium'>Email:</h4>
-                            <p className='text-base text-gray-400 ml-2'>
-                                sales@ecerasystem.com
-                            </p>
-                        </li>
-                    </ul> */}
                     <ul className='flex flex-col gap-14'>
                         <li>
                             <ul className='flex flex-col gap-5'>
@@ -155,7 +110,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <a
-                                href={'faq'}
+                                href={'/faq'}
                                 className='text-gray-400 text-base hover:underline hover:text-white duration-300'
                             >FAQ</a>
                         </li>

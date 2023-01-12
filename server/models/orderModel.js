@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Schema design
-const paymentSchema = mongoose.Schema({
+const orderSchema = mongoose.Schema({
     userName: {
         type: String,
         required: true,
@@ -19,6 +19,10 @@ const paymentSchema = mongoose.Schema({
     },
     totalAmount: {
         type: Number,
+        required: true,
+    },
+    currency: {
+        type: String,
         required: true,
     },
     paymentStatus: {
@@ -45,6 +49,6 @@ const paymentSchema = mongoose.Schema({
 });
 
 
-const PaymentOrder = mongoose.model('PaymentOrder', paymentSchema);
+const ServiceOrder = mongoose.model('ServiceOrders', orderSchema);
 
-module.exports = PaymentOrder;
+module.exports = ServiceOrder;

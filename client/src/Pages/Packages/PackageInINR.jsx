@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
 import banner from '../../Images/packages-bg.jpg';
+import PaymentButton from '../Shared/PaymentButton/PaymentButton';
 
 const PackageInINR = () => {
+    const [openPayBtn, setOpenPayBtn] = useState(null);
+
     return (<>
         <PageTitle title='Package In INR'></PageTitle>
-        <Header />
+        <Header login={true} />
         <ContactSideButton />
         <section>
             <div className='py-24 bg-no-repeat bg-center text-center'
@@ -24,8 +27,8 @@ const PackageInINR = () => {
                     Packages /<span className='text-gray-100 ml-2'>Package In INR</span>
                 </p>
             </div>
-            <div className='w-full h-full py-16 bg-gradient-to-r from-pink-100 to-blue-100'>
-                <div className='md:w-3/4 sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-start gap-8'>
+            <div className='w-full h-full py-16 bg-blue-50'>
+                <div className='2xl:w-[1200px] md:w-3/4 sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-start gap-8'>
                     <div className='w-full bg-white p-6 rounded-md  border-t-4 border-blue-600 shadow-[0px_5px_20px_0px_rgba(0,0,20,0.1)] hover:-translate-y-3 hover:scale-105 duration-300 ease-linear'>
                         <p className='text-sm font-medium text-gray-500 uppercase'>
                             WEB DESIGN PLAN
@@ -74,7 +77,15 @@ const PackageInINR = () => {
                             </li>
                         </ul>
                         <button
-                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-gradient-to-r from-pink-500 to-purple-500  hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 duration-300 rounded-full'
+                            onClick={() => setOpenPayBtn({
+                                serviceName: 'Web Design Plan',
+                                source: 'Package In INR',
+                                amount: 1000,
+                                currency: 'INR',
+                                quantity: 1,
+                                path: '/package/in-INR',
+                            })}
+                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-blue-600 hover:bg-blue-700 duration-300 rounded-full'
                         >
                             Buy Now
                         </button>
@@ -83,6 +94,12 @@ const PackageInINR = () => {
             </div>
         </section>
         <Footer />
+
+        {/* <-- Payment Gateway --> */}
+        <PaymentButton
+            openPayBtn={openPayBtn}
+            setOpenPayBtn={setOpenPayBtn}
+        />
     </>);
 };
 

@@ -1,22 +1,19 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
 const cors = require('cors');
 const errorHandler = require('./utils/errorHandler');
 
 
 // <-- Middleware -->
 app.use(cors());
-// Stripe webhook
-app.use('/api/v1/payment/stripe/webhook', express.raw({ type: "*/*" }));
+app.use('/api/v1/payment/stripe/webhook', express.raw({ type: "*/*" })); // Stripe webhook
 app.use(express.json());
 
 
-
 // <-- Routes -->
-const paymentRoute = require('./routes/v1/payment.route');
-
-
-app.use('/api/v1/payment', paymentRoute);
+app.use('/api/v1/payment', require('./routes/v1/order.route'));
+app.use('/api/v1/user', require('./routes/v1/user.route'));
 
 
 app.get('/', (req, res) => {

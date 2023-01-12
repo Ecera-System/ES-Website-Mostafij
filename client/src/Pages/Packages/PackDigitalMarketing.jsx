@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
 import banner from '../../Images/packages-bg.jpg';
 import Footer from '../Shared/Footer/Footer';
+import PaymentButton from '../Shared/PaymentButton/PaymentButton';
 
 const PackDigitalMarketing = () => {
+    const [openPayBtn, setOpenPayBtn] = useState(null);
+
     return (<>
         <PageTitle title='Digital Marketing Package'></PageTitle>
-        <Header />
+        <Header login={true} />
         <ContactSideButton />
         <section>
             <div className='py-24 bg-no-repeat bg-center text-center'
@@ -24,8 +27,8 @@ const PackDigitalMarketing = () => {
                     Packages /<span className='text-gray-100 ml-2'>Digital Marketing</span>
                 </p>
             </div>
-            <div className='w-full h-full py-16 bg-gradient-to-r from-pink-100 to-blue-100'>
-                <div className='md:w-3/4 sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-start gap-8'>
+            <div className='w-full h-full py-16 bg-blue-50'>
+                <div className='2xl:w-[1200px] md:w-3/4 sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-start gap-8'>
                     <div className='w-full bg-white p-6 rounded-md  border-t-4 border-blue-600 shadow-[0px_5px_20px_0px_rgba(0,0,20,0.1)] hover:-translate-y-3 hover:scale-105 duration-300 ease-linear'>
                         <p className='text-sm font-medium text-gray-500 uppercase'>
                             DIGITAL MARKETING - basic
@@ -70,7 +73,15 @@ const PackDigitalMarketing = () => {
                             </li>
                         </ul>
                         <button
-                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-gradient-to-r from-pink-500 to-purple-500  hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 duration-300 rounded-full'
+                            onClick={() => setOpenPayBtn({
+                                serviceName: 'Digital Marketing - Basic',
+                                source: 'Digital Marketing',
+                                amount: 10,
+                                currency: 'USD',
+                                quantity: 1,
+                                path: '/package/digital-marketing',
+                            })}
+                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-blue-600 hover:bg-blue-700 duration-300 rounded-full'
                         >
                             Buy Now
                         </button>
@@ -123,7 +134,15 @@ const PackDigitalMarketing = () => {
                             </li>
                         </ul>
                         <button
-                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-gradient-to-r from-pink-500 to-purple-500  hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 duration-300 rounded-full'
+                            onClick={() => setOpenPayBtn({
+                                serviceName: 'Digital Marketing - Silver',
+                                source: 'Digital Marketing',
+                                amount: 499,
+                                currency: 'USD',
+                                quantity: 1,
+                                path: '/package/digital-marketing',
+                            })}
+                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-blue-600 hover:bg-blue-700 duration-300 rounded-full'
                         >
                             Buy Now
                         </button>
@@ -180,7 +199,15 @@ const PackDigitalMarketing = () => {
                             </li>
                         </ul>
                         <button
-                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-gradient-to-r from-pink-500 to-purple-500  hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 duration-300 rounded-full'
+                            onClick={() => setOpenPayBtn({
+                                serviceName: 'Digital Marketing - Gold',
+                                source: 'Digital Marketing',
+                                amount: 799,
+                                currency: 'USD',
+                                quantity: 1,
+                                path: '/package/digital-marketing',
+                            })}
+                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-blue-600 hover:bg-blue-700 duration-300 rounded-full'
                         >
                             Buy Now
                         </button>
@@ -237,7 +264,15 @@ const PackDigitalMarketing = () => {
                             </li>
                         </ul>
                         <button
-                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-gradient-to-r from-pink-500 to-purple-500  hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 duration-300 rounded-full'
+                            onClick={() => setOpenPayBtn({
+                                serviceName: 'Digital Marketing - Platinum',
+                                source: 'Digital Marketing',
+                                amount: 1099,
+                                currency: 'USD',
+                                quantity: 1,
+                                path: '/package/digital-marketing',
+                            })}
+                            className='block w-full py-3 mt-8 mb-2 text-base font-medium uppercase text-center text-white bg-blue-600 hover:bg-blue-700 duration-300 rounded-full'
                         >
                             Buy Now
                         </button>
@@ -246,6 +281,12 @@ const PackDigitalMarketing = () => {
             </div>
         </section>
         <Footer />
+
+        {/* <-- Payment Gateway --> */}
+        <PaymentButton
+            openPayBtn={openPayBtn}
+            setOpenPayBtn={setOpenPayBtn}
+        />
     </>);
 };
 

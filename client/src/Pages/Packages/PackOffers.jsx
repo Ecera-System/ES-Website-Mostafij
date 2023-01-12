@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import offerArea from '../../Images/es-offers/offer-area.png';
 import logoBg from '../../Images/es-offers/logo-bg.png';
 import webTab from '../../Images/es-offers/web-tab-sprite.jpg';
+import PaymentButton from '../Shared/PaymentButton/PaymentButton';
 
 const PackOffers = () => {
     const [openAns1, setOpenAns1] = useState(true);
@@ -16,10 +17,11 @@ const PackOffers = () => {
     const [openAns3, setOpenAns3] = useState(false);
     const [openAns4, setOpenAns4] = useState(false);
 
+    const [openPayBtn, setOpenPayBtn] = useState(null);
 
     return (<>
         <PageTitle title='Ecera System Offers'></PageTitle>
-        <Header />
+        <Header login={true} />
         <ContactSideButton />
         <div>
             <section className='w-full py-12 bg-no-repeat bg-center bg-cover text-center'
@@ -99,8 +101,8 @@ const PackOffers = () => {
                                     E-Commerce Websites
                                     {
                                         openAns1 ?
-                                            <i class="fa-solid fa-caret-up mt-1 ml-3"></i>
-                                            : <i class="fa-solid fa-caret-down mt-1 ml-3"></i>
+                                            <i className="fa-solid fa-caret-up mt-1 ml-3"></i>
+                                            : <i className="fa-solid fa-caret-down mt-1 ml-3"></i>
                                     }
                                 </button>
                                 {
@@ -123,8 +125,8 @@ const PackOffers = () => {
                                     CMS Websites
                                     {
                                         openAns2 ?
-                                            <i class="fa-solid fa-caret-up mt-1 ml-3"></i>
-                                            : <i class="fa-solid fa-caret-down mt-1 ml-3"></i>
+                                            <i className="fa-solid fa-caret-up mt-1 ml-3"></i>
+                                            : <i className="fa-solid fa-caret-down mt-1 ml-3"></i>
                                     }
                                 </button>
                                 {
@@ -147,8 +149,8 @@ const PackOffers = () => {
                                     Custom Websites
                                     {
                                         openAns3 ?
-                                            <i class="fa-solid fa-caret-up mt-1 ml-3"></i>
-                                            : <i class="fa-solid fa-caret-down mt-1 ml-3"></i>
+                                            <i className="fa-solid fa-caret-up mt-1 ml-3"></i>
+                                            : <i className="fa-solid fa-caret-down mt-1 ml-3"></i>
                                     }
                                 </button>
                                 {
@@ -171,8 +173,8 @@ const PackOffers = () => {
                                     Responsive Websites
                                     {
                                         openAns4 ?
-                                            <i class="fa-solid fa-caret-up mt-1 ml-3"></i>
-                                            : <i class="fa-solid fa-caret-down mt-1 ml-3"></i>
+                                            <i className="fa-solid fa-caret-up mt-1 ml-3"></i>
+                                            : <i className="fa-solid fa-caret-down mt-1 ml-3"></i>
                                     }
                                 </button>
                                 {
@@ -293,6 +295,14 @@ const PackOffers = () => {
                         </ul>
                         <div className='w-full'>
                             <button
+                                onClick={() => setOpenPayBtn({
+                                    serviceName: 'Web Design - Free',
+                                    source: 'Offers',
+                                    amount: 10,
+                                    currency: 'USD',
+                                    quantity: 1,
+                                    path: '/package/offers',
+                                })}
                                 className='mt-3 w-full font-medium uppercase bg-cyan-400 hover:bg-transparent text-white hover:text-cyan-400 border-2 hover:border-2 border-cyan-400 text-base py-3 px-5 rounded-full duration-300'
                             >
                                 Buy Now
@@ -406,6 +416,14 @@ const PackOffers = () => {
                         </ul>
                         <div className='w-full'>
                             <button
+                                onClick={() => setOpenPayBtn({
+                                    serviceName: 'Web Design - Plus',
+                                    source: 'Offers',
+                                    amount: 200,
+                                    currency: 'USD',
+                                    quantity: 1,
+                                    path: '/package/offers',
+                                })}
                                 className='mt-3 w-full font-medium uppercase bg-cyan-400 hover:bg-transparent text-white hover:text-cyan-400 border-2 hover:border-2 border-cyan-400 text-base py-3 px-5 rounded-full duration-300'
                             >
                                 Buy Now
@@ -535,6 +553,14 @@ const PackOffers = () => {
                         </ul>
                         <div className='w-full'>
                             <button
+                                onClick={() => setOpenPayBtn({
+                                    serviceName: 'Web Design - Pro',
+                                    source: 'Offers',
+                                    amount: 400,
+                                    currency: 'USD',
+                                    quantity: 1,
+                                    path: '/package/offers',
+                                })}
                                 className='mt-3 w-full font-medium uppercase bg-cyan-400 hover:bg-transparent text-white hover:text-cyan-400 border-2 hover:border-2 border-cyan-400 text-base py-3 px-5 rounded-full duration-300'
                             >
                                 Buy Now
@@ -689,6 +715,12 @@ const PackOffers = () => {
             </section>
         </div>
         <Footer />
+
+        {/* <-- Payment Gateway --> */}
+        <PaymentButton
+            openPayBtn={openPayBtn}
+            setOpenPayBtn={setOpenPayBtn}
+        />
     </>);
 };
 

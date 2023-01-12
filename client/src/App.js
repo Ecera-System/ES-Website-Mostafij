@@ -18,8 +18,15 @@ import Careers from "./Pages/Careers/Careers";
 import PayInvoice from "./Pages/PayInvoice/PayInvoice";
 import Trainings from "./Pages/Trainings/Trainings";
 import TermsOfServices from "./Pages/TermsOfServices/TermsOfServices";
+import Login from "./Pages/Auth/Login";
+import Signup from "./Pages/Auth/Signup";
+import ActivateEmail from "./Pages/Auth/ActivateEmail";
+import StripeCheckoutMsg from "./Pages/Shared/PaymentButton/StripeCheckoutMsg";
+import RequireAuth from "./AuthHook/RequireAuth";
+import UserProfile from "./Pages/UserProfile/UserProfile";
+import OrderHistory from "./Pages/UserProfile/OrderHistory";
 
-function App() {  
+function App() {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
@@ -41,6 +48,20 @@ function App() {
       <Route path='/invoice' element={<PayInvoice />} />
       {/* <Route path='/trainings' element={<Trainings />}></Route> */}
       <Route path='/terms-of-services' element={<TermsOfServices />} />
+      <Route path='/stripe/checkout' element={<StripeCheckoutMsg />} />
+
+      <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<Signup />} />
+      <Route path='/user/activate/:activation_token' element={<ActivateEmail></ActivateEmail>}></Route>
+
+      {/* <-- User Profile --> */}
+      <Route path="/profile" element={
+        <RequireAuth>
+          <UserProfile></UserProfile>
+        </RequireAuth>}
+      >
+        <Route path='/profile/order-history' element={<OrderHistory />}></Route>
+      </Route>
 
       <Route path='/*' element={<NotFound />}></Route>
     </Routes>
