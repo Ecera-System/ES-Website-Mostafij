@@ -37,7 +37,6 @@ const data = [
 ];
 
 const BusinessSlider = () => {
-
     const [sliderRef, setSliderRef] = useState(null);
 
     const settings = {
@@ -78,20 +77,20 @@ const BusinessSlider = () => {
 
 
     return (
-        <section className='xl:w-4/5 w-11/12 mx-auto'>
+        <section className='2xl:w-[1100px] xl:w-4/5 w-11/12 mx-auto'>
             <div>
                 <Link
                     to={'/get-estimate'}
-                    className='bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg font-medium py-3 block mx-auto my-10 w-40 text-center shadow-black/20 shadow-xl rounded-lg'
+                    className='bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg font-medium py-3 block mx-auto mt-20 w-40 text-center shadow-black/20 rounded-lg'
                 >
                     Get a Quote
                 </Link>
-                <h1 className='text-center md:text-[40px] md:leading-normal text-3xl font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                <h1 className='text-center mt-16 md:text-[40px] md:leading-normal text-3xl font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     Here's how Ecera System can benefit your business
                 </h1>
             </div>
 
-            <div className='py-10 w-[75%] mx-auto text-center relative'>
+            <div className='pt-10 pb-20 w-[75%] mx-auto text-center relative'>
                 <div className='w-full'>
                     <Slider ref={setSliderRef} {...settings}>
                         {
@@ -111,21 +110,21 @@ const BusinessSlider = () => {
                     </Slider>
                 </div>
 
-                {/* =============Left button============= */}
-                <div
+                {/* <-- Left button --> */}
+                <button
                     onClick={() => { sliderRef?.slickPrev() }}
-                    className='absolute top-1/2 lg:-left-20 -left-10 -translate-y-1/2 z-10 bg-black/50 hover:bg-black duration-300 py-2 px-3 rounded-lg cursor-pointer'
+                    className='absolute top-1/2 lg:-left-20 -left-10 -translate-y-1/2 z-10 text-black/50 hover:text-black duration-300'
                 >
-                    <i className="fa-solid fa-chevron-left text-2xl text-white"></i>
-                </div>
+                    <i className="fa-solid fa-chevron-left md:text-3xl text-2xl"></i>
+                </button>
 
-                {/* =============Right button============= */}
-                <div
+                {/* <-- Right button --> */}
+                <button
                     onClick={() => { sliderRef?.slickNext() }}
-                    className='absolute top-1/2 lg:-right-20 -right-10 -translate-y-1/2 z-10 bg-black/50 hover:bg-black duration-300 py-2 px-3 rounded-lg cursor-pointer'
+                    className='absolute top-1/2 lg:-right-20 -right-10 -translate-y-1/2 z-10 text-black/50 hover:text-black duration-300'
                 >
-                    <i className="fa-solid fa-chevron-right text-2xl text-white"></i>
-                </div>
+                    <i className="fa-solid fa-chevron-right md:text-3xl text-2xl"></i>
+                </button>
             </div>
         </section>
     );

@@ -36,7 +36,7 @@ const data = [
         content: 'Starting a business requires analytical thinking, determined organization, and detailed record-keeping. It’s important to be aware of your competition and either appropriate or improve upon their successful tactics. Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app portfolios.We help bring bold strategies to transform our clients from being Market followers to Market Leaders.',
         bgColor: 'bg-[#1A0000]',
         textColor: 'text-[#1A0000]',
-        btnPath: '/IT-consultancy'
+        btnPath: '/IT-staffing'
     },
 ];
 
@@ -70,7 +70,7 @@ const HeroSection = () => {
 
     return (
         <section>
-            <div className='relative'>
+            <div className='relative 2xl:w-[1200px] mx-auto xl:w-full'>
                 <div className='w-full overflow-hidden'>
                     <div
                         className='grid grid-cols-4 w-[400%] h-[80vh] scroll-smooth duration-1000 ease-in-out'

@@ -9,7 +9,7 @@ import professional from '../../../Images/EceraWork_Banner/professional.png';
 
 const ClientTestimonials = () => {
     return (<>
-        <section className='xl:w-3/4 lg:w-4/5 w-11/12 mx-auto my-20 text-center text-gray-500'>
+        <section className='2xl:w-[1200px] xl:w-3/4 lg:w-4/5 w-11/12 mx-auto my-20 text-center text-gray-500'>
             <h1 className='md:text-5xl text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                 What Makes Us Stand Out
             </h1>
@@ -73,7 +73,7 @@ const ClientTestimonials = () => {
             <p className='text-center text-lg font-medium'>
                 We have been working with clients around the world
             </p>
-            <div className='mt-24 mb-10 xl:w-[90%] lg:w-4/5 w-11/12 mx-auto grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-10 gap-y-24 items-start text-center'>
+            <div className='mt-24 mb-10 2xl:w-[1200px] xl:w-[90%] lg:w-4/5 w-11/12 mx-auto grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-10 gap-y-24 items-start text-center'>
                 <div className='px-6 pb-8 pt-12 rounded-tl-[3rem] rounded-br-[3rem] border relative'>
                     <div className='absolute -top-1/4 left-1/2 translate-x-[-50%] w-24 h-24 border-[3px] rounded-full'>
                         <img src={billSmith} alt="" className='w-full h-full rounded-full' />

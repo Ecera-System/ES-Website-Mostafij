@@ -5,32 +5,32 @@ import banner from '../../../Images/DriveResults_Banner/DriveResults_banner.jpg'
 const DriveResults = () => {
     return (
         <section
-            className='w-full bg-cover bg-no-repeat py-12 mt-14'
+            className='w-full bg-cover bg-no-repeat py-16 mt-14'
             style={{ backgroundImage: `url(${banner})` }}
         >
-            <div className='xl:w-3/5 lg:w-3/4 md:w-4/5 w-11/12 mx-auto'>
-                <h1 className='text-center md:text-[40px] text-3xl font-semibold leading-none text-gray-100 pb-2'>
+            <div className='2xl:w-[1200px] xl:w-3/4 md:w-4/5 w-11/12 mx-auto'>
+                <h1 className='text-center md:text-5xl text-3xl font-semibold leading-none text-gray-100 pb-2'>
                     We partner with our clients to drive results
                 </h1>
-                <div className='text-gray-100 mt-8 flex md:flex-row flex-col justify-center items-center xl:gap-24 lg:gap-20 md:gap-10 gap-8'>
+                <div className='text-gray-200 mt-16 grid lg:grid-cols-3 grid-cols-1 lg:gap-2 gap-10'>
                     <div className='text-center'>
-                        <p className='text-lg'>Expert</p>
-                        <h4 className='text-2xl font-medium py-1'>Team Members</h4>
-                        <p className='text-4xl font-medium text-sky-400 mt-2'>--</p>
+                        <p className='text-3xl font-medium'>Expert</p>
+                        <h4 className='text-3xl font-medium py-1'>Team Members</h4>
+                        <p className='text-4xl font-medium text-sky-400 mt-2'></p>
                     </div>
                     <div className='text-center'>
-                        <p className='text-lg'>Results-Driven</p>
-                        <h4 className='text-2xl font-medium py-1'>Proactive Approach</h4>
-                        <p className='text-4xl font-medium text-sky-400 mt-2'>--</p>
+                        <p className='text-3xl font-medium'>Results-Driven</p>
+                        <h4 className='text-3xl font-medium py-1'>Proactive Approach</h4>
+                        <p className='text-4xl font-medium text-sky-400 mt-2'></p>
                     </div>
                     <div className='text-center'>
-                        <p className='text-lg'>Streamlined</p>
-                        <h4 className='text-2xl font-medium py-1'>Execution</h4>
-                        <p className='text-4xl font-medium text-sky-400 mt-2'>--</p>
+                        <p className='text-3xl font-medium'>Streamlined</p>
+                        <h4 className='text-3xl font-medium py-1'>Execution</h4>
+                        <p className='text-4xl font-medium text-sky-400 mt-2'></p>
                     </div>
                 </div>
 
-                <div className='mt-12'>
+                <div className='mt-20'>
                     <h2 className='text-center md:text-3xl text-xl font-semibold leading-none text-gray-100 mb-8'>
                         Ready to discuss your project?
                     </h2>

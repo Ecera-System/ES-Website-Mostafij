@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PageTitle from '../Shared/PageTitle';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
@@ -10,9 +10,11 @@ import { razorpayApi, stripePayApi } from '../../api/PaymentApi';
 
 
 const PayInvoice = () => {
-    const [nameValidate, setNameValidate] = useState({ name: '', error: '' });
-    const [phoneValidate, setPhoneValidate] = useState({ phone: '', error: '' });
-    const [emailValidate, setEmailValidate] = useState({ email: '', error: '' });
+    const location = useLocation();
+    const [nameValidate, setNameValidate] = useState({ name: location?.state?.name, error: '' });
+    const [phoneValidate, setPhoneValidate] = useState({ phone: location?.state?.phoneNumber, error: '' });
+    const [emailValidate, setEmailValidate] = useState({ email: location?.state?.email, error: '' });
+    const [amountValidate, setAmountValidate] = useState({ amount: '', error: '' });
     const [openForm, setOpenForm] = useState('');
     const [loading, setLoading] = useState(false);
     const [razorpayRes, setRazorpayRes] = useState(null);
@@ -33,7 +35,7 @@ const PayInvoice = () => {
         e.preventDefault();
         if (nameValidate.name.match(/^\s*$/)) {
             return setNameValidate({
-                ...nameValidate, error: 'Full name is required'
+                ...nameValidate, error: 'Full name is required!'
             });
         }
         else if (!phoneValidate.phone.match(/^-?\d+\.?\d*$/)) {
@@ -46,6 +48,12 @@ const PayInvoice = () => {
                 ...emailValidate, error: 'Please enter a valid email address.'
             });
         }
+        else if (!amountValidate.amount) {
+            return setAmountValidate({
+                ...amountValidate, error: 'Please enter a valid amount'
+            });
+        }
+
         // <-- Stirpe payment api -->
         else if (openForm === 'stripe') {
             setLoading(true);
@@ -54,12 +62,13 @@ const PayInvoice = () => {
                 userEmail: emailValidate.email,
                 phoneNumber: phoneValidate.phone,
                 serviceName: 'Web Design and Services',
-                amount: 2000 * 100,
+                amount: amountValidate.amount * 100,
                 currency: 'USD',
                 quantity: 1,
                 source: 'Pay Invoice',
                 paymentMethod: 'Stripe',
                 path: '/invoice',
+                registrationId: location?.state?.registrationId
             })
         }
 
@@ -71,15 +80,15 @@ const PayInvoice = () => {
                 userEmail: emailValidate.email,
                 phoneNumber: phoneValidate.phone,
                 serviceName: 'Web Design and Services',
-                amount: 2000 * 100,
+                amount: amountValidate.amount * 100,
                 currency: 'USD',
                 quantity: 1,
                 source: 'Pay Invoice',
                 paymentMethod: 'Razorpay',
                 path: '/invoice',
+                registrationId: location?.state?.registrationId
             }, setRazorpayRes);
         };
-
         setLoading(false);
         setOpenForm('');
     };
@@ -124,14 +133,14 @@ const PayInvoice = () => {
         </section>
         <Footer></Footer>
 
-        <div className={`fixed inset-0 z-50 bg-black/60 flex items-center justify-center duration-200 ${openForm ? 'scale-100' : 'scale-0'}`}>
+        <div className={`fixed inset-0 z-50 bg-black/60 flex items-center justify-center duration-200 ${openForm ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
             <form
                 onSubmit={contactDetails}
-                className='sm:w-[32rem] w-11/12 mx-auto px-8 py-10 sm:p-14 bg-white border rounded-3xl text-base leading-6 flex flex-col gap-6 text-gray-600 sm:text-lg sm:leading-7 relative'
+                className={`sm:w-[32rem] w-11/12 mx-auto px-8 py-10 sm:p-14 bg-white border rounded-3xl text-base leading-6 flex flex-col gap-6 text-gray-600 sm:text-lg sm:leading-7 relative duration-200 ${openForm ? 'scale-100' : 'scale-0'}`}
             >
-                <button onClick={() => setOpenForm('')} className='absolute top-5 right-7 text-3xl text-gray-500 hover:text-gray-600'>
+                <div onClick={() => setOpenForm('')} className='absolute top-5 right-7 text-3xl text-gray-500 hover:text-gray-600'>
                     <i className="fa-solid fa-xmark"></i>
-                </button>
+                </div>
                 <h1 className="md:text-4xl text-2xl pb-5 font-semibold text-gray-700">Please fill out this</h1>
                 <div className="relative">
                     <input
@@ -145,6 +154,7 @@ const PayInvoice = () => {
                                 })
                         }}
                         autoComplete="off"
+                        defaultValue={nameValidate.name}
                         id="name" name="name" type="text"
                         className={`peer placeholder-transparent h-10 w-full border-b-2 focus:outline-none ${nameValidate?.error ? 'border-red-600 focus:border-red-600' : 'border-gray-200 focus:border-blue-600'}`}
                         placeholder="Full Name"
@@ -171,6 +181,7 @@ const PayInvoice = () => {
                                     ...phoneValidate, phone: e.target.value, error: 'Phone number is required'
                                 })
                         }}
+                        defaultValue={phoneValidate.phone}
                         className={`peer placeholder-transparent h-10 w-full border-b-2 focus:outline-none ${phoneValidate?.error ? 'border-red-600 focus:border-red-600' : 'border-gray-200 focus:border-blue-600'}`}
                         autoComplete="off"
                         id="phone" name="phone" type="tel"
@@ -198,6 +209,7 @@ const PayInvoice = () => {
                                     ...emailValidate, email: e.target.value, error: 'Please enter a valid email address.'
                                 })
                         }}
+                        defaultValue={emailValidate.email}
                         className={`peer placeholder-transparent h-10 w-full border-b-2 focus:outline-none ${emailValidate?.error ? 'border-red-600 focus:border-red-600' : 'border-gray-200 focus:border-blue-600'}`}
                         autoComplete="off"
                         id="email" name="email" type="email"
@@ -211,6 +223,33 @@ const PayInvoice = () => {
                         emailValidate?.error &&
                         <p className='mt-1 text-sm text-red-600'>
                             <i className="fa-solid fa-triangle-exclamation mr-1"></i> {emailValidate?.error}
+                        </p>
+                    }
+                </div>
+                <div className="relative">
+                    <input
+                        onChange={(e) => {
+                            e.target.value ?
+                                setAmountValidate({
+                                    ...amountValidate, amount: e.target.value, error: ''
+                                }) :
+                                setAmountValidate({
+                                    ...amountValidate, amount: e.target.value, error: 'Please enter a valid amount'
+                                })
+                        }}
+                        className={`peer placeholder-transparent h-10 w-full border-b-2 focus:outline-none ${amountValidate?.error ? 'border-red-600 focus:border-red-600' : 'border-gray-200 focus:border-blue-600'}`}
+                        autoComplete="off"
+                        id="amount" name="amount" type="number"
+                        placeholder="Amount"
+                    />
+                    <label
+                        htmlFor="amount"
+                        className="absolute left-0 -top-4 text-gray-500 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 transition-all peer-focus:-top-4 peer-focus:text-gray-500 peer-focus:text-sm"
+                    >Amount*</label>
+                    {
+                        amountValidate?.error &&
+                        <p className='mt-1 text-sm text-red-600'>
+                            <i className="fa-solid fa-triangle-exclamation mr-1"></i> {amountValidate?.error}
                         </p>
                     }
                 </div>

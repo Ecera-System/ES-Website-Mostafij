@@ -49,20 +49,20 @@ const slide = [
     }
 ];
 
-const faq = [
-    {
-        question: 'What is an IT staffing firm ?',
-        ans: "IT staffing firms work with companies to help fill open technology roles within their organization. Also known as IT staffing agencies, recruitment firms, search firms, or placement agencies, IT staffing firms match companies with job seekers based on skill sets and organizational fit on a contract, temp-to-perm, or direct placement basis. Many agencies have relationships with a wide variety of companies and hiring managers across all industries and are able to place talent in the best position to meet their needs."
-    },
-    {
-        question: 'What are the types of IT staffing ?',
-        ans: "IT staffing agencies work with companies to place technology professionals in a variety of roles. Typically, that is on a contract, temp-to-perm, or direct placement basis. (link to IT Staffing Options section where these are further defined??)"
-    },
-    {
-        question: 'How do staffing agencies recruit?',
-        ans: "IT staffing agencies work with companies to place technology professionals in a variety of roles. Typically, that is on a contract, temp-to-perm, or direct placement basis. (link to IT Staffing Options section where these are further defined??)"
-    },
-];
+// const faq = [
+//     {
+//         question: 'What is an IT staffing firm ?',
+//         ans: "IT staffing firms work with companies to help fill open technology roles within their organization. Also known as IT staffing agencies, recruitment firms, search firms, or placement agencies, IT staffing firms match companies with job seekers based on skill sets and organizational fit on a contract, temp-to-perm, or direct placement basis. Many agencies have relationships with a wide variety of companies and hiring managers across all industries and are able to place talent in the best position to meet their needs."
+//     },
+//     {
+//         question: 'What are the types of IT staffing ?',
+//         ans: "IT staffing agencies work with companies to place technology professionals in a variety of roles. Typically, that is on a contract, temp-to-perm, or direct placement basis. (link to IT Staffing Options section where these are further defined??)"
+//     },
+//     {
+//         question: 'How do staffing agencies recruit?',
+//         ans: "IT staffing agencies work with companies to place technology professionals in a variety of roles. Typically, that is on a contract, temp-to-perm, or direct placement basis. (link to IT Staffing Options section where these are further defined??)"
+//     },
+// ];
 
 const ITConsultancy = () => {
     const [faqIndex1, setFaqIndex1] = useState(false);
@@ -133,12 +133,12 @@ const ITConsultancy = () => {
             <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                 Services We Offers
             </h1>
-            <div className='2xl:w-[1200px] xl:w-[85%] lg:w-11/12 md:w-[85%] sm:w-11/12 mx-auto mt-10'>
+            <div className='2xl:w-[1200px] xl:w-[85%] lg:w-11/12 md:w-[85%] w-11/12 mx-auto mt-10'>
                 <Slider {...settings}>
                     {
                         slide.map(item => <div key={item.title}>
                             <div className='border-2 rounded-md p-6 sm:mx-3 mx-6'>
-                                <img src={item.img} alt="" className='w-[160px] h-auto mx-auto' />
+                                <img src={item.img} alt="" className='sm:w-[160px] w-full h-auto mx-auto' />
                                 <h1 className='text-center lg:text-lg text-base font-medium text-gray-500 mt-3'>
                                     {
                                         item.title

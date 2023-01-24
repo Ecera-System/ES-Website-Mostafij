@@ -5,6 +5,7 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
     const [openMenu, setOpenMenu] = useState(false);
     const [openDropdown1, setOpenDropdown1] = useState(false);
     const [openDropdown2, setOpenDropdown2] = useState(false);
+    const [openDropdown3, setOpenDropdown3] = useState(false);
 
     return (<>
         <button
@@ -16,7 +17,7 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
 
         {/* Side Menu */}
         <aside className={`lg:hidden w-full h-full fixed top-0 right-0 ${openMenu ? 'visible opacity-100 z-50' : 'invisible opacity-0'} duration-700 bg-black/50`}>
-            <ul className={`sm:w-[420px] w-[90%] h-full bg-white flex flex-col items-start font-medium duration-500 absolute top-0 ${openMenu ? 'right-0' : '-right-[1024px]'}`}>
+            <ul className={`sm:w-[420px] w-[90%] h-full overflow-y-auto scrollbar-none bg-white flex flex-col items-start font-medium duration-500 absolute top-0 ${openMenu ? 'right-0' : '-right-[1024px]'}`}>
                 <li className='px-10 py-3'>
                     <button
                         className='text-3xl text-gray-500 hover:text-gray-700 duration-300'
@@ -38,7 +39,6 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
                             <i className="fa-solid fa-angle-down text-base ml-2"></i>
 
                     }
-
                 </li>
                 {/* ==============Dropdown============== */}
                 <ul className={`w-full origin-top ${openDropdown1 ? 'scale-y-100 h-auto' : 'scale-y-0 h-0'} duration-300 ease-linear`}>
@@ -72,9 +72,8 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
                             <i className="fa-solid fa-angle-down text-base ml-2"></i>
 
                     }
-
                 </li>
-                {/* ==============Dropdown============== */}
+                {/* <-- Dropdown --> */}
                 <ul className={`w-full origin-top ${openDropdown2 ? 'scale-y-100 h-auto' : 'scale-y-0 h-0'} duration-300 ease-linear`}>
                     <li>
                         <Link
@@ -118,14 +117,72 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
                         Hire Virtual Employees
                     </Link>
                 </li>
-                <li className='w-full'>
-                    <Link
-                        to={'/IT-consultancy'}
-                        className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
-                    >
-                        IT Staffing Solutions
-                    </Link>
+                <li
+                    onClick={() => setOpenDropdown3(!openDropdown3)}
+                    className={`w-full px-10 py-4 flex justify-between items-center cursor-pointer hover:text-blue-600 hover:bg-blue-50 ${openDropdown3 ? 'text-blue-600 bg-blue-50' : 'text-gray-600'} duration-300`}
+                >
+                    IT Staffing Solutions
+                    {
+                        openDropdown3 ?
+                            <i className="fa-solid fa-angle-up text-base ml-2"></i>
+                            :
+                            <i className="fa-solid fa-angle-down text-base ml-2"></i>
+
+                    }
                 </li>
+                
+                {/* <-- Dropdown --> */}
+                <ul className={`w-full origin-top ${openDropdown3 ? 'scale-y-100 h-auto' : 'scale-y-0 h-0'} duration-300 ease-linear`}>
+                    <li>
+                        <Link
+                            to={'/IT-staffing'}
+                            className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            IT Staffing Overview
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'/package/digital-marketing'}
+                            className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Career Overview
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'/package/in-INR'}
+                            className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Employee Benefit
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'/package/offers'}
+                            className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Immigration
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'/package/offers'}
+                            className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Current-Opening
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'/package/offers'}
+                            className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Join-Us
+                        </Link>
+                    </li>
+                </ul>
+
                 <li className='w-full py-4 px-10 relative'>
                     {
                         login ? isLoggedIn ?

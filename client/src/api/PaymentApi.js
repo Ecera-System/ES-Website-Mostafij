@@ -62,6 +62,7 @@ const razorpayApi = async (data, setRazorpayRes) => {
                         source: data.source,
                         paymentMethod: data.paymentMethod,
                         path: data.path,
+                        registrationId: data.registrationId,
                     })
                 },
                 prefill: {

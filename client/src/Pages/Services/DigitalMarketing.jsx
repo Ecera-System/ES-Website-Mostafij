@@ -4,7 +4,6 @@ import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
 import banner from '../../Images/globe-banner.png';
 import gtco from '../../Images/Digital_Marketing/gtco.png';
-import digiMarket2 from '../../Images/Digital_Marketing/digi-market2.svg';
 import seoBanner from '../../Images/Digital_Marketing/seo-banner.jpg';
 import dataDriven from '../../Images/Digital_Marketing/data-driven.png';
 import omnichannel from '../../Images/Digital_Marketing/omnichannel-icon.jpg';
@@ -65,7 +64,7 @@ const DigitalMarketing = () => {
             </div>
         </section>
         <section>
-            <div className='2xl:w-[1200px] xl:w-3/4 w-4/5 mx-auto py-10 flex lg:flex-row flex-col-reverse items-center lg:gap-10 gap-8'>
+            <div className='2xl:w-[1200px] xl:w-3/4 md:w-4/5 w-[90%] mx-auto py-10 flex lg:flex-row flex-col-reverse items-center lg:gap-10 gap-8'>
                 <div className='lg:w-1/2 w-full text-base text-gray-500'>
                     <p>
                         <span className='text-lg font-medium'>Ecera System</span> is a dynamic, versatile and full-service digital marketing agency that doesn’t rely on smoke and mirrors to attract new clients. Instead, Ecera System trusts its own search engine optimization (SEO) and marketing skills to drive new customers to our website.
@@ -78,27 +77,18 @@ const DigitalMarketing = () => {
                     <img src={gtco} alt="" className='w-max mx-auto h-auto' />
                 </div>
             </div>
-            <div className='2xl:w-[1200px] xl:w-3/4 w-4/5 mx-auto py-10 flex lg:flex-row flex-col items-center lg:gap-10 gap-8'>
-                <div className='lg:w-1/2 w-full'>
-                    <img src={digiMarket2} alt="" className='w-max h-auto' />
-                </div>
-                <div className='lg:w-1/2 w-full text-base text-gray-500'>
-                    <p>
-                        So many other agencies rely on a one-size-fits-all approach, many times offering you the same strategy and cookie-cutter website as your competitor down the street.
-                    </p>
-                    <p className='mt-2'>
-                        Ecera System works with you to produce customized digital marketing services and a plan that aligns with your unique business needs. We become an extension of your team, a partner that understands your market and goals, rather than just an agency that executes strategies blindly.
-                    </p>
-                    <p className='mt-2'>
-                        Unlike so many other agencies that use glitz and glamor to close sales and then fail to execute, Ecera System focuses on client relationships and results. We always deliver substance, not false promises, ensuring we maximize your budget, so you get the most return on investment (ROI).
-                    </p>
-                    <p className='mt-2'>
-                        Our reviews and testimonials speak volumes. We earn your business every day with month-to-month contracts.
-                    </p>
-                    <p className='mt-2'>
-                        Take a look below at the wide variety of digital marketing services Ecera System offers. Contact us today to learn more about how we can help your business!
-                    </p>
-                </div>
+            <div className='lg:w-[42rem] md:w-4/5 w-[90%] mx-auto text-base lg:text-center text-start text-gray-500 pb-10'>
+                <p>
+                    Ecera System works with you to produce customized digital marketing services and a
+                    plan that aligns with your unique business needs. We become an extension of your
+                    team, a partner that understands your market and goals, rather than just an agency
+                    that executes strategies blindly. Our reviews and testimonials speak volumes. We earn
+                    your business every day with month-to-month contracts.
+                </p>
+                <p className='mt-4'>
+                    Take a look below at the wide variety of digital marketing services Ecera System
+                    offers. Contact us today to learn more about how we can help your business!
+                </p>
             </div>
         </section>
         <section className='py-14'>

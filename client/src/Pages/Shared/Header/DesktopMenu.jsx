@@ -78,13 +78,61 @@ const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }
                     Hire Virtual Employees
                 </Link>
             </li>
-            <li>
-                <Link
-                    to={'/IT-consultancy'}
-                    className='block py-4 cursor-pointer hover:text-blue-600 duration-300'
-                >
-                    IT Staffing Solutions
-                </Link>
+            <li className='py-4 cursor-pointer hover:text-blue-600 duration-300 relative group/it_staff'>
+                IT Staffing Solutions
+                <i className="fa-solid fa-angle-down text-sm ml-2"></i>
+
+                {/* ==============Dropdown============== */}
+                <ul className='absolute top-14 -left-5 z-30 group-hover/it_staff:left-0 w-64 h-auto bg-white overflow-hidden shadow-md rounded-md opacity-0 group-hover/it_staff:opacity-100 invisible group-hover/it_staff:visible duration-700'>
+                    <li>
+                        <Link
+                            to={'/IT-staffing'}
+                            className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            IT Staffing Overview
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'#'}
+                            className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Career Overview
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'#'}
+                            className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Employee Benefit
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'#'}
+                            className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Immigration
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'#'}
+                            className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Current-Opening
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to={'#'}
+                            className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
+                        >
+                            Join-Us
+                        </Link>
+                    </li>
+                </ul>
             </li>
             <li className='flex items-center justify-center relative'>
                 {

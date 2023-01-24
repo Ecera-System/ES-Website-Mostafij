@@ -3,12 +3,12 @@ const app = require('./app');
 const mongoose = require('mongoose');
 
 // database connection
-mongoose.connect(process.env.DB_LOCAL_URL).then(() => {
+mongoose.connect(process.env.DB_URL).then(() => {
     console.log(`Database is connected.`);
 });
 
 // server
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5500;
 
 app.listen(port, () => {
     console.log(`SERVER IS RUNNING ON PORT ${port}`);

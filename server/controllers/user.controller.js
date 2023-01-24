@@ -2,8 +2,27 @@ require('dotenv').config();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const Users = require('../models/userModel');
+const Registration = require('../models/registrationModel');
 const { verifyEmail } = require('../middleware/emailSender');
 
+
+exports.uploadPassport = async (req, res, next) => {
+    try {
+        res.status(200).send(req.file)
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.registration = async (req, res, next) => {
+    try {
+        const data = new Registration(req.body);
+        const result = await data.save();
+        if (result) res.status(200).json(result);
+    } catch (err) {
+        next(err)
+    }
+};
 
 exports.signup = async (req, res, next) => {
     try {
@@ -67,7 +86,6 @@ exports.login = async (req, res, next) => {
         if (err) return res.status(500).json({ message: "Something went wrong!" })
     }
 };
-
 
 exports.getSingleUser = async (req, res, next) => {
     try {

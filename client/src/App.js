@@ -25,6 +25,8 @@ import StripeCheckoutMsg from "./Pages/Shared/PaymentButton/StripeCheckoutMsg";
 import RequireAuth from "./AuthHook/RequireAuth";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 import OrderHistory from "./Pages/UserProfile/OrderHistory";
+import Registration from "./Pages/Registration/Registration";
+import ComingSoon from "./Pages/Shared/ComingSoon";
 
 function App() {
   return (
@@ -34,7 +36,7 @@ function App() {
       <Route path='/website-development' element={<WebDevelopment />} />
       <Route path='/digital-marketing' element={<DigitalMarketing />} />
       <Route path='/remote-employees' element={<RemoteEmployees />} />
-      <Route path='/IT-consultancy' element={<ITConsultancy />} />
+      <Route path='/IT-staffing' element={<ITConsultancy />} />
       <Route path='/package/web-design' element={<PackWebDesign />} />
       <Route path='/package/digital-marketing' element={<PackDigitalMarketing />} />
       <Route path='/package/in-INR' element={<PackageInINR />} />
@@ -45,8 +47,10 @@ function App() {
       <Route path='/blog' element={<BlogPage />} />
       <Route path='/faq' element={<FAQ />} />
       <Route path='/careers' element={<Careers />} />
+      <Route path='/coming-soon' element={<ComingSoon />} />
       <Route path='/invoice' element={<PayInvoice />} />
       {/* <Route path='/trainings' element={<Trainings />}></Route> */}
+      <Route path='/registration' element={<Registration />}></Route>
       <Route path='/terms-of-services' element={<TermsOfServices />} />
       <Route path='/stripe/checkout' element={<StripeCheckoutMsg />} />
 

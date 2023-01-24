@@ -80,10 +80,9 @@ const Footer = () => {
                         </li>
                         <li>
                             <a
-                                href={'https://ecerasystem.com/training/'}
-                                target='blank'
+                                href={'/registration?source=footer'}
                                 className='text-gray-400 text-base hover:underline hover:text-white duration-300'
-                            >Trainings</a>
+                            >Registration</a>
                         </li>
                     </ul>
                     <ul className='flex flex-col gap-3'>
@@ -129,10 +128,31 @@ const Footer = () => {
                                 Certification
                             </h2>
                         </li>
-                        <li className='flex sm:flex-row flex-col sm:items-center gap-3'>
-                            <img src={certification1} alt="certification" className='sm:w-2/5 w-4/5 h-auto rounded-md' />
-                            {/* <img src={certification3} alt="certification" className='w-1/3 h-auto' /> */}
-                            <img src={certification2} alt="certification" className='sm:w-2/5 w-4/5 h-auto rounded-md' />
+                        <li className='flex sm:flex-row flex-col sm:items-center md:gap-3 gap-5'>
+                            <a
+                                target={'blank'}
+                                href='https://www.dnb.com/'
+                                className='sm:w-2/5 w-4/5 h-auto text-gray-400 hover:text-gray-50 duration-300'
+                            >
+                                <h2 className='text-sm font-medium text-center mb-3'>D&B Credibility Certified</h2>
+                                <img
+                                    src={certification1}
+                                    alt="D&B Credibility Certified"
+                                    className='rounded-md w-full h-full'
+                                />
+                            </a>
+                            <a
+                                target={'blank'}
+                                href='https://www.e-verify.gov/'
+                                className='sm:w-2/5 w-4/5 h-auto text-gray-400 hover:text-gray-50 duration-300'
+                            >
+                                <h2 className='text-sm font-medium text-center xl:mb-8 lg:mb-12 mb-3'>E- Verified</h2>
+                                <img
+                                    src={certification2}
+                                    alt="E- Verified"
+                                    className='rounded-md w-full h-full'
+                                />
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -162,6 +182,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <a
+                                target={'blank'}
                                 href="/"
                                 className='text-xl text-gray-400 hover:text-gray-50 duration-300 cursor-pointer'
                             >
@@ -170,8 +191,17 @@ const Footer = () => {
                         </li>
                         <li>
                             <a
-                                target={'blank'}
-                                href="https://github.com/Ecera-System"
+                                // target={'blank'}
+                                href="/"
+                                className='text-xl text-gray-400 hover:text-gray-50 duration-300 cursor-pointer'
+                            >
+                                <i className="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                // target={'blank'}
+                                href="/"
                                 className='text-xl text-gray-400 hover:text-gray-50 duration-300 cursor-pointer'
                             >
                                 <i className="fa-brands fa-github"></i>

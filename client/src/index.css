@@ -17,6 +17,10 @@ code {
     monospace;
 }
 
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* 3D Card design */
 .card-3d {
   color: #101832;

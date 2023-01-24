@@ -5,6 +5,7 @@ const Razorpay = require("razorpay");
 const instance = new Razorpay({ key_id: process.env.RAZORPAY_KEY_ID, key_secret: process.env.RAZORPAY_SECRET_KEY, });
 const crypto = require('crypto');
 const ServiceOrder = require('../models/orderModel');
+const Registration = require('../models/registrationModel');
 
 
 exports.postStripeCCS = async (req, res, next) => {
@@ -19,6 +20,7 @@ exports.postStripeCCS = async (req, res, next) => {
                 source: req.body.source,
                 paymentMethod: req.body.paymentMethod,
                 quantity: req.body.quantity,
+                registrationId: req.body.registrationId,
             },
             line_items: [
                 {
@@ -69,6 +71,13 @@ exports.postStripeWebHook = async (req, res, next) => {
                 source: event.data.object.metadata.source,
             });
             const result = await order.save();
+            if (result._id && event.data.object.metadata.registrationId) {
+                await Registration.updateOne(
+                    { _id: event.data.object.metadata.registrationId },
+                    { $push: { serviceOrders: result._id } }
+                );
+            }
+
             return res.status(200).json(result);
         } else {
             res.status(403).json({})
@@ -119,6 +128,14 @@ exports.postRazorpayVerify = async (req, res, next) => {
                 source: req.body.source,
             });
             const result = await orderData.save();
+            
+            if (result._id && req.body.registrationId) {
+                await Registration.updateOne(
+                    { _id: req.body.registrationId },
+                    { $push: { serviceOrders: result._id } }
+                );
+            };
+
             return res.status(200).json(result);
         } else {
             res.status(403).json({ message: 'Payment is not verified!' })

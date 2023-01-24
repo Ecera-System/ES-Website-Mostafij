@@ -80,7 +80,6 @@ const slide = [
 ];
 
 const AboutUs = () => {
-
     const [sliderRef, setSliderRef] = useState(null);
 
     const settings = {
@@ -135,7 +134,8 @@ const AboutUs = () => {
         <Header />
         <ContactSideButton />
         <div>
-            <section className='py-24 bg-no-repeat bg-center text-center'
+            <section
+                className='py-24 bg-no-repeat bg-center text-center'
                 style={{ backgroundImage: `url(${banner})` }}
             >
                 <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
@@ -157,13 +157,12 @@ const AboutUs = () => {
                     <h1 className='sm:text-4xl text-3xl font-medium text-gray-600'>
                         You Can not Use Up Creativity.
                     </h1>
-                    <p className='my-5 text-base text-gray-500'>
+                    <p className='mt-4 text-base text-gray-500'>
                         Does any industry face a more complex audience journey and marketing sales process than B2B technology? Consider the number of people who influence a sale, the length of the decision-making cycle, the competing interests of the people who purchase, implement, manage, and use the technology. It’s a lot meaningful content here.
                     </p>
-                    <div className='flex items-start gap-5 my-10'>
+                    <div className='flex items-start gap-5 my-8'>
                         <div>
-                            <svg
-                                className='w-12 h-12 text-cyan-600'
+                            <svg className='w-12 h-12 text-cyan-600'
                                 viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M17.71 6.15C17.46 5.38 16.79 5.21 16.45 4.77C16.14 4.31 16.18 3.62 15.53 3.15S14.23 2.92 13.7 2.77 12.81 2 12 2 10.82 2.58 10.3 2.77 9.13 2.67 8.47 3.15 7.86 4.31 7.55 4.77C7.21 5.21 6.55 5.38 6.29 6.15S6.5 7.45 6.5 8 6 9.08 6.29 9.85 7.21 10.79 7.55 11.23C7.86 11.69 7.82 12.38 8.47 12.85S9.77 13.08 10.3 13.23 11.19 14 12 14 13.18 13.42 13.7 13.23 14.87 13.33 15.53 12.85 16.14 11.69 16.45 11.23C16.79 10.79 17.45 10.62 17.71 9.85S17.5 8.55 17.5 8 18 6.92 17.71 6.15M12 12A4 4 0 1 1 16 8A4 4 0 0 1 12 12M14 8A2 2 0 1 1 12 6A2 2 0 0 1 14 8M13.71 15.56L13.08 19.16L12.35 23.29L9.74 20.8L6.44 22.25L7.77 14.75A4 4 0 0 0 9.66 15.17A4.15 4.15 0 0 0 11 15.85A3.32 3.32 0 0 0 12 16A3.5 3.5 0 0 0 13.71 15.56M17.92 18.78L15.34 17.86L15.85 14.92A3.2 3.2 0 0 0 16.7 14.47L16.82 14.37Z" />
                             </svg>
@@ -176,7 +175,7 @@ const AboutUs = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='flex items-start gap-5 my-10'>
+                    <div className='flex items-start gap-5 my-8'>
                         <div>
                             <svg className='w-12 h-12 text-cyan-600'
                                 viewBox="0 0 24 24">
@@ -187,6 +186,38 @@ const AboutUs = () => {
                             <h5 className='text-lg font-medium text-gray-600'>Quick Support</h5>
                             <p className='text-base text-gray-500'>
                                 We’ll help you test bold new ideas while sharing your.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='flex items-start gap-5 my-8'>
+                        <div>
+                            <svg className='w-12 h-12 text-cyan-600'
+                                viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M16 9C16 14.33 8 14.33 8 9H10C10 11.67 14 11.67 14 9M20 18V21H4V18C4 15.33 9.33 14 12 14C14.67 14 20 15.33 20 18M18.1 18C18.1 17.36 14.97 15.9 12 15.9C9.03 15.9 5.9 17.36 5.9 18V19.1H18.1M12.5 2C12.78 2 13 2.22 13 2.5V5.5H14V3C15.45 3.67 16.34 5.16 16.25 6.75C16.25 6.75 16.95 6.89 17 8H7C7 6.89 7.75 6.75 7.75 6.75C7.66 5.16 8.55 3.67 10 3V5.5H11V2.5C11 2.22 11.22 2 11.5 2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 className='text-lg font-medium text-gray-600'>
+                                Dedicated and Versatile Workforce
+                            </h5>
+                            <p className='text-base text-gray-500'>
+                                Competitive and excellence talent base.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='flex items-start gap-5 my-8'>
+                        <div>
+                            <svg className='w-12 h-12 text-cyan-600'
+                                viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M21.71 8.71C22.96 7.46 22.39 6 21.71 5.29L18.71 2.29C17.45 1.04 16 1.61 15.29 2.29L13.59 4H11C9.1 4 8 5 7.44 6.15L3 10.59V14.59L2.29 15.29C1.04 16.55 1.61 18 2.29 18.71L5.29 21.71C5.83 22.25 6.41 22.45 6.96 22.45C7.67 22.45 8.32 22.1 8.71 21.71L11.41 19H15C16.7 19 17.56 17.94 17.87 16.9C19 16.6 19.62 15.74 19.87 14.9C21.42 14.5 22 13.03 22 12V9H21.41L21.71 8.71M20 12C20 12.45 19.81 13 19 13L18 13L18 14C18 14.45 17.81 15 17 15L16 15L16 16C16 16.45 15.81 17 15 17H10.59L7.31 20.28C7 20.57 6.82 20.4 6.71 20.29L3.72 17.31C3.43 17 3.6 16.82 3.71 16.71L5 15.41V11.41L7 9.41V11C7 12.21 7.8 14 10 14S13 12.21 13 11H20V12M20.29 7.29L18.59 9H11V11C11 11.45 10.81 12 10 12S9 11.45 9 11V8C9 7.54 9.17 6 11 6H14.41L16.69 3.72C17 3.43 17.18 3.6 17.29 3.71L20.28 6.69C20.57 7 20.4 7.18 20.29 7.29Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 className='text-lg font-medium text-gray-600'>
+                                All round Business Solution
+                            </h5>
+                            <p className='text-base text-gray-500'>
+                                Customize your business solution with Ecera System.
                             </p>
                         </div>
                     </div>

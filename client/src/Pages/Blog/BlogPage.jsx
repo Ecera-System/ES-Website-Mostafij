@@ -5,7 +5,6 @@ import PageTitle from '../Shared/PageTitle';
 import { Link } from 'react-router-dom';
 import banner from '../../Images/packages-bg.jpg';
 import splas from '../../Images/Blog_Page/splas.jpg';
-import splash2 from '../../Images/Blog_Page/splash2.jpg';
 import workProcess from '../../Images/Blog_Page/work-process-item-01.png';
 import cardPattern from '../../Images/Blog_Page/card-pattern-4.png';
 import testimonialIcon1 from '../../Images/Blog_Page/testimonial-icon-1.png';
@@ -187,23 +186,6 @@ const BlogPage = () => {
                             <p className='text-gray-600 text-base font-medium mt-1'>
                                 Company should have step-by-step models for transforming products or services from ideas to reality. Like a physical product that requires planning, designing, manufacture, and selling – same way we need proper step by step planning for digital marketing what all digital mix should be used to increase a business’s efficiency
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className='py-20'>
-                <div className='sm:w-4/5 w-11/12 mx-auto'>
-                    <div className='grid md:grid-cols-2 grid-cols-1 items-center lg:gap-20 gap-10'>
-                        <div>
-                            <h2 className='text-2xl font-medium text-blue-700 mb-5'>
-                                COMPLETE PACKAGE
-                            </h2>
-                            <p className='text-gray-500 lg:text-lg text-base'>
-                                Want a Complete package of web designing, digital marketing, and skillful remote employees? Ecera provides you a handful of these facilities and many more. Their main expertise is these fields given below:-.
-                            </p>
-                        </div>
-                        <div className='w-full'>
-                            <img src={splash2} alt="" className='max-w-full h-auto shadow-[0px_5px_20px_0px_rgba(0,0,255,0.4)] rounded-xl' />
                         </div>
                     </div>
                 </div>

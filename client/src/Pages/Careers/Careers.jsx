@@ -6,88 +6,88 @@ import banner from '../../Images/globe-banner.png';
 import picture from './Images/picture.jpg';
 
 
-const jobsData = [
-    {
-        img: picture,
-        companyTitle: 'What Is Hydraulic Hose?',
-        jobTitle: 'What Is Hydraulic Hose?',
-        publishDate: '7 months ago',
-        jobLocation: 'Detroit',
-        workTime: 'Full-time',
-        salary: '00',
-        jobDescription: "Unless you work in an industry that uses hydraulic-powered machinery, the chances are you'll have little awareness of what a hydraulic hose does (or even that such a thing exists)....",
-    },
-    {
-        img: picture,
-        companyTitle: 'Main Parts Of Injection Molding Machine',
-        jobTitle: 'Main parts of Injection Molding Machine',
-        publishDate: '7 months ago',
-        jobLocation: 'Detroit',
-        workTime: 'Full-time',
-        salary: '00',
-        jobDescription: "Injection molding is an important industrial method. It is little bit similar to die casting but the difference is in raw material used. In die casting we use metals which require...",
-    },
-    {
-        img: picture,
-        companyTitle: 'As The Industry Leader In Phosphine Ligands And Catalysts For Homogeneous Catalysis',
-        jobTitle: 'As the industry leader in phosphine ligands and catalysts for homogeneous catalysis',
-        publishDate: '7 months ago',
-        jobLocation: 'Detroit',
-        workTime: 'Full-time',
-        salary: '00',
-        jobDescription: "As the industry leader in phosphine ligands and catalysts for homogeneous catalysis, Solvay offers a range of phosphorus compounds used in a breadth of applications and markets. Ou...",
-    },
-    {
-        img: picture,
-        companyTitle: 'What Are The Health Benefits Of Tea?',
-        jobTitle: 'What Are The Health Benefits of Tea?',
-        publishDate: '7 months ago',
-        jobLocation: 'Detroit',
-        workTime: 'Full-time',
-        salary: '00',
-        jobDescription: "What Are The Health Benefits of Tea? People all over the world have been drinking tea for thousands of centuries, and for good reason. Numerous studies have shown that a variety of...",
-    },
-    {
-        img: picture,
-        companyTitle: 'How Does An LED Display Work?',
-        jobTitle: 'How does an LED Display work?',
-        publishDate: '7 months ago',
-        jobLocation: 'Detroit',
-        workTime: 'Full-time',
-        salary: '00',
-        jobDescription: "What is LED? LED is short for Light Emitting Diode. An LED emits light as a result of electric luminescence. It is also known as “cold light” as, unlike with old-fashioned incandes...",
-    },
-    {
-        img: picture,
-        companyTitle: 'As The Industry Leader In Phosphine Ligands And Catalysts For Homogeneous Catalysis',
-        jobTitle: 'As the industry leader in phosphine ligands and catalysts for homogeneous catalysis',
-        publishDate: '7 months ago',
-        jobLocation: 'Detroit',
-        workTime: 'Full-time',
-        salary: '00',
-        jobDescription: "As the industry leader in phosphine ligands and catalysts for homogeneous catalysis, Solvay offers a range of phosphorus compounds used in a breadth of applications and markets. Ou...",
-    },
-    {
-        img: picture,
-        companyTitle: 'What Are The Health Benefits Of Tea?',
-        jobTitle: 'What Are The Health Benefits of Tea?',
-        publishDate: '7 months ago',
-        jobLocation: 'Detroit',
-        workTime: 'Full-time',
-        salary: '00',
-        jobDescription: "What Are The Health Benefits of Tea? People all over the world have been drinking tea for thousands of centuries, and for good reason. Numerous studies have shown that a variety of...",
-    },
-    {
-        img: picture,
-        companyTitle: 'How Does An LED Display Work?',
-        jobTitle: 'How does an LED Display work?',
-        publishDate: '7 months ago',
-        jobLocation: 'Detroit',
-        workTime: 'Full-time',
-        salary: '00',
-        jobDescription: "What is LED? LED is short for Light Emitting Diode. An LED emits light as a result of electric luminescence. It is also known as “cold light” as, unlike with old-fashioned incandes...",
-    },
-];
+// const jobsData = [
+//     {
+//         img: picture,
+//         companyTitle: 'What Is Hydraulic Hose?',
+//         jobTitle: 'What Is Hydraulic Hose?',
+//         publishDate: '7 months ago',
+//         jobLocation: 'Detroit',
+//         workTime: 'Full-time',
+//         salary: '00',
+//         jobDescription: "Unless you work in an industry that uses hydraulic-powered machinery, the chances are you'll have little awareness of what a hydraulic hose does (or even that such a thing exists)....",
+//     },
+//     {
+//         img: picture,
+//         companyTitle: 'Main Parts Of Injection Molding Machine',
+//         jobTitle: 'Main parts of Injection Molding Machine',
+//         publishDate: '7 months ago',
+//         jobLocation: 'Detroit',
+//         workTime: 'Full-time',
+//         salary: '00',
+//         jobDescription: "Injection molding is an important industrial method. It is little bit similar to die casting but the difference is in raw material used. In die casting we use metals which require...",
+//     },
+//     {
+//         img: picture,
+//         companyTitle: 'As The Industry Leader In Phosphine Ligands And Catalysts For Homogeneous Catalysis',
+//         jobTitle: 'As the industry leader in phosphine ligands and catalysts for homogeneous catalysis',
+//         publishDate: '7 months ago',
+//         jobLocation: 'Detroit',
+//         workTime: 'Full-time',
+//         salary: '00',
+//         jobDescription: "As the industry leader in phosphine ligands and catalysts for homogeneous catalysis, Solvay offers a range of phosphorus compounds used in a breadth of applications and markets. Ou...",
+//     },
+//     {
+//         img: picture,
+//         companyTitle: 'What Are The Health Benefits Of Tea?',
+//         jobTitle: 'What Are The Health Benefits of Tea?',
+//         publishDate: '7 months ago',
+//         jobLocation: 'Detroit',
+//         workTime: 'Full-time',
+//         salary: '00',
+//         jobDescription: "What Are The Health Benefits of Tea? People all over the world have been drinking tea for thousands of centuries, and for good reason. Numerous studies have shown that a variety of...",
+//     },
+//     {
+//         img: picture,
+//         companyTitle: 'How Does An LED Display Work?',
+//         jobTitle: 'How does an LED Display work?',
+//         publishDate: '7 months ago',
+//         jobLocation: 'Detroit',
+//         workTime: 'Full-time',
+//         salary: '00',
+//         jobDescription: "What is LED? LED is short for Light Emitting Diode. An LED emits light as a result of electric luminescence. It is also known as “cold light” as, unlike with old-fashioned incandes...",
+//     },
+//     {
+//         img: picture,
+//         companyTitle: 'As The Industry Leader In Phosphine Ligands And Catalysts For Homogeneous Catalysis',
+//         jobTitle: 'As the industry leader in phosphine ligands and catalysts for homogeneous catalysis',
+//         publishDate: '7 months ago',
+//         jobLocation: 'Detroit',
+//         workTime: 'Full-time',
+//         salary: '00',
+//         jobDescription: "As the industry leader in phosphine ligands and catalysts for homogeneous catalysis, Solvay offers a range of phosphorus compounds used in a breadth of applications and markets. Ou...",
+//     },
+//     {
+//         img: picture,
+//         companyTitle: 'What Are The Health Benefits Of Tea?',
+//         jobTitle: 'What Are The Health Benefits of Tea?',
+//         publishDate: '7 months ago',
+//         jobLocation: 'Detroit',
+//         workTime: 'Full-time',
+//         salary: '00',
+//         jobDescription: "What Are The Health Benefits of Tea? People all over the world have been drinking tea for thousands of centuries, and for good reason. Numerous studies have shown that a variety of...",
+//     },
+//     {
+//         img: picture,
+//         companyTitle: 'How Does An LED Display Work?',
+//         jobTitle: 'How does an LED Display work?',
+//         publishDate: '7 months ago',
+//         jobLocation: 'Detroit',
+//         workTime: 'Full-time',
+//         salary: '00',
+//         jobDescription: "What is LED? LED is short for Light Emitting Diode. An LED emits light as a result of electric luminescence. It is also known as “cold light” as, unlike with old-fashioned incandes...",
+//     },
+// ];
 
 const companiesData = [
     {
@@ -189,28 +189,28 @@ const Careers = () => {
                             Login
                         </li>
                         <li className='py-4 cursor-pointer hover:text-blue-600 duration-300 relative group/packages'>
-                            Register
+                            Sign-up
                         </li>
                         <li className=''>
                             <Link
-                                // to='/get-estimate'
-                                className='bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-base py-3 px-5 rounded-lg'
+                                to='/coming-soon'
+                                className='bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-base py-3 px-10 rounded-lg'
                             >
-                                <i className="fa-solid fa-plus mr-2"></i>
-                                Post a job
+                                {/* <i className="fa-solid fa-plus mr-2"></i> */}
+                                Enlistco
                             </Link>
                         </li>
                     </ul>
                 </nav>
             </header>
-            <div className='md:py-32 py-20'>
+            <div className='md:py-40 py-20'>
                 <h1 className='md:text-[42px] text-3xl font-bold text-center text-white'>
-                    FIND A JOB NEAR YOU
+                    With ECERA SYSTEM
                 </h1>
                 <p className='text-lg font-medium text-white py-3'>
-                    Simple, fast and efficient
+                    find the career you deserve
                 </p>
-                <form className='bg-cyan-500 xl:w-[900px] lg:w-3/4 md:w-3/4 sm:w-4/5 w-11/12 mx-auto flex lg:flex-row flex-col items-center lg:gap-0 gap-1 p-1 mt-5 rounded'>
+                {/* <form className='bg-cyan-500 xl:w-[900px] lg:w-3/4 md:w-3/4 sm:w-4/5 w-11/12 mx-auto flex lg:flex-row flex-col items-center lg:gap-0 gap-1 p-1 mt-5 rounded'>
                     <div className='bg-white lg:w-2/5 w-full h-10 flex items-center text-gray-500 lg:rounded-l lg:rounded-tr-none rounded-tr rounded-tl overflow-hidden'>
                         <label htmlFor="job" className='px-3'>
                             <i className="fa-solid fa-briefcase text-xl"></i>
@@ -240,11 +240,11 @@ const Careers = () => {
                             Find Jobs
                         </button>
                     </div>
-                </form>
+                </form> */}
             </div>
         </section>
-        <section className='py-8'>
-            <div className='lg:w-[82%] md:w-[90%] sm:w-4/5 w-11/12 mx-auto border rounded'>
+        <section className='py-8 flex justify-center'>
+            {/* <div className='lg:w-[82%] md:w-[90%] sm:w-4/5 w-11/12 mx-auto border rounded'>
                 <div className='flex justify-between items-center text-gray-600 bg-gray-100 p-3'>
                     <h2 className='text-xl'>
                         Latest <span className='font-bold'>Jobs</span>
@@ -308,6 +308,27 @@ const Careers = () => {
                 <button className='w-full py-3 text-center text-base font-medium bg-gray-100 hover:bg-gray-200 hover:text-orange-600 duration-300'>
                     View All Jobs
                 </button>
+            </div> */}
+            <div className='lg:w-max w-[90%] bg-blue-50 flex md:flex-row flex-col justify-center md:gap-16 gap-5 lg:px-16 lg:py-12 p-10 my-10 rounded-xl'>
+                <div>
+                    <h1 className='text-xl font-medium text-gray-600'>To apply jobs in India :</h1>
+                    <p className='text-base font-medium mt-3 text-gray-600'>
+                        Email your CV
+                        <a href="mailto:career@ecersystem.com" className='ml-2 text-blue-600'>
+                            career@ecersystem.com
+                        </a>
+                    </p>
+                </div>
+                <div className='md:h-full h-0.5 md:w-0.5 w-full bg-gray-300' />
+                <div>
+                    <h1 className='text-xl font-medium text-gray-600'>To apply jobs in US :</h1>
+                    <p className='text-base font-medium mt-3 text-gray-600'>
+                        Email your CV
+                        <a href="mailto:ushire@ecerasystem.com" className='ml-2 text-blue-600'>
+                            ushire@ecerasystem.com
+                        </a>
+                    </p>
+                </div>
             </div>
         </section>
         <section className='pb-8'>

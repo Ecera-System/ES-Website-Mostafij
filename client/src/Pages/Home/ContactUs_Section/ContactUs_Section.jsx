@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ContactUs_Section = () => {
     return (<>
-        <section className='xl:w-3/4 lg:w-4/5 w-11/12 rounded-3xl bg-blue-50 mx-auto my-20 pt-16 pb-20 px-5'>
+        <section className='2xl:w-[1200px] xl:w-3/4 lg:w-4/5 w-11/12 rounded-3xl bg-blue-50 mx-auto my-20 pt-16 pb-20 px-5'>
             <h1 className='text-center md:text-5xl text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 pb-16'>
                 Ready to discuss your project ?
             </h1>
