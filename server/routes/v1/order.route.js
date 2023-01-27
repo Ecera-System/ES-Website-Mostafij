@@ -6,7 +6,7 @@ const {
     postStripeWebHook,
     postRazorpayCreateOrder,
     postRazorpayVerify,
-    getAllOrders,
+    getUserServicesOrder,
 } = require('../../controllers/order.controller');
 
 
@@ -15,7 +15,7 @@ router.route('/stripe/webhook').post(postStripeWebHook);
 router.route('/razorpay-create-order').post(postRazorpayCreateOrder);
 router.route('/razorpay-verify').post(postRazorpayVerify);
 
-router.route('/order').get(userAuthorize, getAllOrders);
+router.route('/services-order').get(userAuthorize, getUserServicesOrder);
 
 
 module.exports = router;

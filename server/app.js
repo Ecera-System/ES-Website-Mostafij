@@ -25,6 +25,7 @@ app.get('/api/v1/passport-file/:fileName', (req, res) => {
 
 app.use('/api/v1/payment', require('./routes/v1/order.route'));
 app.use('/api/v1/user', require('./routes/v1/user.route'));
+app.use('/api/v1/admin', require('./routes/v1/admin.route'));
 
 
 app.all('*', (req, res) => {

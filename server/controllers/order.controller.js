@@ -128,7 +128,7 @@ exports.postRazorpayVerify = async (req, res, next) => {
                 source: req.body.source,
             });
             const result = await orderData.save();
-            
+
             if (result._id && req.body.registrationId) {
                 await Registration.updateOne(
                     { _id: req.body.registrationId },
@@ -146,10 +146,10 @@ exports.postRazorpayVerify = async (req, res, next) => {
 };
 
 
-exports.getAllOrders = async (req, res, next) => {
+exports.getUserServicesOrder = async (req, res, next) => {
     try {
         const { email } = req.decoded;
-        const result = await ServiceOrder.find({ email: email });
+        const result = await ServiceOrder.find({ userEmail: email });
         res.status(200).json(result);
     }
     catch (err) {

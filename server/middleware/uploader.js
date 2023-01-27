@@ -14,16 +14,15 @@ const uploader = multer({
     fileFilter: (req, file, cb) => {
         const supportedFile = /jpg|png|pdf|jpeg/;
         const extension = path.extname(file.originalname);
-
         if (supportedFile.test(extension)) {
             cb(null, true)
         }
         else {
             cb(new Error("Only jpg, png, pdf, and jpeg supported!"))
-        }
+        };
     },
     limits: {
-        fileSize: 1000000
+        fileSize: 10000000
     }
 });
 

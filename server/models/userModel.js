@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
+const { ObjectId } = mongoose.Schema.Types;
 
 // Schema design
 const userSchema = mongoose.Schema({
     name: {
         type: String,
         required: [true, "Please provide your name."],
-        trim: true, //remove space of name
-        // minLength: [3, "Name must be at least 3 characters."],
-        // maxLength: [100, "Name is too large"]
+        trim: true,
     },
     phoneNumber: {
         type: String,
@@ -29,6 +28,10 @@ const userSchema = mongoose.Schema({
         trim: true,
         default: 'user'
     },
+    // serviceOrders: [{
+    //     type: ObjectId,
+    //     ref: "ServiceOrders"
+    // }],
 }, {
     timestamps: true,
 });

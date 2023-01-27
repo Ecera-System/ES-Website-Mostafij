@@ -8,7 +8,7 @@ const { verifyEmail } = require('../middleware/emailSender');
 
 exports.uploadPassport = async (req, res, next) => {
     try {
-        res.status(200).send(req.file)
+        res.status(200).send(req.file);
     } catch (err) {
         next(err);
     }
