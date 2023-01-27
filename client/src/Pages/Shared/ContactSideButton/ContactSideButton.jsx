@@ -58,7 +58,7 @@ const ContactSideButton = () => {
         <aside>
             <Link
                 to='/get-estimate'
-                className='fixed top-1/2 -translate-y-1/2 left-3 z-50 w-16 h-16 flex items-center justify-center bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 shadow-md rounded-full cursor-pointer'
+                className='fixed top-1/2 -translate-y-1/2 left-3 z-40 w-16 h-16 flex items-center justify-center bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 shadow-md rounded-full cursor-pointer'
             >
                 <i className="fa-regular fa-envelope text-2xl text-white"></i>
             </Link>

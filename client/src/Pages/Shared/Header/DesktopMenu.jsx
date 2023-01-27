@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }) => {
 
     return (<>
-        <ul className='hidden lg:flex items-center xl:gap-x-8 gap-x-5 text-base font-medium uppercase'>
+        <ul className='hidden lg:flex items-center xl:gap-x-8 gap-x-5 text-lg font-medium'>
             <li className='py-4 cursor-pointer hover:text-blue-600 duration-300 relative group/services'>
                 Services
                 <i className="fa-solid fa-angle-down text-sm ml-2"></i>
@@ -12,20 +12,20 @@ const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }
                 {/* ==============Dropdown============== */}
                 <ul className='absolute top-14 -left-5 z-30 group-hover/services:left-0 w-64 h-auto bg-white overflow-hidden shadow-md rounded-md opacity-0 group-hover/services:opacity-100 invisible group-hover/services:visible duration-700'>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/website-development'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Website Development
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/digital-marketing'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Digital Marketing
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
 
@@ -37,46 +37,46 @@ const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }
                 {/* ==============Dropdown============== */}
                 <ul className='absolute top-14 -left-5 z-30 group-hover/packages:left-0 w-64 h-auto bg-white overflow-hidden shadow-md rounded-md opacity-0 group-hover/packages:opacity-100 invisible group-hover/packages:visible duration-700'>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/package/web-design'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Website Design
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/package/digital-marketing'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Digital Marketing
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/package/in-INR'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Package In INR
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/package/offers'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Offers
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </li>
             <li>
-                <Link
+                <NavLink
                     to={'/remote-employees'}
                     className='block py-4 cursor-pointer hover:text-blue-600 duration-300'
                 >
                     Hire Virtual Employees
-                </Link>
+                </NavLink>
             </li>
             <li className='py-4 cursor-pointer hover:text-blue-600 duration-300 relative group/it_staff'>
                 IT Staffing Solutions
@@ -85,52 +85,52 @@ const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }
                 {/* ==============Dropdown============== */}
                 <ul className='absolute top-14 -left-5 z-30 group-hover/it_staff:left-0 w-64 h-auto bg-white overflow-hidden shadow-md rounded-md opacity-0 group-hover/it_staff:opacity-100 invisible group-hover/it_staff:visible duration-700'>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/IT-staffing'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             IT Staffing Overview
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'#'}
+                        <NavLink
+                            to={'/career-overview'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Career Overview
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'#'}
+                        <NavLink
+                            to={'/employee-benefits'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
-                            Employee Benefit
-                        </Link>
+                            Employee Benefits
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'#'}
+                        <NavLink
+                            to={'/immigration'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Immigration
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'#'}
+                        <NavLink
+                            to={'/careers'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Current-Opening
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'#'}
+                        <NavLink
+                            to={'/about'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Join-Us
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </li>

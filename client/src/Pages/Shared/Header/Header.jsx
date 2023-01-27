@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useLoggedIn from '../../../AuthHook/useLoggedIn';
 import eceraLogo from '../../../Images/Nav_logo/ecera-logo.png';
 import DesktopMenu from './DesktopMenu';
 import MobileMenu from './MobileMenu';
 import TopNavigation from './TopNavigation';
+
 
 const Header = ({ login, topNav }) => {
     const [scroll, setScroll] = useState(false);
@@ -23,12 +24,12 @@ const Header = ({ login, topNav }) => {
 
     const profile = <ul className='absolute lg:top-14 top-16 lg:right-0 lg:left-auto left-0 lg:w-72 w-full h-auto lg:py-2 bg-white rounded lg:shadow-[3px_5px_10px_5px_rgba(0,0,0,0.1)] overflow-hidden normal-case'>
         <li>
-            <Link
+            <NavLink
                 to={'/profile/order-history'}
                 className='w-full px-10 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300 flex items-center gap-3'
             >
                 <i className="fa-solid fa-tags"></i> Order History
-            </Link>
+            </NavLink>
         </li>
         <li>
             <button
@@ -43,9 +44,9 @@ const Header = ({ login, topNav }) => {
     </ul>;
 
     return (
-        <header className='w-full h-[121px] text-gray-600'>
+        <header className={`w-full ${topNav ? 'h-[76px]' : 'h-[121px]'} text-gray-600`}>
             {/* =====================Top Navigation===================== */}
-            <TopNavigation></TopNavigation>
+            {topNav ? '' : <TopNavigation></TopNavigation>}
 
             {/* =====================Main Navigation===================== */}
             <nav className={`w-full bg-white ${scroll ? 'fixed top-0 left-0 right-0 z-40 shadow-md' : ''}`}>

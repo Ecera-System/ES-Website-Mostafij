@@ -70,7 +70,7 @@ const HeroSection = () => {
 
     return (
         <section>
-            <div className='relative 2xl:w-[1200px] mx-auto xl:w-full'>
+            <div className='relative w-full mx-auto'>
                 <div className='w-full overflow-hidden'>
                     <div
                         className='grid grid-cols-4 w-[400%] h-[80vh] scroll-smooth duration-1000 ease-in-out'

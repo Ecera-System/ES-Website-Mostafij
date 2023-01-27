@@ -26,7 +26,7 @@ const useGetUser = () => {
                 }
             });
     }, [userData, navigate]);
-
+ 
     return [userData, loading];
 };
 

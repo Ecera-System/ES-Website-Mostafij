@@ -5,9 +5,9 @@ import Header from '../Shared/Header/Header';
 const UserProfile = () => {
     return (<>
         <Header login={true} />
-        <div className='w-full h-screen bg-blue-50 flex justify-center'>
-            <div className='2xl:w-[1200px] xl:w-[90%] lg:w-[96%] w-full mt-5 flex justify-center items-start lg:gap-6'>
-                <aside className='lg:block hidden xl:w-1/5 lg:w-[22%] sticky'>
+        <div className='w-full h-screen overflow-auto bg-blue-50 flex justify-center pt-5'>
+            <div className='2xl:w-[1100px] xl:w-[90%] lg:w-[96%] w-full h-full flex justify-center items-start lg:gap-6'>
+                <aside className='lg:block hidden xl:w-1/5 lg:w-[22%] sticky top-0'>
                     <ul className='bg-white h-auto rounded-md overflow-hidden normal-case p-6'>
                         <li>
                             <Link
@@ -19,7 +19,7 @@ const UserProfile = () => {
                         </li>
                     </ul>
                 </aside>
-                <div className='xl:w-4/5 lg:w-[78%] w-full'>
+                <div className='xl:w-4/5 lg:w-[78%] w-full h-full'>
                     <Outlet />
                 </div>
             </div>

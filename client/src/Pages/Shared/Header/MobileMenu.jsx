@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }) => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -43,20 +43,20 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
                 {/* ==============Dropdown============== */}
                 <ul className={`w-full origin-top ${openDropdown1 ? 'scale-y-100 h-auto' : 'scale-y-0 h-0'} duration-300 ease-linear`}>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/website-development'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Website Development
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/digital-marketing'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Digital Marketing
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
 
@@ -76,46 +76,46 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
                 {/* <-- Dropdown --> */}
                 <ul className={`w-full origin-top ${openDropdown2 ? 'scale-y-100 h-auto' : 'scale-y-0 h-0'} duration-300 ease-linear`}>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/package/web-design'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Website Design
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/package/digital-marketing'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Digital Marketing
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/package/in-INR'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Package In INR
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/package/offers'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Offers
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
 
                 <li className='w-full'>
-                    <Link
+                    <NavLink
                         to={'/remote-employees'}
                         className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                     >
                         Hire Virtual Employees
-                    </Link>
+                    </NavLink>
                 </li>
                 <li
                     onClick={() => setOpenDropdown3(!openDropdown3)}
@@ -130,56 +130,56 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
 
                     }
                 </li>
-                
+
                 {/* <-- Dropdown --> */}
                 <ul className={`w-full origin-top ${openDropdown3 ? 'scale-y-100 h-auto' : 'scale-y-0 h-0'} duration-300 ease-linear`}>
                     <li>
-                        <Link
+                        <NavLink
                             to={'/IT-staffing'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             IT Staffing Overview
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'/package/digital-marketing'}
+                        <NavLink
+                            to={'/career-overview'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Career Overview
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'/package/in-INR'}
+                        <NavLink
+                            to={'/employee-benefits'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
-                            Employee Benefit
-                        </Link>
+                            Employee Benefits
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'/package/offers'}
+                        <NavLink
+                            to={'/immigration'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Immigration
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'/package/offers'}
+                        <NavLink
+                            to={'/careers'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Current-Opening
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
-                            to={'/package/offers'}
+                        <NavLink
+                            to={'/about'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Join-Us
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
 

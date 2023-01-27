@@ -6,23 +6,23 @@ import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
 import banner from '../../Images/globe-banner.png';
-import svg1 from '../../Images/IT_Consultancy/app2.svg';
-import svg2 from '../../Images/IT_Consultancy/consultancy.svg';
-import svg3 from '../../Images/IT_Consultancy/digital.svg';
-import svg4 from '../../Images/IT_Consultancy/testing1.svg';
-import svg5 from '../../Images/IT_Consultancy/web1.svg';
-import it5 from '../../Images/IT_Consultancy/it5.jpg';
-import talent from '../../Images/IT_Consultancy/talent.jpg';
-import st2 from '../../Images/IT_Consultancy/st2.png';
-import itt from '../../Images/IT_Consultancy/itt.jpg';
-import itt2 from '../../Images/IT_Consultancy/itt2.jpg';
-import itt3 from '../../Images/IT_Consultancy/itt3.jpg';
-import itt4 from '../../Images/IT_Consultancy/itt4.jpg';
-import itt5 from '../../Images/IT_Consultancy/itt5.jpg';
-import itt6 from '../../Images/IT_Consultancy/itt6.jpg';
-import itt7 from '../../Images/IT_Consultancy/itt7.jpg';
-import itt8 from '../../Images/IT_Consultancy/itt8.jpg';
-import itt9 from '../../Images/IT_Consultancy/itt9.jpg';
+import svg1 from '../../Images/IT_Staffing/app2.svg';
+import svg2 from '../../Images/IT_Staffing/consultancy.svg';
+import svg3 from '../../Images/IT_Staffing/digital.svg';
+import svg4 from '../../Images/IT_Staffing/testing1.svg';
+import svg5 from '../../Images/IT_Staffing/web1.svg';
+import it5 from '../../Images/IT_Staffing/it5.jpg';
+import talent from '../../Images/IT_Staffing/talent.jpg';
+import st2 from '../../Images/IT_Staffing/st2.png';
+import itt from '../../Images/IT_Staffing/itt.jpg';
+import itt2 from '../../Images/IT_Staffing/itt2.jpg';
+import itt3 from '../../Images/IT_Staffing/itt3.jpg';
+import itt4 from '../../Images/IT_Staffing/itt4.jpg';
+import itt5 from '../../Images/IT_Staffing/itt5.jpg';
+import itt6 from '../../Images/IT_Staffing/itt6.jpg';
+import itt7 from '../../Images/IT_Staffing/itt7.jpg';
+import itt8 from '../../Images/IT_Staffing/itt8.jpg';
+import itt9 from '../../Images/IT_Staffing/itt9.jpg';
 import Footer from '../Shared/Footer/Footer';
 
 
@@ -64,7 +64,7 @@ const slide = [
 //     },
 // ];
 
-const ITConsultancy = () => {
+const ITStaffing = () => {
     const [faqIndex1, setFaqIndex1] = useState(false);
     const [faqIndex2, setFaqIndex2] = useState(false);
     const [faqIndex3, setFaqIndex3] = useState(false);
@@ -108,7 +108,7 @@ const ITConsultancy = () => {
     };
 
     return (<>
-        <PageTitle title='IT Consultancy'></PageTitle>
+        <PageTitle title='IT Staffing Solutions'></PageTitle>
         <Header />
         <ContactSideButton />
         <section
@@ -124,7 +124,7 @@ const ITConsultancy = () => {
                         We are committed to providing our customers with exceptional service <br /> while offering our employees the best training.
                     </p>
                     <p className='text-gray-300 text-lg font-medium pt-10 pb-5'>
-                        Services / <span className='text-gray-100'>IT Consultancy</span>
+                        Services / <span className='text-gray-100'>IT Staffing Solutions</span>
                     </p>
                 </div>
             </div>
@@ -466,4 +466,4 @@ const ITConsultancy = () => {
     </>);
 };
 
-export default ITConsultancy;
+export default ITStaffing;

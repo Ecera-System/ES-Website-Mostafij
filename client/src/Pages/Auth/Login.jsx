@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import emailRegex from '../Shared/emailRegex';
 import PageTitle from '../Shared/PageTitle';
 
 const Login = () => {
@@ -32,7 +33,7 @@ const Login = () => {
     const handleSignIn = async e => {
         e.preventDefault();
 
-        if (!emailValidate.email.match(/^[\w-]+@([\w-]+\.)+[\w-]{2,6}$/)) {
+        if (!emailRegex.test(emailValidate.email)) {
             return setEmailValidate({
                 ...emailValidate, error: 'Please enter a valid email address.'
             });
@@ -107,7 +108,7 @@ const Login = () => {
                             <div className="relative">
                                 <input
                                     onChange={(e) => {
-                                        e.target.value.match(/^[\w-]+@([\w-]+\.)+[\w-]{2,6}$/) ?
+                                        emailRegex.test(e.target.value) ?
                                             setEmailValidate({
                                                 ...emailValidate, email: e.target.value, error: ''
                                             }) :

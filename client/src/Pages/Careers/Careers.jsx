@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import eceraLogo from '../../Images/Nav_logo/ecera-logo.png';
 import PageTitle from '../Shared/PageTitle';
 import banner from '../../Images/globe-banner.png';
-import picture from './Images/picture.jpg';
+// import picture from './Images/picture.jpg';
+import Footer from '../Shared/Footer/Footer';
 
 
 // const jobsData = [
@@ -89,75 +90,75 @@ import picture from './Images/picture.jpg';
 //     },
 // ];
 
-const companiesData = [
-    {
-        img: picture,
-        companyName: 'Mechanical Locks Are The Backbone Of Your Security System',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'What Is Hydraulic Hose?',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'Ways To Tell Rhinestones And Diamonds Apart',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'Positive Displacement Pumps',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'How Does An LED Display Work?',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'Main Parts Of Injection Molding Machine',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'What Are The Health Benefits Of Tea?',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'As The Industry Leader In Phosphine Ligands And Catalysts For Homogeneous Catalysis',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'Will You Choose Glass Or Plastic For Your Bottles Or Containers?',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'Storage Of Personal Belongings',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'What Is PCB Assembly?',
-        totalJobs: 1
-    },
-    {
-        img: picture,
-        companyName: 'Types Of Active Pharmaceutical Ingredients',
-        totalJobs: 1
-    },
-];
+// const companiesData = [
+//     {
+//         img: picture,
+//         companyName: 'Mechanical Locks Are The Backbone Of Your Security System',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'What Is Hydraulic Hose?',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'Ways To Tell Rhinestones And Diamonds Apart',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'Positive Displacement Pumps',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'How Does An LED Display Work?',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'Main Parts Of Injection Molding Machine',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'What Are The Health Benefits Of Tea?',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'As The Industry Leader In Phosphine Ligands And Catalysts For Homogeneous Catalysis',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'Will You Choose Glass Or Plastic For Your Bottles Or Containers?',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'Storage Of Personal Belongings',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'What Is PCB Assembly?',
+//         totalJobs: 1
+//     },
+//     {
+//         img: picture,
+//         companyName: 'Types Of Active Pharmaceutical Ingredients',
+//         totalJobs: 1
+//     },
+// ];
 
 const Careers = () => {
     const [scroll, setScroll] = useState(false);
 
     window.addEventListener('scroll', () => {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > 72) {
+        if (scrollTop > 48) {
             setScroll(true);
         }
         else {
@@ -171,7 +172,7 @@ const Careers = () => {
             style={{ backgroundImage: `url(${banner})` }}
         >
             <header className='w-full h-[72px] text-gray-600'>
-                <nav className={`w-full flex items-center justify-between px-14 py-2 duration-300 ease-out ${scroll ? 'fixed left-0 top-0 z-50 bg-white shadow-md' : 'bg-transparent text-gray-50'}`}>
+                <nav className={`fixed left-0 top-0 z-50 w-full flex items-center justify-between px-14 py-2 duration-300 ease-out ${scroll ? 'bg-white shadow-md' : 'bg-transparent text-gray-50'}`}>
                     {/* ===========Right Logo=========== */}
                     <div>
                         <Link to={'/'}>
@@ -309,7 +310,7 @@ const Careers = () => {
                     View All Jobs
                 </button>
             </div> */}
-            <div className='lg:w-max w-[90%] bg-blue-50 flex md:flex-row flex-col justify-center md:gap-16 gap-5 lg:px-16 lg:py-12 p-10 my-10 rounded-xl'>
+            <div className='lg:w-max w-[90%] bg-blue-50 flex md:flex-row flex-col justify-center md:gap-16 gap-5 lg:px-16 lg:py-12 p-10 mt-10 mb-32 rounded-xl'>
                 <div>
                     <h1 className='text-xl font-medium text-gray-600'>To apply jobs in India :</h1>
                     <p className='text-base font-medium mt-3 text-gray-600'>
@@ -331,7 +332,7 @@ const Careers = () => {
                 </div>
             </div>
         </section>
-        <section className='pb-8'>
+        {/* <section className='pb-8'>
             <div className='lg:w-[82%] md:w-[90%] sm:w-4/5 w-11/12 mx-auto border rounded'>
                 <div className='flex justify-between items-center text-gray-600 bg-gray-100 p-3'>
                     <h2 className='text-xl'>
@@ -509,8 +510,8 @@ const Careers = () => {
                     </div>
                 </div>
             </div>
-        </section>
-        <footer className='bg-gray-100 border-t'>
+        </section> */}
+        {/* <footer className='bg-gray-100 border-t'>
             <div className='lg:w-[82%] md:w-[90%] sm:w-4/5 w-[90%] mx-auto '>
                 <div className='py-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-y-0 gap-y-5'>
                     <ul className='flex flex-col gap-2 text-sm text-gray-500'>
@@ -623,7 +624,8 @@ const Careers = () => {
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> */}
+        <Footer></Footer>
     </>);
 };
 

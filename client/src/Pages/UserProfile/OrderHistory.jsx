@@ -19,9 +19,9 @@ const OrderHistory = () => {
                 You haven't ordered yet!
             </div>
             :
-            <div className='w-full bg-white text-gray-700 p-6 mx-2 rounded-md'>
+            <div className='lg:w-full w-[950px] overflow-x-auto bg-white text-gray-700 p-6 mx-2 rounded-md'>
                 <h1 className='md:text-[40px] text-3xl text-center pb-3 text-accent font-medium'>Order History</h1>
-                <div className="overflow-x-auto">
+                <div>
                     <table className="table w-full">
                         <thead>
                             <tr className='text-base font-medium'>

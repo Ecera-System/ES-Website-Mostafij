@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import DigitalMarketing from "./Pages/Services/DigitalMarketing";
 import GetEstimate from "./Pages/GetEstimate/GetEstimate";
 import Home from "./Pages/Home/Home";
-import ITConsultancy from "./Pages/ITConsultancy/ITConsultancy";
+import ITStaffing from "./Pages/ITStaffing/ITStaffing";
 import PackWebDesign from "./Pages/Packages/PackWebDesign";
 import RemoteEmployees from "./Pages/RemoteEmployees/RemoteEmployees";
 import WebDevelopment from "./Pages/Services/WebDevelopment";
@@ -16,7 +16,6 @@ import BlogPage from "./Pages/Blog/BlogPage";
 import FAQ from "./Pages/FAQ/FAQ";
 import Careers from "./Pages/Careers/Careers";
 import PayInvoice from "./Pages/PayInvoice/PayInvoice";
-import Trainings from "./Pages/Trainings/Trainings";
 import TermsOfServices from "./Pages/TermsOfServices/TermsOfServices";
 import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
@@ -27,6 +26,14 @@ import UserProfile from "./Pages/UserProfile/UserProfile";
 import OrderHistory from "./Pages/UserProfile/OrderHistory";
 import Registration from "./Pages/Registration/Registration";
 import ComingSoon from "./Pages/Shared/ComingSoon";
+import CareerOverview from "./Pages/ITStaffing/CareerOverview";
+import EmployeeBenefits from "./Pages/ITStaffing/EmployeeBenefits";
+import Immigration from "./Pages/ITStaffing/Immigration";
+import RequireAdmin from "./AuthHook/RequireAdmin";
+import AdminDashboard from "./Pages/Admin/AdminDashboard";
+import ManageUsers from "./Pages/Admin/ManageUsers";
+import ServicesOrder from "./Pages/Admin/ServicesOrder";
+import RegistrationUsers from "./Pages/Admin/RegistrationUsers/RegistrationUsers";
 
 function App() {
   return (
@@ -36,11 +43,14 @@ function App() {
       <Route path='/website-development' element={<WebDevelopment />} />
       <Route path='/digital-marketing' element={<DigitalMarketing />} />
       <Route path='/remote-employees' element={<RemoteEmployees />} />
-      <Route path='/IT-staffing' element={<ITConsultancy />} />
       <Route path='/package/web-design' element={<PackWebDesign />} />
       <Route path='/package/digital-marketing' element={<PackDigitalMarketing />} />
       <Route path='/package/in-INR' element={<PackageInINR />} />
       <Route path='/package/offers' element={<PackOffers />} />
+      <Route path='/IT-staffing' element={<ITStaffing />} />
+      <Route path='/career-overview' element={<CareerOverview />} />
+      <Route path='/employee-benefits' element={<EmployeeBenefits />} />
+      <Route path='/immigration' element={<Immigration />} />
 
       <Route path='/about' element={<AboutUs />} />
       <Route path='/contact' element={<ContactUs />} />
@@ -50,21 +60,34 @@ function App() {
       <Route path='/coming-soon' element={<ComingSoon />} />
       <Route path='/invoice' element={<PayInvoice />} />
       {/* <Route path='/trainings' element={<Trainings />}></Route> */}
-      <Route path='/registration' element={<Registration />}></Route>
+      <Route path='/registration' element={<Registration />} />
       <Route path='/terms-of-services' element={<TermsOfServices />} />
       <Route path='/stripe/checkout' element={<StripeCheckoutMsg />} />
 
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />
-      <Route path='/user/activate/:activation_token' element={<ActivateEmail></ActivateEmail>}></Route>
+      <Route path='/user/activate/:activation_token' element={<ActivateEmail />} />
+
+
+      {/* <-- Admin --> */}
+      <Route path="/admin" element={
+        <RequireAdmin>
+          <AdminDashboard />
+        </RequireAdmin>
+      }>
+        <Route path='/admin/manage-users' element={<ManageUsers />} />
+        <Route path='/admin/services-order' element={<ServicesOrder />} />
+        <Route path='/admin/registration-users' element={<RegistrationUsers />} />
+      </Route>
+
 
       {/* <-- User Profile --> */}
       <Route path="/profile" element={
         <RequireAuth>
-          <UserProfile></UserProfile>
+          <UserProfile />
         </RequireAuth>}
       >
-        <Route path='/profile/order-history' element={<OrderHistory />}></Route>
+        <Route path='/profile/order-history' element={<OrderHistory />} />
       </Route>
 
       <Route path='/*' element={<NotFound />}></Route>

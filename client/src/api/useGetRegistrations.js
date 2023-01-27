@@ -2,20 +2,20 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const useGetOrders = () => {
-    const [orderData, setOrderData] = useState([]);
+const useGetRegistrations = () => {
+    const [registrationData, setRegistrationData] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_V1_URL}/payment/services-order`, {
+        axios.get(`${process.env.REACT_APP_API_V1_URL}/admin/registration`, {
             method: 'GET',
             headers: {
                 'Authorization': localStorage.getItem('user_token')
             }
         })
             .then(res => {
-                setOrderData(res.data);
+                setRegistrationData(res.data);
                 setLoading(false)
             })
             .catch(err => {
@@ -25,9 +25,9 @@ const useGetOrders = () => {
                     return navigate('/login');
                 }
             });
-    }, [orderData, navigate]);
+    }, [registrationData, navigate]);
 
-    return [orderData, loading];
+    return [registrationData, loading];
 };
 
-export default useGetOrders;
+export default useGetRegistrations;

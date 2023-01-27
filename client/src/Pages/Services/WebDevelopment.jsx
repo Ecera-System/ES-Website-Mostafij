@@ -74,7 +74,7 @@ const WebDevelopment = () => {
                 className='py-16 bg-no-repeat bg-right-top bg-contain bg-gray-100'
                 style={{ backgroundImage: `url(${designArea})` }}
             >
-                <div className='xl:w-1/2 lg:w-3/5 md:w-4/5 w-11/12 mx-auto'>
+                <div className='2xl:w-[1000px] lg:w-3/5 md:w-4/5 w-11/12 mx-auto'>
                     <h1 className='text-center md:text-5xl md:leading-snug text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                         We Don't Just Build Websites, We Build Websites That Sells
                     </h1>
@@ -283,7 +283,7 @@ const WebDevelopment = () => {
             </section>
             <section className='py-20'>
                 <div className='sm:w-4/5 w-11/12 mx-auto'>
-                    <div className='grid md:grid-cols-2 grid-cols-1 items-center lg:gap-20 gap-10'>
+                    <div className='grid lg:grid-cols-2 grid-cols-1 items-center lg:gap-20 gap-10'>
                         <div>
                             <h2 className='text-2xl font-medium text-blue-700 mb-5'>
                                 COMPLETE PACKAGE
@@ -291,6 +291,24 @@ const WebDevelopment = () => {
                             <p className='text-gray-500 lg:text-lg text-base'>
                                 Want a Complete package of web designing, digital marketing, and skillful remote employees? Ecera provides you a handful of these facilities and many more. Their main expertise is these fields given below:-.
                             </p>
+                            <ul className='mt-5 flex flex-col gap-4 text-gray-500 lg:text-lg text-base'>
+                                <li className='flex items-start'>
+                                    <span className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400 inline-block mt-2 mr-2' />
+                                    Custom Website Design & Development
+                                </li>
+                                <li className='flex items-start'>
+                                    <span className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400 inline-block mt-2 mr-2' />
+                                    Revamp your Digital Reach
+                                </li>
+                                <li className='flex items-start'>
+                                    <span className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400 inline-block mt-2 mr-2' />
+                                    Hire a competitive workforce
+                                </li>
+                                <li className='flex items-start'>
+                                    <span className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400 inline-block mt-2 mr-2' />
+                                    A one Stop Solution to all your Business Needs
+                                </li>
+                            </ul>
                         </div>
                         <div className='w-full'>
                             <img src={splash2} alt="" className='max-w-full h-auto shadow-[0px_5px_20px_0px_rgba(0,0,255,0.4)] rounded-xl' />

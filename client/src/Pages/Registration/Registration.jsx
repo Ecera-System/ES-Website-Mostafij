@@ -206,9 +206,6 @@ const Registration = () => {
                                     htmlFor="passport_file"
                                 >Passport*</label>
                                 <input
-                                    className="block w-full p-1 text-sm text-gray-700 border border-gray-300 rounded cursor-pointer bg-gray-50 focus:outline-none"
-                                    id="passport_file"
-                                    type="file" name='passport'
                                     onChange={(e) => {
                                         e.target.files ?
                                             setPassportValidate({
@@ -218,10 +215,10 @@ const Registration = () => {
                                                 ...passportValidate, passport: '', error: 'Please enter your passport copy!'
                                             })
                                     }}
+                                    className="block w-full p-1 text-sm text-gray-700 border border-gray-300 rounded cursor-pointer bg-gray-50 focus:outline-none"
+                                    id="passport_file"
+                                    type="file" name='passport'
                                 />
-                                <p className='text-sm text-gray-400 mt-0.5'>
-                                    File size max 1MB
-                                </p>
                                 {
                                     passportValidate?.error &&
                                     <p className='mt-1 text-sm text-red-600'>
@@ -233,7 +230,7 @@ const Registration = () => {
                                 <button
                                     disabled={loading}
                                     type='submit'
-                                    className="bg-blue-600 hover:bg-blue-700 duration-300 text-lg font-medium text-white rounded-md w-full py-2"
+                                    className="bg-blue-600 hover:bg-blue-700 duration-300 text-lg font-medium text-white rounded-md w-full py-2 mt-2"
                                 >
                                     {loading ? 'Loading...' : 'Submit'}
                                 </button>

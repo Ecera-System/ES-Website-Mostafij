@@ -53,7 +53,7 @@ const PackOffers = () => {
                 </div>
             </section>
             <section className='py-16 2xl:w-[1200px] xl:w-4/5 md:w-11/12 sm:w-4/5 w-11/12 mx-auto'>
-                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                <h1 className='text-center md:text-5xl md:leading-snug text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     Pick A Suitable Package According To Your Needs
                 </h1>
                 <p className='md:text-lg text-base font-medium text-center text-gray-500 lg:mx-32 my-5'>

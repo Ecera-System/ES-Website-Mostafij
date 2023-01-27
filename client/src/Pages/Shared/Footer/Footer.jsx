@@ -128,29 +128,29 @@ const Footer = () => {
                                 Certification
                             </h2>
                         </li>
-                        <li className='flex sm:flex-row flex-col sm:items-center md:gap-3 gap-5'>
+                        <li className='flex flex-col sm:items-center gap-5'>
                             <a
                                 target={'blank'}
                                 href='https://www.dnb.com/'
-                                className='sm:w-2/5 w-4/5 h-auto text-gray-400 hover:text-gray-50 duration-300'
+                                className='sm:w-full w-4/5 h-auto grid md:grid-cols-2 grid-cols-1 items-center md:gap-0 gap-3 text-gray-400 hover:text-gray-50 duration-300'
                             >
-                                <h2 className='text-sm font-medium text-center mb-3'>D&B Credibility Certified</h2>
+                                <h2 className='text-sm font-medium break-words'>D&B Credibility Certified</h2>
                                 <img
                                     src={certification1}
                                     alt="D&B Credibility Certified"
-                                    className='rounded-md w-full h-full'
+                                    className='rounded-md w-[146px] h-[52px]'
                                 />
                             </a>
                             <a
                                 target={'blank'}
                                 href='https://www.e-verify.gov/'
-                                className='sm:w-2/5 w-4/5 h-auto text-gray-400 hover:text-gray-50 duration-300'
+                                className='sm:w-full w-4/5 h-auto grid md:grid-cols-2 grid-cols-1 items-center md:gap-0 gap-3 text-gray-400 hover:text-gray-50 duration-300'
                             >
-                                <h2 className='text-sm font-medium text-center xl:mb-8 lg:mb-12 mb-3'>E- Verified</h2>
+                                <h2 className='text-sm font-medium'>E- Verified</h2>
                                 <img
                                     src={certification2}
                                     alt="E- Verified"
-                                    className='rounded-md w-full h-full'
+                                    className='rounded-md w-[146px] h-[52px]'
                                 />
                             </a>
                         </li>
