@@ -87,7 +87,7 @@ const FAQ = () => {
         <Header />
         <ContactSideButton />
         <div>
-            <section className='py-24 bg-no-repeat bg-center text-center'
+            <section className='py-24 bg-no-repeat bg-center bg-cover text-center'
                 style={{ backgroundImage: `url(${banner})` }}
             >
                 <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
@@ -106,7 +106,7 @@ const FAQ = () => {
                     <h1 className='text-4xl font-bold text-gray-700 text-center mt-3 mx-5'>
                         Read Most Frequent Questions
                     </h1>
-                    <div className='xl:w-4/5 md:w-11/12 sm:w-4/5 w-11/12 mx-auto grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4 mt-14'>
+                    <div className='2xl:w-[1200px] xl:w-4/5 md:w-11/12 sm:w-4/5 w-11/12 mx-auto grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4 mt-14'>
                         <ul className='flex flex-col gap-y-4'>
                             {
                                 faq1.map((item, index) => <li key={index}>
@@ -171,7 +171,7 @@ const FAQ = () => {
                 </div>
             </section>
             <section className='py-16'>
-                <div className='xl:w-2/5 md:w-1/2 sm:w-4/5 w-11/12 mx-auto'>
+                <div className='2xl:w-[600px] xl:w-2/5 md:w-1/2 sm:w-4/5 w-11/12 mx-auto'>
                     <h2 className='text-lg font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500 text-center'>Tell Us</h2>
                     <h1 className='text-4xl font-semibold text-gray-700 mt-2 text-center'>
                         Any Question

@@ -34,6 +34,7 @@ import AdminDashboard from "./Pages/Admin/AdminDashboard";
 import ManageUsers from "./Pages/Admin/ManageUsers";
 import ServicesOrder from "./Pages/Admin/ServicesOrder";
 import RegistrationUsers from "./Pages/Admin/RegistrationUsers/RegistrationUsers";
+import Testimonial from "./Pages/Testimonial/Testimonial";
 
 function App() {
   return (
@@ -54,12 +55,12 @@ function App() {
 
       <Route path='/about' element={<AboutUs />} />
       <Route path='/contact' element={<ContactUs />} />
+      <Route path='/testimonial' element={<Testimonial />} />
       <Route path='/blog' element={<BlogPage />} />
       <Route path='/faq' element={<FAQ />} />
       <Route path='/careers' element={<Careers />} />
       <Route path='/coming-soon' element={<ComingSoon />} />
       <Route path='/invoice' element={<PayInvoice />} />
-      {/* <Route path='/trainings' element={<Trainings />}></Route> */}
       <Route path='/registration' element={<Registration />} />
       <Route path='/terms-of-services' element={<TermsOfServices />} />
       <Route path='/stripe/checkout' element={<StripeCheckoutMsg />} />
@@ -68,8 +69,7 @@ function App() {
       <Route path='/signup' element={<Signup />} />
       <Route path='/user/activate/:activation_token' element={<ActivateEmail />} />
 
-
-      {/* <-- Admin --> */}
+      {/* <!-- Admin --> */}
       <Route path="/admin" element={
         <RequireAdmin>
           <AdminDashboard />

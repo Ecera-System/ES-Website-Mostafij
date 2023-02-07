@@ -175,7 +175,7 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
                     </li>
                     <li>
                         <NavLink
-                            to={'/about'}
+                            to={'/careers'}
                             className='block normal-case px-10 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Join-Us

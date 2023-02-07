@@ -29,6 +29,9 @@ import vision from '../../Images/About/vision.png';
 import mission from '../../Images/About/mission.png';
 import qualityPolicy from '../../Images/About/quality-policy.png';
 import aboutBanner from '../../Images/About/about-banner.jpg';
+import solution from '../../Images/About/solution.png';
+import success from '../../Images/About/success.png';
+import curve from '../../Images/About/curve.png';
 import Footer from '../Shared/Footer/Footer';
 
 
@@ -135,7 +138,7 @@ const AboutUs = () => {
         <ContactSideButton />
         <div>
             <section
-                className='py-24 bg-no-repeat bg-center text-center'
+                className='py-24 bg-no-repeat bg-center bg-cover text-center'
                 style={{ backgroundImage: `url(${banner})` }}
             >
                 <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
@@ -146,7 +149,7 @@ const AboutUs = () => {
                     /<span className='text-gray-100 ml-2'>About Us</span>
                 </p>
             </section>
-            <section className='xl:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col items-center justify-center lg:gap-x-14 md:gap-x-10 gap-y-20 my-14'>
+            <section className='2xl:w-[1200px] xl:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col items-center justify-center lg:gap-x-14 md:gap-x-10 gap-y-20 my-14'>
                 <div className='md:w-1/2 w-full'>
                     <img src={about} alt="about icon" className='max-w-full max-h-full' />
                 </div>
@@ -226,7 +229,7 @@ const AboutUs = () => {
             <section className='py-20 bg-no-repeat bg-center bg-cover bg-fixed relative before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:bg-violet-900/90'
                 style={{ backgroundImage: `url(${banner6})` }}
             >
-                <div className='relative xl:w-4/5 lg:w-3/4 sm:w-4/5 w-11/12 mx-auto grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
+                <div className='relative 2xl:w-[1200px] xl:w-4/5 lg:w-3/4 sm:w-4/5 w-11/12 mx-auto grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
                     <div className='flip-card'>
                         <div className='flip-card-inner bg-white rounded-lg text-center'>
                             <div className='flip-card-front p-10'>
@@ -298,62 +301,64 @@ const AboutUs = () => {
             <section className='py-24 bg-no-repeat bg-center text-center'
                 style={{ backgroundImage: `url(${pattern})` }}
             >
-                <div>
-                    <h2 className='text-lg font-medium text-blue-600'>
-                        EXPERIENCE. EXECUTION. EXCELLENCE.
-                    </h2>
-                    <h1 className='text-4xl font-bold text-gray-600 mt-6'>
-                        What We Actually Do
-                    </h1>
-                </div>
-                <div className='w-[86%] mx-auto mt-10 relative'>
-                    <Slider ref={setSliderRef} {...settings}>
-                        {
-                            slide.map(item => <div key={item.title}
-                                className='px-2'
-                            >
-                                <div className='px-8 py-10 rounded-xl bg-radial'>
-                                    <img src={item.icon} className="w-[72px] h-[72px] mx-auto" alt="" />
-                                    <h2 className='text-xl font-medium text-gray-200 mt-5'>
-                                        {item.title}
-                                    </h2>
-                                </div>
-                            </div>)
-                        }
-                    </Slider>
-                    <button
-                        className="absolute top-1/2 -translate-y-1/2 left-7 px-3 py-2 bg-black/70 text-white rounded"
-                        onClick={() => { sliderRef?.slickPrev() }}
-                    >
-                        <i className="fa-solid fa-chevron-left text-3xl"></i>
-                    </button>
-                    <button
-                        className="absolute top-1/2 -translate-y-1/2 right-7 px-3 py-2 bg-black/70 text-white rounded"
-                        onClick={() => { sliderRef?.slickNext() }}
-                    >
-                        <i className="fa-solid fa-chevron-right text-3xl"></i>
-                    </button>
-                </div>
-                <div className='mt-20 lg:w-3/5 sm:w-4/5 w-11/12 mx-auto'>
-                    <h2 className='text-2xl font-medium text-blue-600'>
-                        CSS Website Development Services
-                    </h2>
-                    <p className='text-base text-gray-500 mt-5'>
-                        Engitech is the partner of choice for many of the world’s leading enterprises, SMEs and technology challengers. We help businesses elevate their value through custom software development, product design, QA and consultancy services.
-                    </p>
-                    <Link
-                        to='/website-development'
-                        className='inline-block bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg font-medium mt-10 py-3 px-8 rounded-lg'
-                    >
-                        Learn More
-                    </Link>
+                <div className='2xl:w-[1200px] mx-auto w-full'>
+                    <div>
+                        <h2 className='text-lg font-medium text-blue-600'>
+                            EXPERIENCE. EXECUTION. EXCELLENCE.
+                        </h2>
+                        <h1 className='text-4xl font-bold text-gray-600 mt-6'>
+                            What We Actually Do
+                        </h1>
+                    </div>
+                    <div className='2xl:w-full w-[86%] mx-auto mt-10 relative'>
+                        <Slider ref={setSliderRef} {...settings}>
+                            {
+                                slide.map(item => <div key={item.title}
+                                    className='px-2'
+                                >
+                                    <div className='px-8 py-10 rounded-xl bg-radial'>
+                                        <img src={item.icon} className="w-[72px] h-[72px] mx-auto" alt="" />
+                                        <h2 className='text-xl font-medium text-gray-200 mt-5'>
+                                            {item.title}
+                                        </h2>
+                                    </div>
+                                </div>)
+                            }
+                        </Slider>
+                        <button
+                            className="absolute top-1/2 -translate-y-1/2 left-7 px-3 py-2 bg-black/70 text-white rounded"
+                            onClick={() => { sliderRef?.slickPrev() }}
+                        >
+                            <i className="fa-solid fa-chevron-left text-3xl"></i>
+                        </button>
+                        <button
+                            className="absolute top-1/2 -translate-y-1/2 right-7 px-3 py-2 bg-black/70 text-white rounded"
+                            onClick={() => { sliderRef?.slickNext() }}
+                        >
+                            <i className="fa-solid fa-chevron-right text-3xl"></i>
+                        </button>
+                    </div>
+                    <div className='mt-20 lg:w-3/5 sm:w-4/5 w-11/12 mx-auto'>
+                        <h2 className='text-2xl font-medium text-blue-600'>
+                            CSS Website Development Services
+                        </h2>
+                        <p className='text-base text-gray-500 mt-5'>
+                            Engitech is the partner of choice for many of the world’s leading enterprises, SMEs and technology challengers. We help businesses elevate their value through custom software development, product design, QA and consultancy services.
+                        </p>
+                        <Link
+                            to='/website-development'
+                            className='inline-block bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg font-medium mt-10 py-3 px-8 rounded-lg'
+                        >
+                            Learn More
+                        </Link>
+                    </div>
                 </div>
             </section>
             <section
                 className="py-14 flex justify-center bg-no-repeat bg-cover bg-fixed relative before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:bg-black/80"
                 style={{ backgroundImage: `url(${aboutBanner})` }}
             >
-                <div className='z-10 xl:w-2/5 lg:w-1/2 md:w-3/5 sm:w-4/5 w-11/12'>
+                <div className='z-10 2xl:w-[700px] xl:w-2/5 lg:w-1/2 md:w-3/5 sm:w-4/5 w-11/12'>
                     <h2 className='text-lg font-medium text-center text-gray-100 uppercase mb-2'>ABOUT ECERASYSTEM</h2>
                     <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                         We offer innovative technology solutions.
@@ -397,34 +402,26 @@ const AboutUs = () => {
                 </div>
             </section>
             <section className='py-16'>
-                <div className='lx:w-4/5 w-11/12 mx-auto'>
+                <div className='2xl:w-[1200px] xl:w-4/5 w-11/12 mx-auto'>
                     <h4 className='text-center sm:text-lg text-base font-medium mb-5 text-blue-600'>
                         OUR PROCESS
                     </h4>
                     <h1 className='text-center sm:text-4xl text-2xl font-medium text-gray-600'>
                         Driving Client Results Utilizing New Innovation Points of view
                     </h1>
-                    <div className='lg:w-full sm:w-[400px] w-[98%] mx-auto grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-20 mt-20'>
+                    <div className='lg:w-full sm:w-[400px] w-[98%] mx-auto grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-20 mt-20 mb-10'>
                         <div className='border p-7 group/card1 duration-300 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.2)] relative'>
                             <div className='absolute -top-10 left-7'>
                                 <span className='p-4 inline-block rounded-full bg-slate-200 group-hover/card1:bg-cyan-500 text-white text-4xl font-bold duration-300 group-hover/card1:shadow-[5px_7px_0px_0px_rgba(0,0,0,0.2)]'>
                                     01
                                 </span>
                             </div>
-                            <a href="#" className='inline-block text-2xl font-medium text-gray-700 hover:text-cyan-500 duration-300 mt-7'>
+                            <div className='grid place-content-center'>
+                                <img src={solution} alt="" width='120' height="120" />
+                            </div>
+                            <h2 className='text-xl font-medium text-gray-700 group-hover/card1:text-cyan-500 duration-300 mt-7'>
                                 End to End Solutions and Services Guaranteed
-                            </a>
-                            <p className='text-base text-gray-500 my-4'>
-                                Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. per inceptos himenaeos.
-                            </p>
-                            <button
-                                className='text-lg font-medium text-gray-600 duration-300 hover:text-cyan-600'
-                            >
-                                <span className='px-3 py-1 mr-2 inline-block text-base bg-slate-200 duration-300 group-hover/card1:bg-cyan-500 text-white rounded'>
-                                    <i className="fa-solid fa-arrow-right"></i>
-                                </span>
-                                Read More
-                            </button>
+                            </h2>
                         </div>
                         <div className='border p-7 group/card1 duration-300 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.2)] relative'>
                             <div className='absolute -top-10 left-7'>
@@ -432,20 +429,12 @@ const AboutUs = () => {
                                     02
                                 </span>
                             </div>
-                            <a href="#" className='inline-block text-2xl font-medium text-gray-700 hover:text-cyan-500 duration-300 mt-7'>
+                            <div className='grid place-content-center'>
+                                <img src={curve} alt="" width='120' height="120" />
+                            </div>
+                            <h2 className='text-xl font-medium text-gray-700 group-hover/card1:text-cyan-500 duration-300 mt-7'>
                                 Ahead of The Curve We Future-proof Your IT
-                            </a>
-                            <p className='text-base text-gray-500 my-4'>
-                                Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. per inceptos himenaeos.
-                            </p>
-                            <button
-                                className='text-lg font-medium text-gray-600 duration-300 hover:text-cyan-600'
-                            >
-                                <span className='px-3 py-1 mr-2 inline-block text-base bg-slate-200 duration-300 group-hover/card1:bg-cyan-500 text-white rounded'>
-                                    <i className="fa-solid fa-arrow-right"></i>
-                                </span>
-                                Read More
-                            </button>
+                            </h2>
                         </div>
                         <div className='border p-7 group/card1 duration-300 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.2)] relative'>
                             <div className='absolute -top-10 left-7'>
@@ -453,20 +442,12 @@ const AboutUs = () => {
                                     03
                                 </span>
                             </div>
-                            <a href="#" className='inline-block text-2xl font-medium text-gray-700 hover:text-cyan-500 duration-300 mt-7'>
+                            <div className='grid place-content-center'>
+                                <img src={success} alt="" width='120' height="120" />
+                            </div>
+                            <h2 className='text-xl font-medium text-gray-700 group-hover/card1:text-cyan-500 duration-300 mt-7'>
                                 Experience Certainty Every Project Executed Successful
-                            </a>
-                            <p className='text-base text-gray-500 my-4'>
-                                Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. per inceptos himenaeos.
-                            </p>
-                            <button
-                                className='text-lg font-medium text-gray-600 duration-300 hover:text-cyan-600'
-                            >
-                                <span className='px-3 py-1 mr-2 inline-block text-base bg-slate-200 duration-300 group-hover/card1:bg-cyan-500 text-white rounded'>
-                                    <i className="fa-solid fa-arrow-right"></i>
-                                </span>
-                                Read More
-                            </button>
+                            </h2>
                         </div>
                     </div>
                 </div>
@@ -474,7 +455,7 @@ const AboutUs = () => {
             <section className='py-16 bg-no-repeat bg-center bg-cover bg-fixed relative before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:bg-blue-900/90'
                 style={{ backgroundImage: `url(${banner6})` }}
             >
-                <div className='relative z-10 lg:w-4/5 md:w-11/12 sm:w-4/5 w-11/12 mx-auto text-white'>
+                <div className='relative z-10 2xl:w-[1200px] lg:w-4/5 md:w-11/12 sm:w-4/5 w-11/12 mx-auto text-white'>
                     <h1 className='text-4xl text-center'>
                         Ecera System
                     </h1>
@@ -522,7 +503,7 @@ const AboutUs = () => {
                 </div>
             </section>
             <section className='py-10'>
-                <div className='sm:w-3/4 w-11/12 mx-auto grid md:grid-cols-2 grid-cols-1 md:gap-x-16'>
+                <div className='2xl:w-[1200px] sm:w-3/4 w-11/12 mx-auto grid md:grid-cols-2 grid-cols-1 md:gap-x-16'>
                     <div>
                         <div className='w-64 h-60 mx-auto flex items-end justify-center'>
                             <img src={weProvide} alt="" className='w-mx h-mx' />

@@ -9,7 +9,7 @@ const TermsOfServices = () => {
         <PageTitle title='Terms Of Service - Ecera System'></PageTitle>
         <Header />
         <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-500'>
-            <div className='xl:w-3/5 lg:w-3/4 md:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col-reverse items-center justify-between gap-10'>
+            <div className='2xl:w-[800px] xl:w-3/5 lg:w-3/4 md:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col-reverse items-center justify-between gap-10'>
                 <div>
                     <h1 className='md:text-5xl text-3xl text-white font-medium text-center'>
                         Terms of Services

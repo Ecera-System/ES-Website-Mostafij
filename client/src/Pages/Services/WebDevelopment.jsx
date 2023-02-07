@@ -282,7 +282,7 @@ const WebDevelopment = () => {
                 </div>
             </section>
             <section className='py-20'>
-                <div className='sm:w-4/5 w-11/12 mx-auto'>
+                <div className='2xl:w-[1200px] sm:w-4/5 w-11/12 mx-auto'>
                     <div className='grid lg:grid-cols-2 grid-cols-1 items-center lg:gap-20 gap-10'>
                         <div>
                             <h2 className='text-2xl font-medium text-blue-700 mb-5'>
@@ -316,7 +316,7 @@ const WebDevelopment = () => {
                     </div>
                 </div>
             </section>
-            <section className='md:w-3/4 sm:w-4/5 w-11/12 mx-auto mt-20'>
+            <section className='2xl:w-[1200px] md:w-3/4 sm:w-4/5 w-11/12 mx-auto mt-20'>
                 <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     One Web Design Codebase To Rule Every Platform!
                 </h1>
@@ -353,7 +353,7 @@ const WebDevelopment = () => {
                     </div>
                 </div>
             </section>
-            <section className='md:w-3/4 sm:w-4/5 w-11/12 mx-auto my-20'>
+            <section className='2xl:w-[1200px] md:w-3/4 sm:w-4/5 w-11/12 mx-auto my-20'>
                 <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     Fix your corporate systems by picking right web specialists
                 </h1>

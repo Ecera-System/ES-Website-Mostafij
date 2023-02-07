@@ -126,7 +126,7 @@ const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }
                     </li>
                     <li>
                         <NavLink
-                            to={'/about'}
+                            to={'/careers'}
                             className='block normal-case text-lg cursor-pointer px-8 py-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300'
                         >
                             Join-Us

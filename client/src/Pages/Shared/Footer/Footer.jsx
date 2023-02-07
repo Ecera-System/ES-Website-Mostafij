@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className='w-full bg-[#021D40]'>
             <div className='2xl:w-[1200px] w-11/12 mx-auto'>
                 <div className='w-full py-10 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-2 items-start gap-6'>
-                    <ul className='flex flex-col gap-14'>
+                    <ul className='flex flex-col gap-10'>
                         <li>
                             <ul className='flex flex-col gap-5'>
                                 <li>
@@ -38,6 +38,14 @@ const Footer = () => {
                                         className='text-gray-400 text-base hover:underline hover:text-white duration-300'
                                     >
                                         Hire Developers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/testimonial"
+                                        className='text-gray-400 text-base hover:underline hover:text-white duration-300'
+                                    >
+                                        Testimonial
                                     </a>
                                 </li>
                             </ul>

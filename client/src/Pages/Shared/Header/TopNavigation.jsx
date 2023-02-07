@@ -52,6 +52,15 @@ const TopNavigation = () => {
                             <i className="fa-brands fa-linkedin-in text-lg leading-none"></i>
                         </a>
                     </li>
+                    <li>
+                        <a
+                            // target={'blank'}
+                            className='hover:text-gray-300 duration-300'
+                            href="/#"
+                        >
+                            <i className="fa-brands fa-youtube text-lg leading-none"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

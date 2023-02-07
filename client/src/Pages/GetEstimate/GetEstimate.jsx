@@ -238,7 +238,7 @@ const GetEstimate = () => {
             className='pb-20 pt-44 lg:mt-10 bg-no-repeat bg-cover'
             style={{ backgroundImage: `url(${hpImg})` }}
         >
-            <div className='xl:w-4/5 lg:w-11/12 md:w-4/5 w-11/12 mx-auto flex lg:flex-row flex-col-reverse justify-between'>
+            <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 md:w-4/5 w-11/12 mx-auto flex lg:flex-row flex-col-reverse justify-between'>
                 <div className='lg:w-1/2 w-full lg:text-start text-center'>
                     <h2 className='text-4xl text-blue-900'>
                         Questions? We'll put you on the right path.

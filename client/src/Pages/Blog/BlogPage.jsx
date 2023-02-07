@@ -17,7 +17,7 @@ const BlogPage = () => {
         <Header />
         <ContactSideButton />
         <div>
-            <section className='py-24 bg-no-repeat bg-center text-center'
+            <section className='py-24 bg-no-repeat bg-center bg-cover text-center'
                 style={{ backgroundImage: `url(${banner})` }}
             >
                 <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
@@ -29,8 +29,8 @@ const BlogPage = () => {
                 </p>
             </section>
             <section className='py-20'>
-                <div className='sm:w-4/5 w-11/12 mx-auto'>
-                    <h2 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 mb-14'>
+                <div className='2xl:w-[1200px] sm:w-4/5 w-11/12 mx-auto'>
+                    <h2 className='2xl:mx-20 text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 mb-14'>
                         How to choose the best web design company at a high quality but a significantly low cost?
                     </h2>
                     <div className='grid md:grid-cols-2 grid-cols-1 items-center lg:gap-20 gap-10'>
@@ -46,7 +46,7 @@ const BlogPage = () => {
                 </div>
             </section>
             <section className='py-12 bg-blue-100'>
-                <div className='md:w-4/5 w-11/12 mx-auto'>
+                <div className='2xl:w-[1200px] md:w-4/5 w-11/12 mx-auto'>
                     <h1 className='text-4xl font-semibold text-center text-gray-700'>
                         Following are the features
                     </h1>
@@ -91,7 +91,7 @@ const BlogPage = () => {
                 </div>
             </section>
             <section className='py-20'>
-                <div className='sm:w-4/5 w-[90%] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-16'>
+                <div className='2xl:w-[1200px] sm:w-4/5 w-[90%] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-16'>
                     <div className='border-2 border-gray-400'>
                         <div
                             className='h-full bg-right-top bg-no-repeat p-10 bg-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 shadow-[0px_0px_20px_rgb(0,0,0,0.1)]'

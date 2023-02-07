@@ -376,8 +376,8 @@ const ITStaffing = () => {
                     <img src={itt9} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
                 </div>
             </div>
-            <div className='2xl:w-[1200px] w-full mx-auto bg-violet-50 md:py-16 py-10 md:mt-20 mt-10 text-violet-900'>
-                <div className='lg:w-3/5 w-4/5 mx-auto'>
+            <div className='w-full mx-auto bg-violet-50 md:py-16 py-10 md:mt-20 mt-10 text-violet-900'>
+                <div className='2xl:w-[800px] lg:w-3/5 w-4/5 mx-auto'>
                     <p className='md:text-2xl text-xl font-medium italic leading-relaxed'>
                         "The quality of candidates provided by Judge and ease of doing business, including flexibility, is second to none. Judge offers a wide range of services and they are able to offer alternative solutions that make it easier to resolve our business needs."
                     </p>
@@ -388,7 +388,7 @@ const ITStaffing = () => {
             </div>
         </section>
         <section className='pb-20'>
-            <div className='2xl:w-[1200px] lg:w-3/5 md:w-4/5 w-11/12 mx-auto'>
+            <div className='2xl:w-[700px] lg:w-3/5 md:w-4/5 w-11/12 mx-auto'>
                 <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     Have any Question?
                 </h1>
