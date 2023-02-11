@@ -275,7 +275,7 @@ const DigitalMarketing = () => {
                 <p className='md:text-lg text-base font-medium text-center text-gray-500'>
                     Hire a remote employee in any domain
                 </p>
-                <div className='xl:w-4/5 lg:w-11/12 w-4/5 mx-auto mt-12 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-16'>
+                <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 w-4/5 mx-auto mt-12 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-16'>
                     <div className=''>
                         <div
                             style={{ backgroundImage: `url(${outsourcing})` }}

@@ -3,7 +3,7 @@ import React from 'react';
 const TopNavigation = () => {
     return (
         <div className='w-full bg-slate-900'>
-            <div className='2xl:w-[1200px] xl:w-full mx-auto flex items-center md:justify-between justify-center px-16 py-3 text-white'>
+            <div className='2xl:w-[1200px] xl:w-full mx-auto flex items-center md:justify-between justify-center 2xl:px-0 px-16 py-3 text-white'>
                 <ul className='md:flex hidden items-center gap-x-10'>
                     <li>
                         <a
