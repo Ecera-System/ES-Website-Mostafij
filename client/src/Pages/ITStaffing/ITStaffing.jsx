@@ -13,7 +13,7 @@ import svg4 from '../../Images/IT_Staffing/testing1.svg';
 import svg5 from '../../Images/IT_Staffing/web1.svg';
 import it5 from '../../Images/IT_Staffing/it5.jpg';
 import talent from '../../Images/IT_Staffing/talent.jpg';
-import st2 from '../../Images/IT_Staffing/st2.png';
+// import st2 from '../../Images/IT_Staffing/st2.png';
 import itt from '../../Images/IT_Staffing/itt.jpg';
 import itt2 from '../../Images/IT_Staffing/itt2.jpg';
 import itt3 from '../../Images/IT_Staffing/itt3.jpg';
@@ -49,21 +49,6 @@ const slide = [
     }
 ];
 
-// const faq = [
-//     {
-//         question: 'What is an IT staffing firm ?',
-//         ans: "IT staffing firms work with companies to help fill open technology roles within their organization. Also known as IT staffing agencies, recruitment firms, search firms, or placement agencies, IT staffing firms match companies with job seekers based on skill sets and organizational fit on a contract, temp-to-perm, or direct placement basis. Many agencies have relationships with a wide variety of companies and hiring managers across all industries and are able to place talent in the best position to meet their needs."
-//     },
-//     {
-//         question: 'What are the types of IT staffing ?',
-//         ans: "IT staffing agencies work with companies to place technology professionals in a variety of roles. Typically, that is on a contract, temp-to-perm, or direct placement basis. (link to IT Staffing Options section where these are further defined??)"
-//     },
-//     {
-//         question: 'How do staffing agencies recruit?',
-//         ans: "IT staffing agencies work with companies to place technology professionals in a variety of roles. Typically, that is on a contract, temp-to-perm, or direct placement basis. (link to IT Staffing Options section where these are further defined??)"
-//     },
-// ];
-
 const ITStaffing = () => {
     const [faqIndex1, setFaqIndex1] = useState(false);
     const [faqIndex2, setFaqIndex2] = useState(false);
@@ -77,6 +62,15 @@ const ITStaffing = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: true,
+        appendDots: dots => (
+            <div
+                style={{
+                    bottom: "-50px"
+                }}
+            >
+                <ul style={{ margin: "0px" }}> {dots} </ul>
+            </div>
+        ),
         responsive: [
             {
                 breakpoint: 1024,
@@ -113,7 +107,7 @@ const ITStaffing = () => {
         <ContactSideButton />
         <section
             style={{ backgroundImage: `url(${banner})` }}
-            className='w-full xl:h-[500px] md:h-[400px] h-80 bg-no-repeat bg-center bg-fixed bg-[#141d38]'
+            className='w-full xl:h-[500px] md:h-[400px] h-80 bg-no-repeat bg-center bg-fixed bg-[#080d1d]'
         >
             <div className='w-11/12 mx-auto h-full flex items-center justify-center text-center'>
                 <div>
@@ -129,23 +123,26 @@ const ITStaffing = () => {
                 </div>
             </div>
         </section>
-        <section className='py-14'>
-            <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+        <section className='py-20'>
+            <h1 className='text-center md:text-5xl md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                 Services We Offers
             </h1>
             <div className='2xl:w-[1200px] xl:w-[85%] lg:w-11/12 md:w-[85%] w-11/12 mx-auto mt-10'>
                 <Slider {...settings}>
                     {
-                        slide.map(item => <div key={item.title}>
-                            <div className='border-2 rounded-md p-6 sm:mx-3 mx-6'>
-                                <img src={item.img} alt="" className='sm:w-[160px] w-full h-auto mx-auto' />
-                                <h1 className='text-center lg:text-lg text-base font-medium text-gray-500 mt-3'>
-                                    {
-                                        item.title
-                                    }
-                                </h1>
-                            </div>
-                        </div>)
+                        slide.map(item =>
+                            <div key={item.title}>
+                                <div className='border rounded-md p-4 sm:mx-3 mx-6'>
+                                    <div className='p-4 rounded-md bg-gray-100'>
+                                        <img src={item.img} alt="" className='sm:w-[160px] w-full h-auto mx-auto' />
+                                        <h1 className='text-center lg:text-lg text-base font-medium text-gray-500 mt-3'>
+                                            {
+                                                item.title
+                                            }
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>)
                     }
                 </Slider>
             </div>
@@ -153,14 +150,22 @@ const ITStaffing = () => {
         <section className='py-16'>
             <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 md:w-3/4 w-11/12 mx-auto grid lg:grid-cols-2 grid-cols-1 items-center gap-12'>
                 <div>
-                    <img src={it5} alt="" className='w-full md:h-[450px] sm:h-[350px] h-[300px] rounded-lg' />
+                    <img src={it5} alt="" className='w-full md:h-[350px] sm:h-[300px] h-[300px] rounded-lg' />
                 </div>
                 <div>
                     <h2 className='text-3xl lg:text-start text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                         Reach the talent on global level with IT Staffing Services
                     </h2>
-                    <p className='text-lg text-gray-500 mt-5'>
-                        Ecera System has been delivering driven IT staffing services to its clients. We combine our expertise and knowledge to build agile and future-proof IT Staffing solutions. Our strategies and result-oriented services have gained us a reputation of a leading IT staffing companies in India and across the globe. Ecera System aims to serve as a reliable medium to its clients that want valuable talent in the most cost-effective way. Besides, our clients get an opportunity to tap into our wide network of contacts, cultivated throughout the years of hard work. In addition, we also craft permanent staffing solutions for businesses that require a long-term resource. Therefore, having us help with the recruitment will not just save you money but efforts too.
+                    <div className='w-40 h-0.5 bg-gray-500 relative mt-6 mb-8'>
+                        <span
+                            className='absolute top-1/2 -translate-y-1/2 left-1 w-0.5 h-4 rotate-[30deg] bg-gray-500'
+                        />
+                        <span
+                            className='absolute top-1/2 -translate-y-1/2 left-2.5 w-0.5 h-4 rotate-[30deg] bg-gray-500'
+                        />
+                    </div>
+                    <p className='text-lg text-gray-500'>
+                        Ecera System has been delivering driven IT staffing services to its clients. We combine our expertise and knowledge to build agile and future-proof IT Staffing solutions. Our strategies and result-oriented services have gained us a reputation of a leading IT staffing companies in India and across the globe. Ecera System aims to serve as a reliable medium to its clients that want valuable talent in the most cost-effective way.
                     </p>
                 </div>
             </div>
@@ -171,12 +176,69 @@ const ITStaffing = () => {
                     <h2 className='text-3xl md:text-start text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                         Hire talent smoothly with Contract to Hire IT Staffing Services
                     </h2>
+                    <div className='w-40 h-0.5 bg-gray-500 relative mt-6 mb-8'>
+                        <span
+                            className='absolute top-1/2 -translate-y-1/2 left-1 w-0.5 h-4 rotate-[30deg] bg-gray-500'
+                        />
+                        <span
+                            className='absolute top-1/2 -translate-y-1/2 left-2.5 w-0.5 h-4 rotate-[30deg] bg-gray-500'
+                        />
+                    </div>
                     <p className='text-lg text-gray-500 mt-5'>
-                        Our contract to hire IT staffing services allows you to try out a talent temporarily before making any long-term commitments. It projects high chances of the seamless transition of this temporary employee to a permanent one. IT staffing company in India has made quite a buzz over the last few years, and we have managed to contribute to its success with our unique approach. Channelizing the power of our deep knowledge of the job market and database of 10 lacs + qualified candidates, we take you to the right path of employee hunting. Hence, if you are looking for a reliable partner, we can ensure a solution that will help you in the long run.
+                        Our contract to hire IT staffing services allows you to try out a talent temporarily before making any long-term commitments. It projects high chances of the seamless transition of this temporary employee to a permanent one. IT staffing company in India has made quite a buzz over the last few years, and we have managed to contribute to its success with our unique approach.
+                        {/* Channelizing the power of our deep knowledge of the job market and database of 10 lacs + qualified candidates, we take you to the right path of employee hunting. Hence, if you are looking for a reliable partner, we can ensure a solution that will help you in the long run. */}
                     </p>
                 </div>
                 <div className='lg:w-1/2 w-full'>
                     <img src={talent} alt="" className='w-full h-auto rounded-lg' />
+                </div>
+            </div>
+        </section>
+        <section className='pt-14 pb-20'>
+            <div className='2xl:w-[1200px] lg:w-4/5 md:w-3/4 w-11/12 mx-auto grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 items-start gap-10'>
+                <div className='text-center'>
+                    <h2 className='text-5xl font-light text-gray-700'>
+                        5000
+                    </h2>
+                    <p className='text-lg text-gray-500 font-medium mt-4'>
+                        <span
+                            className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-900 to-cyan-500 inline-block mr-2'
+                        />
+                        LinkedIn Followers
+                    </p>
+                </div>
+                <div className='text-center'>
+                    <h2 className='text-5xl font-light text-gray-700'>
+                        2020
+                    </h2>
+                    <p className='text-lg text-gray-500 font-medium mt-4'>
+                        <span
+                            className='w-3 h-3 rounded-full bg-gradient-to-r from-red-600 to-yellow-500 inline-block mr-2'
+                        />
+                        Year Ecera was founded
+                    </p>
+                </div>
+                <div className='text-center'>
+                    <h2 className='text-5xl font-light text-gray-700'>
+                        360
+                    </h2>
+                    <p className='text-lg text-gray-500 font-medium mt-4'>
+                        <span
+                            className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 inline-block mr-2'
+                        />
+                        5 Star Rating
+                    </p>
+                </div>
+                <div className='text-center'>
+                    <h2 className='text-5xl font-light text-gray-700'>
+                        50
+                    </h2>
+                    <p className='text-lg text-gray-500 font-medium mt-4'>
+                        <span
+                            className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-emerald-500 inline-block mr-2'
+                        />
+                        Satisfied Clients
+                    </p>
                 </div>
             </div>
         </section>
@@ -231,7 +293,7 @@ const ITStaffing = () => {
                 </div>
             </div>
         </section>
-        <section className='py-16'>
+        {/* <section className='py-16'>
             <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-2 grid-cols-1 items-center gap-12'>
                 <div>
                     <img src={st2} alt="" className='w-full md:h-[450px] sm:h-[350px] h-72 rounded-lg' />
@@ -245,55 +307,7 @@ const ITStaffing = () => {
                     </p>
                 </div>
             </div>
-        </section>
-        <section className='pb-16'>
-            <div className='2xl:w-[1200px] lg:w-4/5 md:w-3/4 w-11/12 mx-auto grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 items-start gap-10'>
-                <div className='text-center'>
-                    <h2 className='text-5xl font-light text-gray-700'>
-                        5000
-                    </h2>
-                    <p className='text-lg text-gray-500 font-medium mt-4'>
-                        <span
-                            className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-900 to-cyan-500 inline-block mr-2'
-                        />
-                        LinkedIn Followers
-                    </p>
-                </div>
-                <div className='text-center'>
-                    <h2 className='text-5xl font-light text-gray-700'>
-                        2020
-                    </h2>
-                    <p className='text-lg text-gray-500 font-medium mt-4'>
-                        <span
-                            className='w-3 h-3 rounded-full bg-gradient-to-r from-red-600 to-yellow-500 inline-block mr-2'
-                        />
-                        Year Ecera was founded
-                    </p>
-                </div>
-                <div className='text-center'>
-                    <h2 className='text-5xl font-light text-gray-700'>
-                        360
-                    </h2>
-                    <p className='text-lg text-gray-500 font-medium mt-4'>
-                        <span
-                            className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 inline-block mr-2'
-                        />
-                        5 Star Rating
-                    </p>
-                </div>
-                <div className='text-center'>
-                    <h2 className='text-5xl font-light text-gray-700'>
-                        50
-                    </h2>
-                    <p className='text-lg text-gray-500 font-medium mt-4'>
-                        <span
-                            className='w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-emerald-500 inline-block mr-2'
-                        />
-                        Satisfied Clients
-                    </p>
-                </div>
-            </div>
-        </section>
+        </section> */}
         <section className='py-16 bg-gray-50'>
             <div className='2xl:w-[1200px] lg:w-4/5 md:w-3/5 sm:w-4/5 w-11/12 mx-auto'>
                 <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>

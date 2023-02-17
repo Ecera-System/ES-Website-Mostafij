@@ -47,6 +47,15 @@ const BusinessSlider = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: true,
+        appendDots: dots => (
+            <div
+                style={{
+                    bottom: "-50px"
+                }}
+            >
+                <ul style={{ margin: "0px" }}> {dots} </ul>
+            </div>
+        ),
         responsive: [
             {
                 breakpoint: 1280,
@@ -96,12 +105,15 @@ const BusinessSlider = () => {
                         {
                             data.map((item, index) =>
                                 <div key={index} className=''>
-                                    <div className='border-2 border-blue-600 rounded-full lg:w-48 lg:h-48 w-36 h-36 mx-auto'>
-                                        <img
+                                    <div
+                                        style={{ backgroundImage: `url(${item.img})` }}
+                                        className='border-2 border-blue-600 rounded-full lg:w-48 lg:h-48 w-36 h-36 mx-auto bg-no-repeat bg-cover bg-center'
+                                    >
+                                        {/* <img
                                             className='w-full h-full rounded-full border'
                                             src={item.img}
                                             alt=""
-                                        />
+                                        /> */}
                                     </div>
                                     <h4 className='font-bold md:text-base text-sm text-gray-700 mt-3 mx-2 text-center'>{item.title}</h4>
                                 </div>
