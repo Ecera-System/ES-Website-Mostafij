@@ -6,11 +6,11 @@ import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
 import banner from '../../Images/globe-banner.png';
-import svg1 from '../../Images/IT_Staffing/app2.svg';
-import svg2 from '../../Images/IT_Staffing/consultancy.svg';
-import svg3 from '../../Images/IT_Staffing/digital.svg';
-import svg4 from '../../Images/IT_Staffing/testing1.svg';
-import svg5 from '../../Images/IT_Staffing/web1.svg';
+import app_dev from '../../Images/IT_Staffing/app_dev.jpg';
+import it_consultancy from '../../Images/IT_Staffing/it_consultancy.jpg';
+import digital_marketing from '../../Images/IT_Staffing/digital_marketing.jpg';
+import qa_and_testing from '../../Images/IT_Staffing/qa_and_testing.jpg';
+import web_design from '../../Images/IT_Staffing/web_design.jpg';
 import it5 from '../../Images/IT_Staffing/it5.jpg';
 import talent from '../../Images/IT_Staffing/talent.jpg';
 // import st2 from '../../Images/IT_Staffing/st2.png';
@@ -28,23 +28,23 @@ import Footer from '../Shared/Footer/Footer';
 
 const slide = [
     {
-        img: svg1,
+        img: app_dev,
         title: 'App Development'
     },
     {
-        img: svg2,
+        img: it_consultancy,
         title: 'IT Consultancy'
     },
     {
-        img: svg3,
+        img: digital_marketing,
         title: 'Digital Marketing'
     },
     {
-        img: svg4,
+        img: qa_and_testing,
         title: 'QA & Testing'
     },
     {
-        img: svg5,
+        img: web_design,
         title: 'Website Design'
     }
 ];
@@ -132,10 +132,14 @@ const ITStaffing = () => {
                     {
                         slide.map(item =>
                             <div key={item.title}>
-                                <div className='border rounded-md p-4 sm:mx-3 mx-6'>
-                                    <div className='p-4 rounded-md bg-gray-100'>
-                                        <img src={item.img} alt="" className='sm:w-[160px] w-full h-auto mx-auto' />
-                                        <h1 className='text-center lg:text-lg text-base font-medium text-gray-500 mt-3'>
+                                <div className='border rounded-md p-3 sm:mx-3 mx-6'>
+                                    <div className='rounded-md bg-gray-100'>
+                                        <img
+                                            className='w-full h-36 mx-auto rounded-t-md'
+                                            src={item.img}
+                                            alt=""
+                                        />
+                                        <h1 className='p-4 text-center lg:text-lg text-base font-medium text-gray-500 mt-3'>
                                             {
                                                 item.title
                                             }

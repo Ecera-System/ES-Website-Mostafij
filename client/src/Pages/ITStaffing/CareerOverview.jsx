@@ -84,8 +84,8 @@ const CareerOverview = () => {
                 <h1 className='text-4xl font-medium text-blue-600'>
                     Careers Overview
                 </h1>
-                <p className='text-lg font-medium text-gray-500 my-5'>
-                    Organization is only as good as its people. At Ecera System Pvt. Ltd, our employees are our priority, we consider our employees as part of our family. Success can only come from your elite workforce.
+                <p className='text-base text-gray-500 my-5'>
+                    Organization is only as good as its people. At Ecera System, our employees are our priority, we consider our employees as part of our family. Success can only come from your elite workforce.
                 </p>
                 <p className='text-base text-gray-500'>
                     Ecera System, a progressive and fast growing firm provide challenging work opportunities coupled with conducive work environment. We are always looking for intelligent & experienced Technical, Functional and Management consultants, who are ready to take on the challenge to develop and implement leading edge software applications as well as share their ideas to maintain the highest quality standards in the industry. Our goal is all-round skill enhancement and continuous learning in line with the long-term career aspirations and success of our employees.

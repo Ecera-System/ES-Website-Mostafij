@@ -42,7 +42,7 @@ const BusinessSlider = () => {
     const settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -99,23 +99,22 @@ const BusinessSlider = () => {
                 </h1>
             </div>
 
-            <div className='pt-10 pb-20 w-[75%] mx-auto text-center relative'>
+            <div className='pt-10 pb-20 sm:w-11/12 w-4/5 mx-auto text-center relative'>
                 <div className='w-full'>
                     <Slider ref={setSliderRef} {...settings}>
                         {
                             data.map((item, index) =>
-                                <div key={index} className=''>
-                                    <div
-                                        style={{ backgroundImage: `url(${item.img})` }}
-                                        className='border-2 border-blue-600 rounded-full lg:w-48 lg:h-48 w-36 h-36 mx-auto bg-no-repeat bg-cover bg-center'
-                                    >
-                                        {/* <img
-                                            className='w-full h-full rounded-full border'
-                                            src={item.img}
-                                            alt=""
-                                        /> */}
+                                <div key={index}>
+                                    <div className='border rounded-md sm:mx-3 mx-6'>
+                                        <div className='rounded-md bg-gray-100'>
+                                            <img src={item.img} alt="" className='w-full h-36 mx-auto rounded-t-md ' />
+                                            <h1 className='text-center text-base font-medium text-gray-600 py-4'>
+                                                {
+                                                    item.title
+                                                }
+                                            </h1>
+                                        </div>
                                     </div>
-                                    <h4 className='font-bold md:text-base text-sm text-gray-700 mt-3 mx-2 text-center'>{item.title}</h4>
                                 </div>
                             )
                         }

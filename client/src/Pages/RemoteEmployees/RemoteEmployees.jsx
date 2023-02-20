@@ -8,7 +8,6 @@ import img2 from '../../Images/Remote_Employees/img-icon2.png';
 import img3 from '../../Images/Remote_Employees/img-icon3.png';
 import img4 from '../../Images/Remote_Employees/img-icon4.png';
 import sa from '../../Images/Remote_Employees/sa.jpg';
-// import choose from '../../Images/Remote_Employees/choose.jpg';
 import Footer from '../Shared/Footer/Footer';
 import { Link } from 'react-router-dom';
 
@@ -297,31 +296,6 @@ const RemoteEmployees = () => {
                 </div>
             </div>
         </section>
-        {/* <section className='py-14'>
-            <div className='2xl:w-[1200px] lg:w-4/5 md:w-3/4 sm:w-4/5 w-11/12 mx-auto'>
-                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
-                    Why choose us?
-                </h1>
-                <div className='grid lg:grid-cols-2 grid-cols-1 items-start gap-10 mt-10'>
-                    <div className='w-full rounded-xl shadow-[0px_5px_20px_0px_rgba(0,0,20,0.45)] overflow-hidden'>
-                        <img src={choose} alt="" className='max-w-full h-auto' />
-                    </div>
-                    <div>
-                        <p className='text-gray-500 text-lg'>
-                            Our virtual employees allow you to scale up your business quickly with minimal risks and headaches and give you a wider talent pool with flexible working hours to choose from.
-                        </p>
-                        <ul className='flex flex-col gap-y-3 mt-5 list-inside list-decimal text-base font-medium text-gray-500'>
-                            
-                            <li>Dedicated, full time employees</li>
-                            <li>We work in your time zone, on your schedule</li>
-                            <li>Experienced IT professionals</li>
-                            <li>Hire an individual or a team with a dedicated project manager</li>
-                            <li>Our agile teams will grow and shrink as your business needs change</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section> */}
         <Footer />
     </>);
 };

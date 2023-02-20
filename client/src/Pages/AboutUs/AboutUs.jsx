@@ -155,7 +155,7 @@ const AboutUs = () => {
                 </div>
                 <div className='md:w-1/2 w-full'>
                     <h4 className='text-lg font-medium mb-5 text-blue-600'>
-                        ABOUT ECERA SYSTEM PVT. LTD
+                        ABOUT ECERA SYSTEM
                     </h4>
                     <h1 className='sm:text-4xl text-3xl font-medium text-gray-600'>
                         You Can not Use Up Creativity.
