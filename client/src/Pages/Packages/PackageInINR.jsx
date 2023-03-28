@@ -3,7 +3,6 @@ import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import banner from '../../Images/packages-bg.jpg';
 import PaymentButton from '../Shared/PaymentButton/PaymentButton';
 
 const PackageInINR = () => {
@@ -15,7 +14,7 @@ const PackageInINR = () => {
         <ContactSideButton />
         <section>
             <div className='py-24 bg-no-repeat bg-center text-center'
-                style={{ backgroundImage: `url(${banner})` }}
+                style={{ backgroundImage: `url(/Images/packages-bg.jpg)` }}
             >
                 <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
                     Website Design

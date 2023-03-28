@@ -2,9 +2,6 @@ import React from 'react';
 import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import banner from '../../Images/packages-bg.jpg';
-import hpImg from '../../Images/hp-img-closer-bg.png';
-import qnaImg from '../../Images/qna.png';
 import { Link } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
 
@@ -16,7 +13,7 @@ const ContactUs = () => {
         <div>
             <section
                 className='py-24 bg-no-repeat bg-center bg-cover text-center'
-                style={{ backgroundImage: `url(${banner})` }}
+                style={{ backgroundImage: `url(/Images/packages-bg.jpg)` }}
             >
                 <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
                     Contact US
@@ -248,7 +245,7 @@ const ContactUs = () => {
             </section>
             <section
                 className='pb-14 pt-44 bg-no-repeat bg-cover'
-                style={{ backgroundImage: `url(${hpImg})` }}
+                style={{ backgroundImage: `url(/Images/hp-img-closer-bg.png)` }}
             >
                 <div className='2xl:w-[1100px] xl:w-4/5 lg:w-11/12 md:w-4/5 w-11/12 mx-auto flex lg:flex-row flex-col-reverse justify-between'>
                     <div className='lg:w-1/2 w-full lg:text-start text-center'>
@@ -268,7 +265,12 @@ const ContactUs = () => {
                         </div>
                     </div>
                     <div className='lg:w-1/2 w-full'>
-                        <img src={qnaImg} alt="" className='max-w-full max-h-full mx-auto' />
+                        <img
+                            loading='lazy'
+                            src='/Images/qna.png'
+                            alt=""
+                            className='max-w-full max-h-full mx-auto'
+                        />
                     </div>
                 </div>
             </section>

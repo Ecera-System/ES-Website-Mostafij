@@ -1,6 +1,4 @@
 import React from 'react';
-import certification1 from '../../../Images/Certification_icons/certification1.png';
-import certification2 from '../../../Images/Certification_icons/certification2.png';
 
 const Footer = () => {
     return (<>
@@ -143,8 +141,8 @@ const Footer = () => {
                                 className='sm:w-full w-4/5 h-auto grid md:grid-cols-2 grid-cols-1 items-center md:gap-0 gap-3 text-gray-400 hover:text-gray-50 duration-300'
                             >
                                 <h2 className='text-sm font-medium break-words'>D&B Credibility Certified</h2>
-                                <img
-                                    src={certification1}
+                                <img loading='lazy'
+                                    src='/Images/Certification_icons/certification1.png'
                                     alt="D&B Credibility Certified"
                                     className='rounded-md w-[146px] h-[52px]'
                                 />
@@ -155,8 +153,8 @@ const Footer = () => {
                                 className='sm:w-full w-4/5 h-auto grid md:grid-cols-2 grid-cols-1 items-center md:gap-0 gap-3 text-gray-400 hover:text-gray-50 duration-300'
                             >
                                 <h2 className='text-sm font-medium'>E- Verified</h2>
-                                <img
-                                    src={certification2}
+                                <img loading='lazy'
+                                    src='/Images/Certification_icons/certification2.png'
                                     alt="E- Verified"
                                     className='rounded-md w-[146px] h-[52px]'
                                 />

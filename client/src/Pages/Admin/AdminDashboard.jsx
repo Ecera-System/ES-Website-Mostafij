@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import useGetUser from '../../api/useGetUser';
-import eceraLogo from '../../Images/Nav_logo/ecera-logo.png';
 
 
 const AdminDashboard = () => {
@@ -18,9 +17,9 @@ const AdminDashboard = () => {
             <div className='2xl:w-[1200px] w-full lg:h-screen overflow-auto border-t flex lg:gap-6'>
                 <aside className='lg:block hidden lg:w-1/4 h-full bg-white sticky top-0'>
                     <Link to={'/'} className='inline-block pl-8 pt-3'>
-                        <img
+                        <img loading='lazy'
                             className='w-14 h-14'
-                            src={eceraLogo}
+                            src='/Images/Nav_logo/ecera-logo.png'
                             alt="ecera logo"
                         />
                     </Link>

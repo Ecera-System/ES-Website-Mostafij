@@ -2,34 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import banner from '../../Images/globe-banner.png';
-import gtco from '../../Images/Digital_Marketing/gtco.png';
-import seoBanner from '../../Images/Digital_Marketing/seo-banner.jpg';
-import data_driven_dm from '../../Images/Digital_Marketing/data_driven_dm.png';
-import industry_experts_dm from '../../Images/Digital_Marketing/industry_experts_dm.jpg';
-import dm_framework from '../../Images/Digital_Marketing/dm_framework.jpg';
-import omnichannel_personalization_dm from '../../Images/Digital_Marketing/omnichannel_personalization_dm.jpg';
-import campaign_monitoring_dm from '../../Images/Digital_Marketing/campaign_monitoring_dm.jpg';
-import competitive_pricing_dm from '../../Images/Digital_Marketing/competitive_pricing_dm.jpg';
-import ctaBanner from '../../Images/Digital_Marketing/cta-banner.jpg';
-import whyDigital from '../../Images/Digital_Marketing/why-digital.png';
-import cardsBackground from '../../Images/Digital_Marketing/cards-background.jpg';
 import Footer from '../Shared/Footer/Footer';
-import briefUs from '../../Images/Digital_Marketing/briefUs.png';
-import chooseTeam from '../../Images/Digital_Marketing/chooseTeam.png';
-import handPick from '../../Images/Digital_Marketing/handPick.png';
-import getGoing from '../../Images/Digital_Marketing/getGoing.png';
-import talent from '../../Images/Digital_Marketing/talent.png';
-import money from '../../Images/Digital_Marketing/money.png';
-import support from '../../Images/Digital_Marketing/support.png';
-import outsourcing from '../../Images/Digital_Marketing/outsourcing.png';
-import app_development from '../../Images/Digital_Marketing/app-development.png';
-import digital_marketing from '../../Images/Digital_Marketing/digital_marketing.png';
-import content_writing from '../../Images/Digital_Marketing/content-writing.png';
-import graphics_and_web from '../../Images/Digital_Marketing/graphics_and_web.png';
-import engineer from '../../Images/Digital_Marketing/engineer.png';
-import technical_support from '../../Images/Digital_Marketing/technical_support.png';
-import hr_recruitment from '../../Images/Digital_Marketing/hr_recruitment.png';
 
 
 const faq = [
@@ -51,7 +24,6 @@ const faq = [
     },
 ];
 
-
 const DigitalMarketing = () => {
     const [faqIndex1, setFaqIndex1] = useState(false);
     const [isOver, setIsOver] = useState(1);
@@ -60,75 +32,42 @@ const DigitalMarketing = () => {
         <PageTitle title='Digital Marketing'></PageTitle>
         <Header></Header>
         <section
-            style={{ backgroundImage: `url(${banner})` }}
-            className='w-full h-auto bg-no-repeat bg-center bg-fixed bg-[#020a23]'
+            className='w-full h-auto bg-gradient-to-r from-blue-600 to-purple-600 py-20'
         >
-            <div className='w-full h-full py-20 flex items-center justify-center text-center'>
-                <div className='lg:w-[50rem] w-[90%]'>
-                    <h2
-                        style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
-                        className='lg:text-4xl md:text-3xl text-2xl font-medium text-white'
-                    >
-                        Outsource in Any Domain
-                    </h2>
-                    <h1
-                        style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
-                        className='lg:text-5xl md:text-4xl text-3xl font-semibold text-white mt-5'
-                    >
-                        Hire Dedicated Virtual Employees
+            <div className='2xl:w-[1100px] lg:w-[90%] sm:w-4/5 w-11/12 h-full mx-auto grid lg:grid-cols-2 grid-cols-1 items-center lg:gap-0 gap-20'>
+                <div className='lg:text-start text-center'>
+                    <h1 className='md:text-5xl text-3xl font-bold md:leading-[3.5rem] text-white'>
+                        Digital Marketing
                     </h1>
-                    <h2
-                        style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
-                        className='sm:w-max mx-auto lg:text-2xl text-lg font-medium text-white mt-14 py-4 border-t border-b'
+                    <p className='text-gray-200 sm:text-lg text-base italic font-medium py-3'>
+                        Grow Your Client Base With Data-Driven and Targeted Strategies
+                    </p>
+                    <Link
+                        to="/contact"
+                        className='inline-block text-lg text-white font-medium mt-5 py-2 px-10 border-2 border-white rounded hover:text-blue-600 hover:bg-white duration-300'
                     >
-                        Starting from Just
-                        <strong className='mx-2 text-cyan-400'>
-                            US $995 – $1995
-                        </strong>
-                        / Month only
-                    </h2>
-                    <ul className='md:w-full w-max lg:mt-20 mt-14 mx-auto flex md:flex-row flex-col md:items-center justify-between gap-5'>
-                        <li
-                            style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
-                            className='text-lg font-medium text-cyan-400 flex items-center gap-3'
-                        >
-                            <span className='text-4xl text-white'>
-                                <i class="fa-solid fa-users"></i>
-                            </span>
-                            1500+ Employees
-                        </li>
-                        <li
-                            style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
-                            className='text-lg font-medium text-cyan-400 flex items-center gap-3'
-                        >
-                            <span className='text-4xl text-white'>
-                                <i class="fa-solid fa-globe"></i>
-                            </span>
-                            150+ Domains
-                        </li>
-                        <li
-                            style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
-                            className='text-lg font-medium text-cyan-400 flex items-center gap-3'
-                        >
-                            <span className='text-4xl text-white'>
-                                <i class="fa-solid fa-hourglass-start"></i>
-                            </span>
-                            Start Within 8 hours
-                        </li>
-                    </ul>
+                        Request a Quote
+                    </Link>
+                </div>
+                <div className='grid lg:place-content-end place-content-center'>
+                    <img
+                        className='w-[450px] h-auto'
+                        src='/Images/Digital_Marketing/gtco.png'
+                        alt="website design featured work"
+                    />
                 </div>
             </div>
         </section>
-        <section className='pt-16 pb-10'>
-            <div className=' flex items-center justify-center sm:gap-5 gap-3 sm:mb-12 mb-8'>
-                <div className='w-1.5 h-1.5 border-2 border-blue-600 rounded-full'></div>
-                <div className='w-2 h-2 border-2 border-blue-600 rounded-full'></div>
-                <div className='w-3 h-3 border-2 border-blue-600 rounded-full'></div>
-                <div className='w-32 h-3 border-2 border-blue-600 rounded-full'></div>
-                <div className='w-3 h-3 border-2 border-blue-600 rounded-full'></div>
-                <div className='w-2 h-2 border-2 border-blue-600 rounded-full'></div>
-                <div className='w-1.5 h-1.5 border-2 border-blue-600 rounded-full'></div>
-            </div>
+        <div className=' flex items-center justify-center sm:gap-5 gap-3 sm:mt-16 mt-12'>
+            <div className='w-1.5 h-1.5 border-2 border-blue-600 rounded-full'></div>
+            <div className='w-2 h-2 border-2 border-blue-600 rounded-full'></div>
+            <div className='w-3 h-3 border-2 border-blue-600 rounded-full'></div>
+            <div className='w-32 h-3 border-2 border-blue-600 rounded-full'></div>
+            <div className='w-3 h-3 border-2 border-blue-600 rounded-full'></div>
+            <div className='w-2 h-2 border-2 border-blue-600 rounded-full'></div>
+            <div className='w-1.5 h-1.5 border-2 border-blue-600 rounded-full'></div>
+        </div>
+        <section className='py-16'>
             <div className='2xl:w-[1200px] xl:w-3/4 md:w-4/5 w-[90%] mx-auto flex lg:flex-row flex-col-reverse items-center lg:gap-10 gap-8'>
                 <div className='lg:w-1/2 w-full text-base text-gray-500'>
                     <p>
@@ -142,16 +81,17 @@ const DigitalMarketing = () => {
                         your business every day with month-to-month contracts.
                     </p>
                 </div>
-                <div className='lg:w-1/2 w-full p-5'>
-                    <img src={gtco} alt="" className='w-max mx-auto h-auto' />
+                <div className='lg:w-1/2 w-full pl-5'>
+                    <div className='w-full h-full bg-gradient-to-r from-blue-600 to-purple-600'>
+                        <img
+                            loading='lazy'
+                            src='/Images/Digital_Marketing/cta-banner.jpg'
+                            alt=""
+                            className='w-max mx-auto h-auto relative -top-3 -left-3'
+                        />
+                    </div>
                 </div>
             </div>
-            {/* <div className='lg:w-[42rem] md:w-4/5 w-[90%] mx-auto text-base lg:text-center text-start text-gray-500 pb-10'>
-                <p className='mt-4'>
-                    Take a look below at the wide variety of digital marketing services Ecera System
-                    offers. Contact us today to learn more about how we can help your business!
-                </p>
-            </div> */}
         </section>
         <div className='flex items-center sm:gap-5 gap-3 my-5'>
             <hr className='w-full h-0.5 bg-blue-500' />
@@ -173,12 +113,13 @@ const DigitalMarketing = () => {
                         <div
                             className='w-full h-full bg-no-repeat bg-center bg-cover duration-300'
                             style={{
-                                backgroundImage: `url(${(isOver === 1 && data_driven_dm) ||
-                                    (isOver === 2 && industry_experts_dm) ||
-                                    (isOver === 3 && dm_framework) ||
-                                    (isOver === 4 && omnichannel_personalization_dm) ||
-                                    (isOver === 5 && campaign_monitoring_dm) ||
-                                    (isOver === 6 && competitive_pricing_dm)
+                                backgroundImage: `url(
+                                    ${(isOver === 1 && '/Images/Digital_Marketing/data_driven_dm.png') ||
+                                    (isOver === 2 && '/Images/Digital_Marketing/industry_experts_dm.jpg') ||
+                                    (isOver === 3 && '/Images/Digital_Marketing/dm_framework.jpg') ||
+                                    (isOver === 4 && '/Images/Digital_Marketing/omnichannel_personalization_dm.jpg') ||
+                                    (isOver === 5 && '/Images/Digital_Marketing/campaign_monitoring_dm.jpg') ||
+                                    (isOver === 6 && '/Images/Digital_Marketing/competitive_pricing_dm.jpg')
                                     })`
                             }} />
                         <div
@@ -263,239 +204,6 @@ const DigitalMarketing = () => {
                 </div>
             </div>
         </section>
-        <section className='pt-20 pb-28 bg-gray-50'>
-            <div>
-                <h1 className='mx-7 text-center md:text-5xl md:leading-snug text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
-                    3 key advantages of a remote workforce
-                </h1>
-                <div className='2xl:w-[1200px] lg:w-4/5 md:w-4/5 sm:w-3/4 w-4/5 mx-auto mt-16 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
-                    <div className='px-8 py-14 bg-white shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem] hover:-translate-y-3 hover:scale-105 duration-300 ease-linear text-center'>
-                        <div
-                            style={{ backgroundImage: `url(${talent})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-cover bg-center"
-                        />
-                        <h2 className='text-xl font-medium text-gray-600 mt-7 mb-3'>
-                            Talent on-demand
-                        </h2>
-                        <p className='text-base text-gray-500'>
-                            Hire a dedicated, skilled remote employee in less than 8 hours
-                        </p>
-                    </div>
-                    <div className='px-8 py-14 bg-white shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem] hover:-translate-y-3 hover:scale-105 duration-300 ease-linear text-center'>
-                        <div
-                            style={{ backgroundImage: `url(${money})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-cover bg-center"
-                        />
-                        <h2 className='text-xl font-medium text-gray-600 mt-7 mb-3'>
-                            Zero overheads
-                        </h2>
-                        <p className='text-base text-gray-500'>
-                            Say goodbye to profit-guzzling expenses like office rent, taxes, hardware, etc
-                        </p>
-                    </div>
-                    <div className='px-8 py-14 bg-white shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem] hover:-translate-y-3 hover:scale-105 duration-300 ease-linear text-center'>
-                        <div
-                            style={{ backgroundImage: `url(${support})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-cover bg-center"
-                        />
-                        <h2 className='text-xl font-medium text-gray-600 mt-7 mb-3'>
-                            24×7 support
-                        </h2>
-                        <p className='text-base text-gray-500'>
-                            No downtime, no being stranded midway in a project
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section className='pt-20 pb-24'>
-            <div>
-                <h1 className='mx-7 text-center md:text-5xl md:leading-snug text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
-                    360° Virtual Staffing Services
-                </h1>
-                <p className='md:text-lg text-base font-medium text-center text-gray-500'>
-                    Hire a remote employee in any domain
-                </p>
-                <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 w-4/5 mx-auto mt-12 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-16'>
-                    <div className=''>
-                        <div
-                            style={{ backgroundImage: `url(${outsourcing})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
-                        />
-                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
-                            IT Outsourcing
-                        </h2>
-                    </div>
-                    <div className=''>
-                        <div
-                            style={{ backgroundImage: `url(${app_development})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
-                        />
-                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
-                            Mobile Apps Development
-                        </h2>
-                    </div>
-                    <div className=''>
-                        <div
-                            style={{ backgroundImage: `url(${digital_marketing})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
-                        />
-                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
-                            Digital Marketing
-                        </h2>
-                    </div>
-                    <div className=''>
-                        <div
-                            style={{ backgroundImage: `url(${content_writing})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
-                        />
-                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
-                            Digital Marketing
-                        </h2>
-                    </div>
-                    <div className=''>
-                        <div
-                            style={{ backgroundImage: `url(${hr_recruitment})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
-                        />
-                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
-                            HR & Recruitment
-                        </h2>
-                    </div>
-                    <div className=''>
-                        <div
-                            style={{ backgroundImage: `url(${graphics_and_web})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
-                        />
-                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
-                            Graphics & Web Designing
-                        </h2>
-                    </div>
-                    <div className=''>
-                        <div
-                            style={{ backgroundImage: `url(${engineer})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
-                        />
-                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
-                            Engineering & Architecture
-                        </h2>
-                    </div>
-                    <div className=''>
-                        <div
-                            style={{ backgroundImage: `url(${technical_support})` }}
-                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
-                        />
-                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
-                            IT Technical Support
-                        </h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div className='flex items-center sm:gap-5 gap-3'>
-            <hr className='w-full h-0.5 bg-blue-500' />
-            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
-            <div className='w-96 h-3 border-2 border-blue-500 rounded-full'></div>
-            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
-            <hr className='w-full h-0.5 bg-blue-500' />
-        </div>
-        <section className='pt-20 pb-24'>
-            <div>
-                <h1 className='mx-7 text-center md:text-5xl md:leading-snug text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
-                    Hiring Remote Staff Was Never This Easy
-                </h1>
-                <div className='2xl:w-[1200px] xl:w-[85%] lg:w-3/5 md:w-4/5 w-9/12 mx-auto grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10 mt-16'>
-                    <div
-                        className='px-8 py-14 shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem]'
-                    >
-                        <div className='relative -top-2 -left-[60px] w-max pl-10 pr-14 py-3 bg-blue-500 text-white text-lg font-medium uppercase rounded-r-full'>
-                            Step 01
-                            <span
-                                style={{ borderStyle: 'solid', borderWidth: '0 28px 28px 0', borderColor: 'transparent #2563EB transparent transparent' }}
-                                className='absolute -bottom-[28px] left-0 w-0 h-0'
-                            />
-                        </div>
-                        <div className='w-[8.5rem] h-[8.5rem] mx-auto my-10 p-8 border border-blue-600 rounded-full'>
-                            <span
-                                style={{ backgroundImage: `url(${briefUs})` }}
-                                className='w-full h-full inline-block bg-no-repeat bg-cover bg-center'
-                            />
-                        </div>
-                        <h2 className='text-xl font-medium text-gray-600 text-center'>
-                            Brief Us
-                        </h2>
-                    </div>
-                    <div
-                        className='px-8 py-14 shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem]'
-                    >
-                        <div className='relative -top-2 -left-[60px] w-max pl-10 pr-14 py-3 bg-purple-600 text-white text-lg font-medium uppercase rounded-r-full'>
-                            Step 02
-                            <span
-                                style={{ borderStyle: 'solid', borderWidth: '0 28px 28px 0', borderColor: 'transparent #7C21CB transparent transparent' }}
-                                className='absolute -bottom-[28px] left-0 w-0 h-0'
-                            />
-                        </div>
-                        <div className='w-[8.5rem] h-[8.5rem] mx-auto my-10 p-8 border border-purple-600 rounded-full'>
-                            <span
-                                style={{ backgroundImage: `url(${handPick})` }}
-                                className='w-full h-full inline-block bg-no-repeat bg-cover bg-center'
-                            />
-                        </div>
-                        <h2 className='text-xl font-medium text-gray-600 text-center'>
-                            Hand-pick Resources
-                        </h2>
-                    </div>
-                    <div
-                        className='px-8 py-14 shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem]'
-                    >
-                        <div className='relative -top-2 -left-[60px] w-max pl-10 pr-14 py-3 bg-[#1DBF73] text-white text-lg font-medium uppercase rounded-r-full'>
-                            Step 03
-                            <span
-                                style={{ borderStyle: 'solid', borderWidth: '0 28px 28px 0', borderColor: 'transparent #19a061 transparent transparent' }}
-                                className='absolute -bottom-[28px] left-0 w-0 h-0'
-                            />
-                        </div>
-                        <div className='w-[8.5rem] h-[8.5rem] mx-auto my-10 p-8 border border-[#1DBF73] rounded-full'>
-                            <span
-                                style={{ backgroundImage: `url(${chooseTeam})` }}
-                                className='w-full h-full inline-block bg-no-repeat bg-cover bg-center'
-                            />
-                        </div>
-                        <h2 className='text-xl font-medium text-gray-600 text-center'>
-                            Choose Your Team
-                        </h2>
-                    </div>
-                    <div
-                        className='px-8 py-14 shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem]'
-                    >
-                        <div className='relative -top-2 -left-[60px] w-max pl-10 pr-14 py-3 bg-cyan-500 text-white text-lg font-medium uppercase rounded-r-full'>
-                            Step 04
-                            <span
-                                style={{ borderStyle: 'solid', borderWidth: '0 28px 28px 0', borderColor: 'transparent #0891B2 transparent transparent' }}
-                                className='absolute -bottom-[28px] left-0 w-0 h-0'
-                            />
-                        </div>
-                        <div className='w-[8.5rem] h-[8.5rem] mx-auto my-10 p-8 border border-cyan-500 rounded-full'>
-                            <span
-                                style={{ backgroundImage: `url(${getGoing})` }}
-                                className='w-full h-full inline-block bg-no-repeat bg-cover bg-center'
-                            />
-                        </div>
-                        <h2 className='text-xl font-medium text-gray-600 text-center'>
-                            Get Going
-                        </h2>
-                    </div>
-                </div>
-                <div className='grid place-items-center mt-20'>
-                    <Link
-                        to='/get-estimate'
-                        className='px-14 py-3 text-lg font-medium text-blue-600 hover:bg-blue-600 hover:text-white duration-300 border border-blue-600 rounded-tr-3xl rounded-bl-3xl'
-                    >
-                        Share Your Requirement
-                    </Link>
-                </div>
-            </div>
-        </section>
         <div className='flex items-center sm:gap-5 gap-3'>
             <hr className='w-full h-0.5 bg-blue-500' />
             <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
@@ -521,13 +229,18 @@ const DigitalMarketing = () => {
                         </p>
                     </div>
                     <div className='lg:w-1/2 w-full'>
-                        <img src={seoBanner} alt="" className='w-full h-auto rounded-xl' />
+                        <img
+                            loading='lazy'
+                            src='/Images/Digital_Marketing/seo-banner.jpg'
+                            alt=""
+                            className='w-full h-auto rounded-xl'
+                        />
                     </div>
                 </div>
             </div>
         </section>
         <section
-            style={{ background: `linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url(${ctaBanner}) fixed center center` }}
+            style={{ background: `linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url(/Images/Digital_Marketing/cta-banner.jpg) fixed center center` }}
             className='w-full lg:py-20 py-12 bg-no-repeat bg-center bg-fixed bg-[#141d38]'
         >
             <div className='2xl:w-[1200px] lg:w-3/4 md:w-4/5 w-11/12 mx-auto text-center text-gray-200'>
@@ -563,7 +276,7 @@ const DigitalMarketing = () => {
                         </p>
                     </div>
                     <div>
-                        <img src={whyDigital} alt="" />
+                        <img loading='lazy' src='/Images/Digital_Marketing/why-digital.png' alt="" />
                     </div>
                     <ul className='flex flex-col gap-y-5 mt-8'>
                         <li className='flex items-center gap-x-3'>
@@ -613,7 +326,7 @@ const DigitalMarketing = () => {
             </div>
         </section>
         <section
-            style={{ background: `linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url(${cardsBackground}) fixed center center` }}
+            style={{ background: `linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url(/Images/Digital_Marketing/cards-background.jpg) fixed center center` }}
             className='w-full py-20 bg-no-repeat bg-cover'
         >
             <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 sm:w-4/5 w-11/12 mx-auto'>

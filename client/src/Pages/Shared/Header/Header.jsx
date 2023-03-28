@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import useLoggedIn from '../../../AuthHook/useLoggedIn';
-import eceraLogo from '../../../Images/Nav_logo/ecera-logo.png';
 import DesktopMenu from './DesktopMenu';
 import MobileMenu from './MobileMenu';
 import TopNavigation from './TopNavigation';
 
 
-const Header = ({ login, topNav }) => {
+const Header = ({ login, topNav, isEnlistco }) => {
     const [scroll, setScroll] = useState(false);
     const [isLoggedIn, setIsLogout] = useLoggedIn();
     const [openProfile, setOpenProfile] = useState(false);
@@ -56,8 +55,9 @@ const Header = ({ login, topNav }) => {
                     <div>
                         <Link to={'/'}>
                             <img
+                                loading='lazy'
                                 className='w-14 h-14'
-                                src={eceraLogo}
+                                src='/Images/Nav_logo/ecera-logo.png'
                                 alt="ecera logo"
                             />
                         </Link>
@@ -71,6 +71,7 @@ const Header = ({ login, topNav }) => {
                         openProfile={openProfile}
                         setOpenProfile={setOpenProfile}
                         profile={profile}
+                        isEnlistco={isEnlistco}
                     />
 
                     {/* <-- Mobile view --> */}
@@ -80,6 +81,7 @@ const Header = ({ login, topNav }) => {
                         openProfile={openProfile}
                         setOpenProfile={setOpenProfile}
                         profile={profile}
+                        isEnlistco={isEnlistco}
                     />
                 </div>
             </nav>

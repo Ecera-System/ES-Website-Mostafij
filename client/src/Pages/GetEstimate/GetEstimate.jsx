@@ -2,66 +2,64 @@ import React, { useState } from 'react';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import hpImg from '../../Images/hp-img-closer-bg.png';
-import qnaImg from '../../Images/qna.png';
 
 const GetEstimate = () => {
     window.scrollTo(0, 0)
     const [error, setError] = useState({ file: false, requiredServices: false });
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const firstName = e.target.firstName.value;
-        const lastName = e.target.lastName.value;
-        const email = e.target.email.value;
-        const contactNumber = e.target.cNumber.value;
-        const skypeWhatsApp = e.target.skypeWhatsApp.value;
-        const approximateBudget = e.target.approximateBudget.value;
-        const webDevelopment = e.target.webDevelopment.checked;
-        const digitalMarketing = e.target.digitalMarketing.checked;
-        const mobileAppDevelopment = e.target.mobileAppDevelopment.checked;
-        const remoteEmployees = e.target.remoteEmployees.checked;
-        const ITStaffingSolutions = e.target.ITStaffingSolutions.checked;
-        const projectDetails = e.target.projectDetails.value || '';
-        const documentFile = e.target.documentFile.files[0] || '';
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const firstName = e.target.firstName.value;
+    //     const lastName = e.target.lastName.value;
+    //     const email = e.target.email.value;
+    //     const contactNumber = e.target.cNumber.value;
+    //     const skypeWhatsApp = e.target.skypeWhatsApp.value;
+    //     const approximateBudget = e.target.approximateBudget.value;
+    //     const webDevelopment = e.target.webDevelopment.checked;
+    //     const digitalMarketing = e.target.digitalMarketing.checked;
+    //     const mobileAppDevelopment = e.target.mobileAppDevelopment.checked;
+    //     const remoteEmployees = e.target.remoteEmployees.checked;
+    //     const ITStaffingSolutions = e.target.ITStaffingSolutions.checked;
+    //     const projectDetails = e.target.projectDetails.value || '';
+    //     const documentFile = e.target.documentFile.files[0] || '';
 
-        const requiredServices = !(webDevelopment || digitalMarketing || mobileAppDevelopment || remoteEmployees || ITStaffingSolutions) ? '' : {
-            webDevelopment,
-            digitalMarketing,
-            mobileAppDevelopment,
-            remoteEmployees,
-            ITStaffingSolutions,
-        }
-        if (!requiredServices) return (
-            document
-                .querySelector('#requiredServices')
-                ?.scrollIntoView({ block: "center", behavior: "smooth" }),
-            setError({ ...error, requiredServices: true })
-        )
+    //     const requiredServices = !(webDevelopment || digitalMarketing || mobileAppDevelopment || remoteEmployees || ITStaffingSolutions) ? '' : {
+    //         webDevelopment,
+    //         digitalMarketing,
+    //         mobileAppDevelopment,
+    //         remoteEmployees,
+    //         ITStaffingSolutions,
+    //     }
+    //     if (!requiredServices) return (
+    //         document
+    //             .querySelector('#requiredServices')
+    //             ?.scrollIntoView({ block: "center", behavior: "smooth" }),
+    //         setError({ ...error, requiredServices: true })
+    //     )
 
-        if (documentFile) {
-            if (
-                !(documentFile.type === "application/pdf" ||
-                    documentFile.type === "image/jpeg" ||
-                    documentFile.type === "image/jpg" ||
-                    documentFile.type === "image/png" ||
-                    documentFile.type === "image/svg+xml")
-            ) return setError({ ...error, file: true });
-        };
+    //     if (documentFile) {
+    //         if (
+    //             !(documentFile.type === "application/pdf" ||
+    //                 documentFile.type === "image/jpeg" ||
+    //                 documentFile.type === "image/jpg" ||
+    //                 documentFile.type === "image/png" ||
+    //                 documentFile.type === "image/svg+xml")
+    //         ) return setError({ ...error, file: true });
+    //     };
 
-        localStorage.setItem('getEstimate', JSON.stringify({
-            firstName,
-            lastName,
-            email,
-            contactNumber,
-            skypeWhatsApp,
-            approximateBudget,
-            requiredServices,
-            projectDetails,
-            documentFile,
-        }))
+    //     localStorage.setItem('getEstimate', JSON.stringify({
+    //         firstName,
+    //         lastName,
+    //         email,
+    //         contactNumber,
+    //         skypeWhatsApp,
+    //         approximateBudget,
+    //         requiredServices,
+    //         projectDetails,
+    //         documentFile,
+    //     }))
 
-    };
+    // };
 
     return (<>
         <PageTitle title='Get Estimate' />
@@ -236,7 +234,7 @@ const GetEstimate = () => {
         </section> */}
         <section
             className='pb-20 pt-44 lg:mt-10 bg-no-repeat bg-cover'
-            style={{ backgroundImage: `url(${hpImg})` }}
+            style={{ backgroundImage: `url(/Images/hp-img-closer-bg.png)` }}
         >
             <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 md:w-4/5 w-11/12 mx-auto flex lg:flex-row flex-col-reverse justify-between'>
                 <div className='lg:w-1/2 w-full lg:text-start text-center'>
@@ -254,7 +252,7 @@ const GetEstimate = () => {
                     </p>
                 </div>
                 <div className='lg:w-1/2 w-full'>
-                    <img src={qnaImg} alt="" className='max-w-full max-h-full mx-auto' />
+                    <img loading='lazy' src='/Images/qna.png' alt="" className='max-w-full max-h-full mx-auto' />
                 </div>
             </div>
         </section>

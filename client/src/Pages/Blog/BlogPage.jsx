@@ -3,12 +3,6 @@ import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
 import { Link } from 'react-router-dom';
-import banner from '../../Images/packages-bg.jpg';
-import splas from '../../Images/Blog_Page/splas.jpg';
-import workProcess from '../../Images/Blog_Page/work-process-item-01.png';
-import cardPattern from '../../Images/Blog_Page/card-pattern-4.png';
-import testimonialIcon1 from '../../Images/Blog_Page/testimonial-icon-1.png';
-import testimonialIcon2 from '../../Images/Blog_Page/testimonial-icon-2.png';
 import Footer from '../Shared/Footer/Footer';
 
 const BlogPage = () => {
@@ -17,7 +11,7 @@ const BlogPage = () => {
         <Header />
         <ContactSideButton />
         <section className='py-24 bg-no-repeat bg-center bg-cover text-center'
-            style={{ backgroundImage: `url(${banner})` }}
+            style={{ backgroundImage: `url(/Images/packages-bg.jpg)` }}
         >
             <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
                 Blog Page
@@ -34,7 +28,12 @@ const BlogPage = () => {
                 </h2>
                 <div className='grid md:grid-cols-2 grid-cols-1 items-center lg:gap-20 gap-10'>
                     <div className='w-full'>
-                        <img src={splas} alt="" className='max-w-full h-auto shadow-[0px_5px_20px_0px_rgba(0,0,255,0.4)] rounded-xl' />
+                        <img
+                            loading='lazy'
+                            src='/Images/Blog_Page/splas.jpg'
+                            alt=""
+                            className='max-w-full h-auto shadow-[0px_5px_20px_0px_rgba(0,0,255,0.4)] rounded-xl'
+                        />
                     </div>
                     <div>
                         <p className='text-gray-500 lg:text-lg text-base'>
@@ -51,37 +50,41 @@ const BlogPage = () => {
                 </h1>
                 <div className='grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mt-12'>
                     <div className='bg-white rounded-2xl p-8 hover:-translate-y-2 duration-300'>
-                        <img src={workProcess} alt="" className='mx-auto' />
+                        <img
+                            loading='lazy'
+                            src='/Images/Blog_Page/work-process-item-01.png'
+                            alt="" className='mx-auto'
+                        />
                         <Link to='/blog/#' className='block text-base uppercase text-gray-600 hover:text-blue-600 hover:underline duration-300 text-center mt-5'>
                             Experienced Employee
                         </Link>
                     </div>
                     <div className='bg-white rounded-2xl p-8 hover:-translate-y-2 duration-300'>
-                        <img src={workProcess} alt="" className='mx-auto' />
+                        <img loading='lazy' src='/Images/Blog_Page/work-process-item-01.png' alt="" className='mx-auto' />
                         <Link to='/blog/#' className='block text-base uppercase text-gray-600 hover:text-blue-600 hover:underline duration-300 text-center mt-5'>
                             VARIETY OF SERVICES
                         </Link>
                     </div>
                     <div className='bg-white rounded-2xl p-8 hover:-translate-y-2 duration-300'>
-                        <img src={workProcess} alt="" className='mx-auto' />
+                        <img loading='lazy' src='/Images/Blog_Page/work-process-item-01.png' alt="" className='mx-auto' />
                         <Link to='/blog/#' className='block text-base uppercase text-gray-600 hover:text-blue-600 hover:underline duration-300 text-center mt-5'>
                             COMMITTMENT BY THE COMPANY
                         </Link>
                     </div>
                     <div className='bg-white rounded-2xl p-8 hover:-translate-y-2 duration-300'>
-                        <img src={workProcess} alt="" className='mx-auto' />
+                        <img loading='lazy' src='/Images/Blog_Page/work-process-item-01.png' alt="" className='mx-auto' />
                         <Link to='/blog/#' className='block text-base uppercase text-gray-600 hover:text-blue-600 hover:underline duration-300 text-center mt-5'>
                             FLEXIBILITY
                         </Link>
                     </div>
                     <div className='bg-white rounded-2xl p-8 hover:-translate-y-2 duration-300'>
-                        <img src={workProcess} alt="" className='mx-auto' />
+                        <img loading='lazy' src='/Images/Blog_Page/work-process-item-01.png' alt="" className='mx-auto' />
                         <Link to='/blog/#' className='block text-base uppercase text-gray-600 hover:text-blue-600 hover:underline duration-300 text-center mt-5'>
                             RELATIONSHIP WITH CLIENTS
                         </Link>
                     </div>
                     <div className='bg-white rounded-2xl p-8 hover:-translate-y-2 duration-300'>
-                        <img src={workProcess} alt="" className='mx-auto' />
+                        <img loading='lazy' src='/Images/Blog_Page/work-process-item-01.png' alt="" className='mx-auto' />
                         <Link to='/blog/#' className='block text-base uppercase text-gray-600 hover:text-blue-600 hover:underline duration-300 text-center mt-5'>
                             PROPER CHAIN OF COMMAND
                         </Link>
@@ -94,10 +97,10 @@ const BlogPage = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-right-top bg-no-repeat p-10 bg-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 shadow-[0px_0px_20px_rgb(0,0,0,0.1)]'
-                        style={{ backgroundImage: `url(${cardPattern})` }}
+                        style={{ backgroundImage: `url(/Images/Blog_Page/card-pattern-4.png)` }}
                     >
                         <div className='flex gap-x-3 items-center'>
-                            <img src={testimonialIcon1} alt="" />
+                            <img loading='lazy' src='/Images/Blog_Page/testimonial-icon-1.png' alt="" />
                             <p className='text-2xl font-medium text-gray-700'>
                                 Experienced Employees
                             </p>
@@ -110,10 +113,10 @@ const BlogPage = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-right-top bg-no-repeat p-10 bg-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 shadow-[0px_0px_20px_rgb(0,0,0,0.1)]'
-                        style={{ backgroundImage: `url(${cardPattern})` }}
+                        style={{ backgroundImage: `url(/Images/Blog_Page/card-pattern-4.png)` }}
                     >
                         <div className='flex gap-x-3 items-center'>
-                            <img src={testimonialIcon2} alt="" />
+                            <img loading='lazy' src='/Images/Blog_Page/testimonial-icon-2.png' alt="" />
                             <p className='text-2xl font-medium text-gray-700'>
                                 Variety of services
                             </p>
@@ -126,10 +129,10 @@ const BlogPage = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-right-top bg-no-repeat p-10 bg-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 shadow-[0px_0px_20px_rgb(0,0,0,0.1)]'
-                        style={{ backgroundImage: `url(${cardPattern})` }}
+                        style={{ backgroundImage: `url(/Images/Blog_Page/card-pattern-4.png)` }}
                     >
                         <div className='flex gap-x-3 items-center'>
-                            <img src={testimonialIcon1} alt="" />
+                            <img loading='lazy' src='/Images/Blog_Page/testimonial-icon-1.png' alt="" />
                             <p className='text-2xl font-medium text-gray-700'>
                                 Commitment by the company
                             </p>
@@ -142,10 +145,10 @@ const BlogPage = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-right-top bg-no-repeat p-10 bg-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 shadow-[0px_0px_20px_rgb(0,0,0,0.1)]'
-                        style={{ backgroundImage: `url(${cardPattern})` }}
+                        style={{ backgroundImage: `url(/Images/Blog_Page/card-pattern-4.png)` }}
                     >
                         <div className='flex gap-x-3 items-center'>
-                            <img src={testimonialIcon2} alt="" />
+                            <img loading='lazy' src='/Images/Blog_Page/testimonial-icon-2.png' alt="" />
                             <p className='text-2xl font-medium text-gray-700'>
                                 Flexibility
                             </p>
@@ -158,10 +161,10 @@ const BlogPage = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-right-top bg-no-repeat p-10 bg-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 shadow-[0px_0px_20px_rgb(0,0,0,0.1)]'
-                        style={{ backgroundImage: `url(${cardPattern})` }}
+                        style={{ backgroundImage: `url(/Images/Blog_Page/card-pattern-4.png)` }}
                     >
                         <div className='flex gap-x-3 items-center'>
-                            <img src={testimonialIcon1} alt="" />
+                            <img loading='lazy' src='/Images/Blog_Page/testimonial-icon-1.png' alt="" />
                             <p className='text-2xl font-medium text-gray-700'>
                                 Relationship with clients
                             </p>
@@ -174,10 +177,10 @@ const BlogPage = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-right-top bg-no-repeat p-10 bg-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 shadow-[0px_0px_20px_rgb(0,0,0,0.1)]'
-                        style={{ backgroundImage: `url(${cardPattern})` }}
+                        style={{ backgroundImage: `url(/Images/Blog_Page/card-pattern-4.png)` }}
                     >
                         <div className='flex gap-x-3 items-center'>
-                            <img src={testimonialIcon2} alt="" />
+                            <img loading='lazy' src='/Images/Blog_Page/testimonial-icon-2.png' alt="" />
                             <p className='text-2xl font-medium text-gray-700'>
                                 Proper chain of command
                             </p>

@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import slider1 from '../../../Images/Banner_Slider/slider-1.png';
-import slider2 from '../../../Images/Banner_Slider/slider-2.png';
-import slider3 from '../../../Images/Banner_Slider/slider-3.png';
-import slider4 from '../../../Images/Banner_Slider/slider-4.png';
 import Slider from './Slider';
 
 const data = [
     {
-        img: slider1,
+        img: '/Images/Banner_Slider/slider-1.png',
         title: 'Web Design & Development',
         content: 'Ecera System is a trusted brand that provides the wide range of website development services. We not only create beautiful websites suiting your requirement in your budget but also provide web hosting services.We carry more than just good coding skills. Our experience makes us stand out from other web development.',
         bgColor: 'bg-[#021D40]',
@@ -15,7 +11,7 @@ const data = [
         btnPath: '/website-development'
     },
     {
-        img: slider2,
+        img: '/Images/Banner_Slider/slider-2.png',
         title: 'Digital Marketing',
         content: "Ecera System is a dynamic, versatile and full-service digital marketing agency that doesn’t rely on smoke and mirrors to attract new clients. Instead, Ecera System trusts its own search engine optimization (SEO) and marketing skills to drive new customers to our website.Digital Marketing Services include SEM, SEO, SMM.etc",
         bgColor: 'bg-[#5A081D]',
@@ -23,7 +19,7 @@ const data = [
         btnPath: '/digital-marketing'
     },
     {
-        img: slider3,
+        img: '/Images/Banner_Slider/slider-3.png',
         title: 'Remote Employees',
         content: 'Ecera System take responsibilities to offer professional services to its clientele for maximum growth to their business in all directions. Hire experts with experience for all your tasks whether you need virtual assistants, web developers, app developers, data entry experts or internet marketing experts; Ecera System has a verstile team to complete your assigned tasks on time and within competitive cost.',
         bgColor: 'bg-[#165E08]',
@@ -31,7 +27,7 @@ const data = [
         btnPath: '/remote-employees'
     },
     {
-        img: slider4,
+        img: '/Images/Banner_Slider/slider-4.png',
         title: 'IT Consultancy',
         content: 'Starting a business requires analytical thinking, determined organization, and detailed record-keeping. It’s important to be aware of your competition and either appropriate or improve upon their successful tactics. Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app portfolios.We help bring bold strategies to transform our clients from being Market followers to Market Leaders.',
         bgColor: 'bg-[#1A0000]',

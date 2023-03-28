@@ -5,46 +5,28 @@ import "slick-carousel/slick/slick-theme.css";
 import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import banner from '../../Images/globe-banner.png';
-import app_dev from '../../Images/IT_Staffing/app_dev.jpg';
-import it_consultancy from '../../Images/IT_Staffing/it_consultancy.jpg';
-import digital_marketing from '../../Images/IT_Staffing/digital_marketing.jpg';
-import qa_and_testing from '../../Images/IT_Staffing/qa_and_testing.jpg';
-import web_design from '../../Images/IT_Staffing/web_design.jpg';
-import it5 from '../../Images/IT_Staffing/it5.jpg';
-import talent from '../../Images/IT_Staffing/talent.jpg';
-// import st2 from '../../Images/IT_Staffing/st2.png';
-import itt from '../../Images/IT_Staffing/itt.jpg';
-import itt2 from '../../Images/IT_Staffing/itt2.jpg';
-import itt3 from '../../Images/IT_Staffing/itt3.jpg';
-import itt4 from '../../Images/IT_Staffing/itt4.jpg';
-import itt5 from '../../Images/IT_Staffing/itt5.jpg';
-import itt6 from '../../Images/IT_Staffing/itt6.jpg';
-import itt7 from '../../Images/IT_Staffing/itt7.jpg';
-import itt8 from '../../Images/IT_Staffing/itt8.jpg';
-import itt9 from '../../Images/IT_Staffing/itt9.jpg';
 import Footer from '../Shared/Footer/Footer';
 
 
 const slide = [
     {
-        img: app_dev,
+        img: '/Images/IT_Staffing/app_dev.jpg',
         title: 'App Development'
     },
     {
-        img: it_consultancy,
+        img: '/Images/IT_Staffing/it_consultancy.jpg',
         title: 'IT Consultancy'
     },
     {
-        img: digital_marketing,
+        img: '/Images/IT_Staffing/digital_marketing.jpg',
         title: 'Digital Marketing'
     },
     {
-        img: qa_and_testing,
+        img: '/Images/IT_Staffing/qa_and_testing.jpg',
         title: 'QA & Testing'
     },
     {
-        img: web_design,
+        img: '/Images/IT_Staffing/web_design.jpg',
         title: 'Website Design'
     }
 ];
@@ -106,18 +88,27 @@ const ITStaffing = () => {
         <Header />
         <ContactSideButton />
         <section
-            style={{ backgroundImage: `url(${banner})` }}
-            className='w-full xl:h-[500px] md:h-[400px] h-80 bg-no-repeat bg-center bg-fixed bg-[#080d1d]'
+            style={{ backgroundImage: `url(/Images/globe-banner.png)` }}
+            className='w-full xl:h-[500px] md:h-[400px] h-80 bg-no-repeat bg-center bg-fixed bg-[#020a23]'
         >
             <div className='w-11/12 mx-auto h-full flex items-center justify-center text-center'>
                 <div>
-                    <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
+                    <h1
+                        style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
+                        className='md:text-5xl text-3xl font-semibold text-white uppercase'
+                    >
                         We help achieve biggest goals
                     </h1>
-                    <p className='text-gray-300 md:text-lg text-base italic font-medium py-3'>
+                    <p
+                        style={{ textShadow: '2px 2px rgba(0,0,0, 0.1)' }}
+                        className='text-gray-200 md:text-lg text-base italic font-medium py-3'
+                    >
                         We are committed to providing our customers with exceptional service <br /> while offering our employees the best training.
                     </p>
-                    <p className='text-gray-300 text-lg font-medium pt-10 pb-5'>
+                    <p
+                        style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
+                        className='text-gray-300 text-lg font-medium pt-10 pb-5'
+                    >
                         Services / <span className='text-gray-100'>IT Staffing Solutions</span>
                     </p>
                 </div>
@@ -134,7 +125,7 @@ const ITStaffing = () => {
                             <div key={item.title}>
                                 <div className='border rounded-md p-3 sm:mx-3 mx-6'>
                                     <div className='rounded-md bg-gray-100'>
-                                        <img
+                                        <img loading='lazy'
                                             className='w-full h-36 mx-auto rounded-t-md'
                                             src={item.img}
                                             alt=""
@@ -154,7 +145,12 @@ const ITStaffing = () => {
         <section className='py-16'>
             <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 md:w-3/4 w-11/12 mx-auto grid lg:grid-cols-2 grid-cols-1 items-center gap-12'>
                 <div>
-                    <img src={it5} alt="" className='w-full md:h-[350px] sm:h-[300px] h-[300px] rounded-lg' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/it5.jpg'
+                        alt=""
+                        className='w-full md:h-[350px] sm:h-[300px] h-[300px] rounded-lg'
+                    />
                 </div>
                 <div>
                     <h2 className='text-3xl lg:text-start text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
@@ -190,11 +186,15 @@ const ITStaffing = () => {
                     </div>
                     <p className='text-lg text-gray-500 mt-5'>
                         Our contract to hire IT staffing services allows you to try out a talent temporarily before making any long-term commitments. It projects high chances of the seamless transition of this temporary employee to a permanent one. IT staffing company in India has made quite a buzz over the last few years, and we have managed to contribute to its success with our unique approach.
-                        {/* Channelizing the power of our deep knowledge of the job market and database of 10 lacs + qualified candidates, we take you to the right path of employee hunting. Hence, if you are looking for a reliable partner, we can ensure a solution that will help you in the long run. */}
                     </p>
                 </div>
                 <div className='lg:w-1/2 w-full'>
-                    <img src={talent} alt="" className='w-full h-auto rounded-lg' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/talent.jpg'
+                        alt=""
+                        className='w-full h-auto rounded-lg'
+                    />
                 </div>
             </div>
         </section>
@@ -297,21 +297,6 @@ const ITStaffing = () => {
                 </div>
             </div>
         </section>
-        {/* <section className='py-16'>
-            <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-2 grid-cols-1 items-center gap-12'>
-                <div>
-                    <img src={st2} alt="" className='w-full md:h-[450px] sm:h-[350px] h-72 rounded-lg' />
-                </div>
-                <div>
-                    <h2 className='text-3xl lg:text-start text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
-                        Reach the talent on global level with IT Staffing Services
-                    </h2>
-                    <p className='text-lg text-gray-500 mt-5'>
-                        Ecera System has been delivering driven IT staffing services to its clients. We combine our expertise and knowledge to build agile and future-proof IT Staffing solutions. Our strategies and result-oriented services have gained us a reputation of a leading IT staffing companies in India and across the globe. Ecera System aims to serve as a reliable medium to its clients that want valuable talent in the most cost-effective way. Besides, our clients get an opportunity to tap into our wide network of contacts, cultivated throughout the years of hard work. In addition, we also craft permanent staffing solutions for businesses that require a long-term resource. Therefore, having us help with the recruitment will not just save you money but efforts too.
-                    </p>
-                </div>
-            </div>
-        </section> */}
         <section className='py-16 bg-gray-50'>
             <div className='2xl:w-[1200px] lg:w-4/5 md:w-3/5 sm:w-4/5 w-11/12 mx-auto'>
                 <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
@@ -367,31 +352,76 @@ const ITStaffing = () => {
             </h1>
             <div className='2xl:w-[1200px] xl:w-[85%] lg:w-11/12 md:w-4/5 w-11/12 mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mt-10'>
                 <div className='w-full h-full bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 p-2.5 overflow-hidden'>
-                    <img src={itt} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/itt.jpg'
+                        alt=""
+                        className='w-full h-full duration-300 ease-linear hover:scale-110'
+                    />
                 </div>
                 <div className='w-full h-full bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 p-2.5 overflow-hidden'>
-                    <img src={itt2} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/itt2.jpg'
+                        alt=""
+                        className='w-full h-full duration-300 ease-linear hover:scale-110'
+                    />
                 </div>
                 <div className='w-full h-full bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 p-2.5 overflow-hidden'>
-                    <img src={itt3} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/itt3.jpg'
+                        alt=""
+                        className='w-full h-full duration-300 ease-linear hover:scale-110'
+                    />
                 </div>
                 <div className='w-full h-full bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 p-2.5 overflow-hidden'>
-                    <img src={itt4} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/itt4.jpg'
+                        alt=""
+                        className='w-full h-full duration-300 ease-linear hover:scale-110'
+                    />
                 </div>
                 <div className='w-full h-full bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 p-2.5 overflow-hidden'>
-                    <img src={itt5} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/itt5.jpg'
+                        alt=""
+                        className='w-full h-full duration-300 ease-linear hover:scale-110'
+                    />
                 </div>
                 <div className='w-full h-full bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 p-2.5 overflow-hidden'>
-                    <img src={itt6} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/itt6.jpg'
+                        alt=""
+                        className='w-full h-full duration-300 ease-linear hover:scale-110'
+                    />
                 </div>
                 <div className='w-full h-full bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 p-2.5 overflow-hidden'>
-                    <img src={itt7} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/itt7.jpg'
+                        alt=""
+                        className='w-full h-full duration-300 ease-linear hover:scale-110'
+                    />
                 </div>
                 <div className='w-full h-full bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 p-2.5 overflow-hidden'>
-                    <img src={itt8} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/itt8.jpg'
+                        alt=""
+                        className='w-full h-full duration-300 ease-linear hover:scale-110'
+                    />
                 </div>
                 <div className='w-full h-full bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 p-2.5 overflow-hidden'>
-                    <img src={itt9} alt="" className='w-full h-full duration-300 ease-linear hover:scale-110' />
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/itt9.jpg'
+                        alt=""
+                        className='w-full h-full duration-300 ease-linear hover:scale-110'
+                    />
                 </div>
             </div>
             <div className='w-full mx-auto bg-violet-50 md:py-16 py-10 md:mt-20 mt-10 text-violet-900'>

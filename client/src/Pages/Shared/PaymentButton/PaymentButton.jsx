@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Navigate, useLocation } from 'react-router-dom';
-import stripe from '../../../Images/Payment/stripe.png';
-import razorpay from '../../../Images/Payment/razorpay.png';
 import useLoggedIn from '../../../AuthHook/useLoggedIn';
 import { razorpayApi, stripePayApi } from '../../../api/PaymentApi';
 import useGetUser from '../../../api/useGetUser';
@@ -70,7 +68,12 @@ const PaymentButton = ({ openPayBtn, setOpenPayBtn }) => {
                     <i className="fa-solid fa-xmark"></i>
                 </button>
                 <div className='w-full'>
-                    <img src={stripe} alt="Stripe logo" className='w-auto mx-auto h-20' />
+                    <img
+                        loading='lazy'
+                        src='/Images/Payment/stripe.png'
+                        alt="Stripe logo"
+                        className='w-auto mx-auto h-20'
+                    />
                     <button
                         onClick={stripePayButton}
                         disabled={loading === 'stripe'}
@@ -82,7 +85,12 @@ const PaymentButton = ({ openPayBtn, setOpenPayBtn }) => {
                     </button>
                 </div>
                 <div className='w-full'>
-                    <img src={razorpay} alt="Razorpay logo" className='w-auto mx-auto h-20' />
+                    <img
+                        loading='lazy'
+                        src='/Images/Payment/razorpay.png'
+                        alt="Razorpay logo"
+                        className='w-auto mx-auto h-20'
+                    />
                     <button
                         onClick={razorpayButton}
                         disabled={loading === 'razorpay'}

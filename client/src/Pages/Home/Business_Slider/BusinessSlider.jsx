@@ -1,37 +1,31 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import slide1 from '../../../Images/Business_Slider/slide1.jpg'
-import slide2 from '../../../Images/Business_Slider/slide2.jpg'
-import slide3 from '../../../Images/Business_Slider/slide3.jpg'
-import slide4 from '../../../Images/Business_Slider/slide4.jpg'
-import slide5 from '../../../Images/Business_Slider/slide5.jpg'
-import slide6 from '../../../Images/Business_Slider/slide6.jpg'
 
 
 const data = [
     {
-        img: slide1,
+        img: '/Images/Business_Slider/slide1.jpg',
         title: 'Experienced Employees'
     },
     {
-        img: slide2,
+        img: '/Images/Business_Slider/slide2.jpg',
         title: 'Variety of Services'
     },
     {
-        img: slide3,
+        img: '/Images/Business_Slider/slide3.jpg',
         title: 'Flexibility'
     },
     {
-        img: slide4,
+        img: '/Images/Business_Slider/slide4.jpg',
         title: 'Relationship with Clients'
     },
     {
-        img: slide5,
+        img: '/Images/Business_Slider/slide5.jpg',
         title: 'Proper Chain of Command'
     },
     {
-        img: slide6,
+        img: '/Images/Business_Slider/slide6.jpg',
         title: 'Round the Clock Support'
     },
 ];
@@ -107,7 +101,12 @@ const BusinessSlider = () => {
                                 <div key={index}>
                                     <div className='border rounded-md sm:mx-3 mx-6'>
                                         <div className='rounded-md bg-gray-100'>
-                                            <img src={item.img} alt="" className='w-full h-36 mx-auto rounded-t-md ' />
+                                            <img
+                                                loading='lazy'
+                                                src={item.img}
+                                                alt=""
+                                                className='w-full h-36 mx-auto rounded-t-md '
+                                            />
                                             <h1 className='text-center text-base font-medium text-gray-600 py-4'>
                                                 {
                                                     item.title

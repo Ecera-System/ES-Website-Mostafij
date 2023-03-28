@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import banner from '../../../Images/DriveResults_Banner/DriveResults_banner.jpg';
 
 const DriveResults = () => {
     return (
         <section
             className='w-full bg-cover bg-no-repeat py-16 mt-14'
-            style={{ backgroundImage: `url(${banner})` }}
+            style={{ backgroundImage: `url(/Images/DriveResults_Banner/DriveResults_banner.jpg)` }}
         >
             <div className='2xl:w-[1200px] xl:w-3/4 md:w-4/5 w-11/12 mx-auto'>
                 <h1 className='text-center md:text-5xl text-3xl font-semibold leading-none text-gray-100 pb-2'>

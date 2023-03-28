@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import banner from '../../Images/packages-bg.jpg';
 import './packages.css'
 import Footer from '../Shared/Footer/Footer';
 import { Link } from 'react-router-dom';
@@ -17,7 +16,7 @@ const PackOffers = () => {
         <ContactSideButton />
         <div>
             <section className='w-full py-12 bg-no-repeat bg-center bg-cover text-center'
-                style={{ backgroundImage: `url(${banner})` }}
+                style={{ backgroundImage: `url(/Images/packages-bg.jpg)` }}
             >
                 <h1 className='md:text-3xl text-2xl font-semibold text-yellow-400'>
                     Delivering Best-in-Class <br />

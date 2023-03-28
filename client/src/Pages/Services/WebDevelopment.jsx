@@ -2,37 +2,18 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import website_design_featured_work from '../../Images/Web_Development/website-design-featured-work.png';
-import custom_development from '../../Images/Web_Development/custom_development.jpg';
-import eCommerce from '../../Images/Web_Development/eCommerce-Website.jpg';
-import shopify from '../../Images/Web_Development/shopify.jpg';
-import web_dev from '../../Images/Web_Development/web_dev.jpg';
-import digital_marketing from '../../Images/Web_Development/digital_marketing.jpg';
-import feature1 from '../../Images/Web_Development/feature-1.png';
-import feature2 from '../../Images/Web_Development/feature-2.png';
-import feature3 from '../../Images/Web_Development/feature-3.png';
-import feature4 from '../../Images/Web_Development/feature-4.png';
-import feature5 from '../../Images/Web_Development/feature-5.png';
-import feature6 from '../../Images/Web_Development/feature-6.png';
-import feature7 from '../../Images/Web_Development/feature-7.png';
-import feature8 from '../../Images/Web_Development/feature-8.png';
-import feature9 from '../../Images/Web_Development/feature-9.png';
 import Footer from '../Shared/Footer/Footer';
-import designArea from '../../Images/Web_Development/design-area.png';
-import squareLogo from '../../Images/Web_Development/squar-logo.png';
-import webTab from '../../Images/Web_Development/web-tab-sprite.jpg';
-import splash2 from '../../Images/Web_Development/splash2.jpg';
 
 const imgArray = [
-    feature1,
-    feature2,
-    feature3,
-    feature4,
-    feature5,
-    feature6,
-    feature7,
-    feature8,
-    feature9
+    '/Images/Web_Development/feature-1.png',
+    '/Images/Web_Development/feature-2.png',
+    '/Images/Web_Development/feature-3.png',
+    '/Images/Web_Development/feature-4.png',
+    '/Images/Web_Development/feature-5.png',
+    '/Images/Web_Development/feature-6.png',
+    '/Images/Web_Development/feature-7.png',
+    '/Images/Web_Development/feature-8.png',
+    '/Images/Web_Development/feature-9.png'
 ];
 
 const WebDevelopment = () => {
@@ -65,9 +46,9 @@ const WebDevelopment = () => {
                     </Link>
                 </div>
                 <div className='grid lg:place-content-end place-content-center'>
-                    <img
+                    <img loading='lazy'
                         className='w-[450px] h-auto'
-                        src={website_design_featured_work}
+                        src='/Images/Web_Development/website-design-featured-work.png'
                         alt="website design featured work"
                     />
                 </div>
@@ -96,7 +77,7 @@ const WebDevelopment = () => {
         </section>
         <section
             className='py-16 bg-no-repeat bg-right-top bg-contain bg-gray-100'
-            style={{ backgroundImage: `url(${designArea})` }}
+            style={{ backgroundImage: 'url(/Images/Web_Development/design-area.png)' }}
         >
             <div className='2xl:w-[1000px] lg:w-3/5 md:w-4/5 w-11/12 mx-auto'>
                 <h1 className='text-center md:text-5xl md:leading-snug text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
@@ -108,7 +89,7 @@ const WebDevelopment = () => {
             </div>
             <div
                 className='w-full bg-no-repeat bg-left-top md:py-28 py-10'
-                style={{ backgroundImage: `url(${squareLogo})` }}
+                style={{ backgroundImage: `url(/Images/Web_Development/squar-logo.png)` }}
             >
                 <div className='xl:w-[1200px] lg:w-11/12 md:w-3/5 w-11/12 mx-auto grid lg:grid-cols-2 grid-cols-1 lg:items-start lg:gap-0 gap-10'>
                     <div className='xl:w-[570px] lg:w-full md:w-[570px] md:block hidden mx-auto h-[480px] rounded-tl-[40%] rounded-br-[40%] overflow-hidden'>
@@ -118,7 +99,7 @@ const WebDevelopment = () => {
                                 (openAns3 && '[background-position-y:-1500px!Important]') ||
                                 (openAns4 && '[background-position-y:-3500px!Important]')
                                 }`}
-                            style={{ backgroundImage: `url(${webTab})` }}
+                            style={{ backgroundImage: `url(/Images/Web_Development/web-tab-sprite.jpg)` }}
                         />
                     </div>
                     <ul className='flex flex-col gap-5 mt-5 lg:pl-12'>
@@ -342,7 +323,12 @@ const WebDevelopment = () => {
                         </ul>
                     </div>
                     <div className='w-full'>
-                        <img src={splash2} alt="" className='max-w-full h-auto shadow-[0px_5px_20px_0px_rgba(0,0,255,0.4)] rounded-xl' />
+                        <img
+                            loading='lazy'
+                            src='/Images/Web_Development/splash2.jpg'
+                            alt="Complete Package"
+                            className='max-w-full h-auto shadow-[0px_5px_20px_0px_rgba(0,0,255,0.4)] rounded-xl'
+                        />
                     </div>
                 </div>
             </div>
@@ -365,7 +351,7 @@ const WebDevelopment = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-no-repeat bg-cover bg-center sm:p-10 p-6 relative top-5 left-5 hover:top-0 hover:left-0 duration-300 hover:shadow-[0px_0px_20px_5px_rgb(0,0,255,0.5)]'
-                        style={{ backgroundImage: `url(${web_dev})` }}
+                        style={{ backgroundImage: `url(/Images/Web_Development/web_dev.jpg)` }}
                     >
                         <h4 className='sm:text-3xl text-2xl font-medium text-white mb-3'>
                             Web Design & Development
@@ -396,7 +382,7 @@ const WebDevelopment = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-no-repeat bg-cover bg-center sm:p-10 p-6 bg-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 hover:shadow-[0px_0px_20px_5px_rgb(0,0,255,0.5)]'
-                        style={{ backgroundImage: `url(${digital_marketing})` }}
+                        style={{ backgroundImage: `url(/Images/Web_Development/digital_marketing.jpg)` }}
                     >
                         <h4 className='sm:text-3xl text-2xl font-medium text-white mb-3'>
                             Results-Driven Digital Marketing
@@ -427,7 +413,7 @@ const WebDevelopment = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-cover bg-center bg-no-repeat sm:p-10 p-6 bg-white text-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 hover:shadow-[0px_0px_20px_5px_rgb(0,0,255,0.5)]'
-                        style={{ backgroundImage: `url(${custom_development})` }}
+                        style={{ backgroundImage: `url(/Images/Web_Development/custom_development.jpg)` }}
                     >
                         <h4 className='sm:text-3xl text-2xl font-medium mb-3'>
                             Custom Development
@@ -458,7 +444,7 @@ const WebDevelopment = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-no-repeat bg-cover bg-center sm:p-10 p-6 bg-white text-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 hover:shadow-[0px_0px_20px_5px_rgb(0,0,255,0.5)]'
-                        style={{ backgroundImage: `url(${eCommerce})` }}
+                        style={{ backgroundImage: `url(/Images/Web_Development/eCommerce-Website.jpg)` }}
                     >
                         <h4 className='sm:text-3xl text-2xl font-medium mb-3'>
                             Full-Service E-commerce Development
@@ -489,7 +475,7 @@ const WebDevelopment = () => {
                 <div className='border-2 border-gray-400'>
                     <div
                         className='h-full bg-cover bg-center bg-no-repeat sm:p-10 p-6 bg-white text-white relative top-5 left-5 hover:top-0 hover:left-0 duration-300 hover:shadow-[0px_0px_20px_5px_rgb(0,0,255,0.5)]'
-                        style={{ backgroundImage: `url(${shopify})` }}
+                        style={{ backgroundImage: `url(/Images/Web_Development/shopify.jpg)` }}
                     >
                         <h4 className='sm:text-3xl text-2xl font-medium mb-3'>
                             High-Performance Shopify Websites
@@ -567,7 +553,7 @@ const WebDevelopment = () => {
             </h2>
             <div className='flex lg:flex-row flex-col lg:items-start items-center justify-between lg:gap-0 gap-10 mt-5'>
                 <div className='lg:w-3/5 w-full border-4 border-white drop-shadow-[0px_5px_15px_rgba(0,0,255,0.45)]'>
-                    <img src={imgArray[img]} alt="" className='w-full h-auto' />
+                    <img loading='lazy' src={imgArray[img]} alt="" className='w-full h-auto' />
                 </div>
                 <ul className='lg:w-2/5 w-full lg:pl-16 pl-10 flex flex-col gap-y-5 text-lg font-medium text-gray-500'>
                     <li

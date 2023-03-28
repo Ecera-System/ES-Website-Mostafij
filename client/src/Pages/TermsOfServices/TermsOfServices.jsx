@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import tac from '../../Images/terms-and-conditions.png';
 import Footer from '../Shared/Footer/Footer';
 
 const TermsOfServices = () => {
@@ -16,7 +15,12 @@ const TermsOfServices = () => {
                     </h1>
                 </div>
                 <div>
-                    <img src={tac} alt="" className='md:w-52 w-32 mx-auto h-auto' />
+                    <img
+                        loading='lazy'
+                        src='/Images/terms-and-conditions.png'
+                        alt=""
+                        className='md:w-52 w-32 mx-auto h-auto'
+                    />
                 </div>
             </div>
         </section>

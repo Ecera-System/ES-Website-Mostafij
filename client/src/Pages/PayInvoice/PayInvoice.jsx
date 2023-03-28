@@ -4,8 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
-import stripe from '../../Images/Payment/stripe.png';
-import razorpay from '../../Images/Payment/razorpay.png';
 import { razorpayApi, stripePayApi } from '../../api/PaymentApi';
 
 
@@ -110,7 +108,12 @@ const PayInvoice = () => {
         <section className='h-full w-full py-16 flex items-center justify-center'>
             <div className='md:w-[40rem] sm:w-4/5 w-11/12 mx-auto py-32 px-10 border flex md:flex-row flex-col items-center justify-center md:gap-12 gap-6 relative rounded-2xl'>
                 <div className='w-full'>
-                    <img src={stripe} alt="Stripe logo" className='w-auto mx-auto h-20' />
+                    <img
+                        loading='lazy'
+                        src='/Images/Payment/stripe.png'
+                        alt="Stripe logo"
+                        className='w-auto mx-auto h-20'
+                    />
                     <button
                         onClick={() => setOpenForm('stripe')}
                         disabled={loading}
@@ -120,7 +123,12 @@ const PayInvoice = () => {
                     </button>
                 </div>
                 <div className='w-full'>
-                    <img src={razorpay} alt="Razorpay logo" className='w-auto mx-auto h-20' />
+                    <img
+                        loading='lazy'
+                        src='/Images/Payment/razorpay.png'
+                        alt="Razorpay logo"
+                        className='w-auto mx-auto h-20'
+                    />
                     <button
                         disabled={loading}
                         onClick={() => setOpenForm('razorpay')}

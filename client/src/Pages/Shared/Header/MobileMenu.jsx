@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }) => {
+const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile, isEnlistco }) => {
     const [openMenu, setOpenMenu] = useState(false);
     const [openDropdown1, setOpenDropdown1] = useState(false);
     const [openDropdown2, setOpenDropdown2] = useState(false);
@@ -185,7 +185,7 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
 
                 <li className='w-full py-4 px-10 relative'>
                     {
-                        login ? isLoggedIn ?
+                        login ? (isLoggedIn ?
                             <button
                                 className=''
                                 onClick={() => setOpenProfile(!openProfile)}
@@ -203,14 +203,21 @@ const MobileMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile })
                                 className='inline-block w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg py-3 text-center rounded-lg'
                             >
                                 Login
-                            </Link>
+                            </Link>)
                             :
-                            <Link
-                                to='/get-estimate'
-                                className='inline-block w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg py-3 text-center rounded-lg'
-                            >
-                                Get Estimate
-                            </Link>
+                            (isEnlistco ?
+                                <Link
+                                    to='/coming-soon'
+                                    className='inline-block w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg py-3 px-10 text-center rounded-lg'
+                                >
+                                    Enlistco
+                                </Link> :
+                                <Link
+                                    to='/get-estimate'
+                                    className='inline-block w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg py-3 text-center rounded-lg'
+                                >
+                                    Get Estimate
+                                </Link>)
                     }
                     {openProfile && profile}
                 </li>

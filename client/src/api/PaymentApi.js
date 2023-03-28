@@ -1,5 +1,4 @@
 import axios from "axios";
-import eceraLogo from '../Images/Nav_logo/ecera-logo.png';
 
 // <-- Stripe payment API -->
 const stripePayApi = async (data) => {
@@ -46,7 +45,7 @@ const razorpayApi = async (data, setRazorpayRes) => {
                 amount: res.data.amount,
                 currency: res.data.currency,
                 description: data.serviceName,
-                image: eceraLogo,
+                image: '/Images/Nav_logo/ecera-logo.png',
                 order_id: res.data.id,
                 handler: async function (response) {
                     return setRazorpayRes({

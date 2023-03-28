@@ -2,7 +2,6 @@ import React from 'react';
 import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import banner from '../../Images/packages-bg.jpg';
 import Footer from '../Shared/Footer/Footer';
 
 const EmployeeBenefits = () => {
@@ -11,7 +10,7 @@ const EmployeeBenefits = () => {
         <Header />
         <ContactSideButton />
         <section
-            style={{ backgroundImage: `url(${banner})` }}
+            style={{ backgroundImage: `url(/Images/packages-bg.jpg)` }}
             className='w-full md:py-36 py-28 bg-no-repeat bg-center bg-cover'
         >
             <div className='w-11/12 mx-auto h-full flex items-center justify-center text-center'>

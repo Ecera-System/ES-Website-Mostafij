@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import phoneCall from '../../../Images/EceraWork_Banner/phone-call.png';
-import guarantee from '../../../Images/EceraWork_Banner/guarantee.png';
-import owner from '../../../Images/EceraWork_Banner/owner.png';
-import professional from '../../../Images/EceraWork_Banner/professional.png';
 
 const ContactUs_Section = () => {
     return (<>
@@ -17,7 +13,7 @@ const ContactUs_Section = () => {
             <div className='lg:w-[800px] md:w-full mx-auto flex md:flex-row flex-col justify-between md:gap-5 gap-10 mt-10'>
                 <div>
                     <div className='w-[88px] h-[88px] mx-auto mb-5'>
-                        <img src={phoneCall} alt="" />
+                        <img loading='lazy' src='/Images/EceraWork_Banner/phone-call.png' alt="" />
                     </div>
                     <p className='text-base font-medium'>
                         Constant Client
@@ -29,7 +25,7 @@ const ContactUs_Section = () => {
                 <div className='w-0.5 hidden md:block bg-gray-300'></div>
                 <div>
                     <div className='w-[88px] h-[88px] mx-auto mb-5'>
-                        <img src={guarantee} alt="" />
+                        <img loading='lazy' src='/Images/EceraWork_Banner/guarantee.png' alt="" />
                     </div>
                     <p className='text-base font-medium'>
                         Supreme Customer
@@ -41,7 +37,7 @@ const ContactUs_Section = () => {
                 <div className='w-0.5 hidden md:block bg-gray-300'></div>
                 <div>
                     <div className='w-[88px] h-[88px] mx-auto mb-5'>
-                        <img src={owner} alt="" />
+                        <img loading='lazy' src='/Images/EceraWork_Banner/owner.png' alt="" />
                     </div>
                     <p className='text-base font-medium'>
                         100% Ownership
@@ -53,7 +49,7 @@ const ContactUs_Section = () => {
                 <div className='w-0.5 hidden md:block bg-gray-300'></div>
                 <div>
                     <div className='w-[88px] h-[88px] mx-auto mb-5'>
-                        <img src={professional} alt="" />
+                        <img loading='lazy' src='/Images/EceraWork_Banner/professional.png' alt="" />
                     </div>
                     <p className='text-base font-medium'>
                         Industry Proven

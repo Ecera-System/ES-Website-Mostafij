@@ -26,6 +26,7 @@ const Slider = ({ item }) => {
             </div>
             <div className='lg:block hidden'>
                 <img
+                    loading='lazy'
                     src={img}
                     alt="Slider images"
                     className='w-full h-full'

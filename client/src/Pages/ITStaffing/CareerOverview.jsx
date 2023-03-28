@@ -3,8 +3,6 @@ import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
 import Footer from '../Shared/Footer/Footer';
-import banner from '../../Images/packages-bg.jpg';
-import cv_success from '../../Images/IT_Staffing/cv-success.png';
 
 const CareerOverview = () => {
     return (<>
@@ -12,7 +10,7 @@ const CareerOverview = () => {
         <Header />
         <ContactSideButton />
         <section
-            style={{ backgroundImage: `url(${banner})` }}
+            style={{ backgroundImage: `url(/Images/packages-bg.jpg)` }}
             className='w-full md:py-36 py-28 bg-no-repeat bg-center bg-cover'
         >
             <div className='w-11/12 mx-auto h-full flex items-center justify-center text-center'>
@@ -123,7 +121,12 @@ const CareerOverview = () => {
                     </p>
                 </div>
                 <div className='lg:w-1/2 w-full'>
-                    <img src={cv_success} alt="" className='sm:w-96 sm:h-96 w-4/5 h-4/5 mx-auto'/>
+                    <img
+                        loading='lazy'
+                        src='/Images/IT_Staffing/cv-success.png'
+                        alt=""
+                        className='sm:w-96 sm:h-96 w-4/5 h-4/5 mx-auto'
+                    />
                 </div>
             </div>
         </section>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }) => {
+const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile, isEnlistco }) => {
 
     return (<>
         <ul className='hidden lg:flex items-center xl:gap-x-8 gap-x-5 text-lg font-medium'>
@@ -136,7 +136,7 @@ const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }
             </li>
             <li className='flex items-center justify-center relative'>
                 {
-                    login ? isLoggedIn ?
+                    login ? (isLoggedIn ?
                         <button
                             className=''
                             onClick={() => setOpenProfile(!openProfile)}
@@ -154,13 +154,20 @@ const DesktopMenu = ({ login, isLoggedIn, openProfile, setOpenProfile, profile }
                             className='normal-case bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg py-3 px-10 rounded-lg'
                         >
                             Login
-                        </Link> :
-                        <Link
-                            to='/get-estimate'
-                            className='normal-case bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg py-3 px-5 rounded-lg'
-                        >
-                            Get Estimate
-                        </Link>
+                        </Link>) :
+                        (isEnlistco ?
+                            <Link
+                                to='/coming-soon'
+                                className='bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg py-3 px-10 rounded-lg'
+                            >
+                                Enlistco
+                            </Link>
+                            : <Link
+                                to='/get-estimate'
+                                className='normal-case bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-600 text-white text-lg py-3 px-5 rounded-lg'
+                            >
+                                Get Estimate
+                            </Link>)
                 }
                 {openProfile && profile}
             </li>

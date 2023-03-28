@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ContactSideButton from '../Shared/ContactSideButton/ContactSideButton';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import banner from '../../Images/packages-bg.jpg';
 import { Link } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
 
@@ -88,7 +87,7 @@ const FAQ = () => {
         <ContactSideButton />
         <div>
             <section className='py-24 bg-no-repeat bg-center bg-cover text-center'
-                style={{ backgroundImage: `url(${banner})` }}
+                style={{ backgroundImage: `url(/Images/packages-bg.jpg)` }}
             >
                 <h1 className='md:text-5xl text-3xl font-semibold text-white uppercase'>
                     SOME FAQ’S
@@ -170,7 +169,7 @@ const FAQ = () => {
                     </div>
                 </div>
             </section>
-            <section className='py-16'>
+            {/* <section className='py-16'>
                 <div className='2xl:w-[600px] xl:w-2/5 md:w-1/2 sm:w-4/5 w-11/12 mx-auto'>
                     <h2 className='text-lg font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500 text-center'>Tell Us</h2>
                     <h1 className='text-4xl font-semibold text-gray-700 mt-2 text-center'>
@@ -231,7 +230,7 @@ const FAQ = () => {
                         </div>
                     </form>
                 </div>
-            </section>
+            </section> */}
         </div>
         <Footer />
     </>);

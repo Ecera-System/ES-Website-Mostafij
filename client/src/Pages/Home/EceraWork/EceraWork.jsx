@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import banner from '../../../Images/EceraWork_Banner/EcearWork_Banner.jpg';
 
 const EceraWork = () => {
     const [isOver, setIsOver] = useState('');
@@ -17,7 +16,7 @@ const EceraWork = () => {
                 </div>
                 <div className='mt-14 grid md:grid-cols-2 grid-cols-1 items-center md:gap-0 gap-10'>
                     <div className='rounded-2xl overflow-hidden relative' style={{ boxShadow: '0 4px 30px 10px rgb(0 0 0 0.30)' }}>
-                        <img className='w-full h-auto' src={banner} alt="" />
+                        <img loading='lazy' className='w-full h-auto' src='/Images/EceraWork_Banner/EcearWork_Banner.jpg' alt="" />
                         <div
                             className='absolute top-0 left-0 w-full h-full bg-[#000066cb] flex items-center justify-center'
                         >

@@ -1,9 +1,6 @@
 import React from 'react';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
-import billSmith from '../../Images/Testimonials/bill-smith.png';
-import isacRedman from '../../Images/Testimonials/isac-redman.png';
-import ronndaZezula from '../../Images/Testimonials/ronnda-zezula.png';
 import Footer from '../Shared/Footer/Footer';
 
 const Testimonial = () => {
@@ -21,7 +18,12 @@ const Testimonial = () => {
                 <div className='mt-28 mb-10 2xl:w-[1200px] xl:w-[90%] lg:w-4/5 w-11/12 mx-auto grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-10 gap-y-24 items-start text-center'>
                     <div className='px-6 pb-8 pt-12 rounded-tl-[3rem] rounded-br-[3rem] border relative'>
                         <div className='absolute -top-1/4 left-1/2 translate-x-[-50%] w-24 h-24 border-[3px] rounded-full'>
-                            <img src={billSmith} alt="" className='w-full h-full rounded-full' />
+                            <img
+                                loading='lazy'
+                                src='/Images/Testimonials/bill-smith.png'
+                                alt=""
+                                className='w-full h-full rounded-full'
+                            />
                         </div>
                         <h4 className='text-lg font-medium uppercase'>Bill Smith</h4>
                         <p className='text-base font-medium'>Business Owner</p>
@@ -38,7 +40,12 @@ const Testimonial = () => {
                     </div>
                     <div className='px-6 pb-8 pt-12 rounded-tl-[3rem] rounded-br-[3rem] border relative'>
                         <div className='absolute -top-1/4 left-1/2 translate-x-[-50%] w-24 h-24 border-[3px] rounded-full'>
-                            <img src={ronndaZezula} alt="" className='w-full h-full rounded-full' />
+                            <img
+                                loading='lazy'
+                                src='/Images/Testimonials/ronnda-zezula.png'
+                                alt=""
+                                className='w-full h-full rounded-full'
+                            />
                         </div>
                         <h4 className='text-lg font-medium uppercase'>Ronnda Zezula</h4>
                         <p className='text-base font-medium'>Entrepreneur</p>
@@ -55,7 +62,12 @@ const Testimonial = () => {
                     </div>
                     <div className='px-6 pb-8 pt-12 rounded-tl-[3rem] rounded-br-[3rem] border relative'>
                         <div className='absolute -top-1/4 left-1/2 translate-x-[-50%] w-24 h-24 border-[3px] rounded-full'>
-                            <img src={isacRedman} alt="" className='w-full h-full rounded-full' />
+                            <img
+                                loading='lazy'
+                                src='/Images/Testimonials/isac-redman.png'
+                                alt=""
+                                className='w-full h-full rounded-full'
+                            />
                         </div>
                         <h4 className='text-lg font-medium uppercase'>Isac Redman</h4>
                         <p className='text-base font-medium'>Entrepreneur</p>
