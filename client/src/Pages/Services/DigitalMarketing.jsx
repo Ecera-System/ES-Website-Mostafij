@@ -3,6 +3,24 @@ import { Link } from 'react-router-dom';
 import Header from '../Shared/Header/Header';
 import PageTitle from '../Shared/PageTitle';
 import Footer from '../Shared/Footer/Footer';
+<<<<<<< HEAD
+=======
+import briefUs from '../../Images/Digital_Marketing/briefUs.png';
+import chooseTeam from '../../Images/Digital_Marketing/chooseTeam.png';
+import handPick from '../../Images/Digital_Marketing/handPick.png';
+import getGoing from '../../Images/Digital_Marketing/getGoing.png';
+import talent from '../../Images/Digital_Marketing/talent.png';
+import money from '../../Images/Digital_Marketing/money.png';
+import support from '../../Images/Digital_Marketing/support.png';
+import outsourcing from '../../Images/Digital_Marketing/outsourcing.png';
+import app_development from '../../Images/Digital_Marketing/app-development.png';
+import digital_marketing from '../../Images/Digital_Marketing/digital_marketing.png';
+import content_writing from '../../Images/Digital_Marketing/content-writing.png';
+import graphics_and_web from '../../Images/Digital_Marketing/graphics_and_web.png';
+import engineer from '../../Images/Digital_Marketing/engineer.png';
+import technical_support from '../../Images/Digital_Marketing/technical_support.png';
+import hr_recruitment from '../../Images/Digital_Marketing/hr_recruitment.png';
+>>>>>>> f0bf03f89deed74347ce14f1f5fe79898fec1902
 
 
 const faq = [
@@ -32,6 +50,7 @@ const DigitalMarketing = () => {
         <PageTitle title='Digital Marketing'></PageTitle>
         <Header></Header>
         <section
+<<<<<<< HEAD
             className='w-full h-auto bg-gradient-to-r from-blue-600 to-purple-600 py-20'
         >
             <div className='2xl:w-[1100px] lg:w-[90%] sm:w-4/5 w-11/12 h-full mx-auto grid lg:grid-cols-2 grid-cols-1 items-center lg:gap-0 gap-20'>
@@ -102,12 +121,76 @@ const DigitalMarketing = () => {
         </div>
         <section className='pt-16 pb-20'>
             <div className='2xl:w-[1100px] md:w-4/5 w-11/12 mx-auto'>
+=======
+            style={{ backgroundImage: `url(${banner})` }}
+            className='w-full h-auto bg-no-repeat bg-center bg-fixed bg-[#020a23]'
+        >
+            <div className='w-full h-full py-20 flex items-center justify-center text-center'>
+                <div className='lg:w-[50rem] w-[90%]'>
+                    <h2
+                        style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
+                        className='lg:text-4xl md:text-3xl text-2xl font-medium text-white'
+                    >
+                        Outsource in Any Domain
+                    </h2>
+                    <h1
+                        style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
+                        className='lg:text-5xl md:text-4xl text-3xl font-semibold text-white mt-5'
+                    >
+                        Hire Dedicated Virtual Employees
+                    </h1>
+                    <h2
+                        style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
+                        className='sm:w-max mx-auto lg:text-2xl text-lg font-medium text-white mt-14 py-4 border-t border-b'
+                    >
+                        Starting from Just
+                        <strong className='mx-2 text-cyan-400'>
+                            US $995 – $1995
+                        </strong>
+                        / Month only
+                    </h2>
+                    <ul className='md:w-full w-max lg:mt-20 mt-14 mx-auto flex md:flex-row flex-col md:items-center justify-between gap-5'>
+                        <li
+                            style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
+                            className='text-lg font-medium text-cyan-400 flex items-center gap-3'
+                        >
+                            <span className='text-4xl text-white'>
+                                <i class="fa-solid fa-users"></i>
+                            </span>
+                            1500+ Employees
+                        </li>
+                        <li
+                            style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
+                            className='text-lg font-medium text-cyan-400 flex items-center gap-3'
+                        >
+                            <span className='text-4xl text-white'>
+                                <i class="fa-solid fa-globe"></i>
+                            </span>
+                            150+ Domains
+                        </li>
+                        <li
+                            style={{ textShadow: '2px 2px rgba(0,0,0, 0.2)' }}
+                            className='text-lg font-medium text-cyan-400 flex items-center gap-3'
+                        >
+                            <span className='text-4xl text-white'>
+                                <i class="fa-solid fa-hourglass-start"></i>
+                            </span>
+                            Start Within 8 hours
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section className='py-16'>
+            <div className='2xl:w-[1200px] md:w-4/5 w-11/12 mx-auto'>
+>>>>>>> f0bf03f89deed74347ce14f1f5fe79898fec1902
                 <h1 className='text-center md:text-5xl md:leading-snug text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
                     Why Choose Us
                 </h1>
                 <p className='md:text-lg text-base font-medium text-center text-gray-500'>
                     Boost Your Revenue Growth Rate and Achieve Online Success
                 </p>
+<<<<<<< HEAD
                 <div className='mt-14 grid lg:grid-cols-2 grid-cols-1 items-center lg:gap-0 gap-10'>
                     <div className='w-full h-[24rem] rounded-2xl overflow-hidden relative' style={{ boxShadow: '0 4px 30px 10px rgb(0 0 0 0.30)' }}>
                         <div
@@ -235,8 +318,393 @@ const DigitalMarketing = () => {
                             alt=""
                             className='w-full h-auto rounded-xl'
                         />
+=======
+                <div className='mt-8 grid lg:grid-cols-2 grid-cols-1 items-start gap-12'>
+                    <div className='flex items-start justify-between gap-x-5'>
+                        <div className='w-24'>
+                            <img src={dataDriven} alt="" className='w-max h-auto' />
+                        </div>
+                        <div className='w-full'>
+                            <h2 className='text-xl font-medium text-gray-600'>
+                                Data-driven Digital Marketing Services
+                            </h2>
+                            <p className='sm:text-base text-sm text-gray-500 mt-2'>
+                                We analyze your brand’s strengths, weaknesses, opportunities and threats (SWOT) to create up-to-date metrics and generate actionable insights.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='flex items-start justify-between gap-x-5'>
+                        <div className='w-24'>
+                            <img src={omnichannel} alt="" className='w-max h-auto' />
+                        </div>
+                        <div className='w-full'>
+                            <h2 className='text-xl font-medium text-gray-600'>
+                                Omnichannel Personalization
+                            </h2>
+                            <p className='sm:text-base text-sm text-gray-500 mt-2'>
+                                At Ecera System, we perform audience analyses and needs assessments to develop customized internet marketing strategies that drive more business.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='flex items-start justify-between gap-x-5'>
+                        <div className='w-24'>
+                            <img src={industryExpert} alt="" className='w-max h-auto' />
+                        </div>
+                        <div className='w-full'>
+                            <h2 className='text-xl font-medium text-gray-600'>
+                                Industry Experts
+                            </h2>
+                            <p className='sm:text-base text-sm text-gray-500 mt-2'>
+                                We keep track of the latest trends and innovations, develop goal-oriented strategies and ensure all our campaigns meet search engine guidelines.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='flex items-start justify-between gap-x-5'>
+                        <div className='w-24'>
+                            <img src={monitoring} alt="" className='w-max h-auto' />
+                        </div>
+                        <div className='w-full'>
+                            <h2 className='text-xl font-medium text-gray-600'>
+                                Campaign Monitoring and Evaluation
+                            </h2>
+                            <p className='sm:text-base text-sm text-gray-500 mt-2'>
+                                At Ecera System, we establish your campaign metrics and perform regular monitoring and evaluation to determine your strategies' success.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='flex items-start justify-between gap-x-5'>
+                        <div className='w-24'>
+                            <img src={customDigital} alt="" className='w-max h-auto' />
+                        </div>
+                        <div className='w-full'>
+                            <h2 className='text-xl font-medium text-gray-600'>
+                                Custom Digital Marketing Framework
+                            </h2>
+                            <p className='sm:text-base text-sm text-gray-500 mt-2'>
+                                We review your current marketing strategies and digital presence, set key performance indicators (KPIs), identify your brand personality and integrate your customer experience in all levels of your strategy-building.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='flex items-start justify-between gap-x-5'>
+                        <div className='w-24'>
+                            <img src={competitive} alt="" className='w-max h-auto' />
+                        </div>
+                        <div className='w-full'>
+                            <h2 className='text-xl font-medium text-gray-600'>
+                                Competitive Pricing
+                            </h2>
+                            <p className='sm:text-base text-sm text-gray-500 mt-2'>
+                                We shape our internet marketing services based on your industry demands, online needs and financial capacity. In this way, we help you acquire the online attention you need without breaking the bank.
+                            </p>
+                        </div>
+>>>>>>> f0bf03f89deed74347ce14f1f5fe79898fec1902
                     </div>
                 </div>
+            </div>
+        </section>
+        <div className='flex items-center sm:gap-5 gap-3 sm:mt-16 mt-10'>
+            <hr className='w-full h-0.5 bg-blue-500' />
+            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
+            <div className='w-96 h-3 border-2 border-blue-500 rounded-full'></div>
+            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
+            <hr className='w-full h-0.5 bg-blue-500' />
+        </div>
+        <section className='pt-20 pb-28 bg-gray-50'>
+            <div>
+                <h1 className='mx-7 text-center md:text-5xl md:leading-snug text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                    3 key advantages of a remote workforce
+                </h1>
+                <div className='2xl:w-[1200px] lg:w-4/5 md:w-4/5 sm:w-3/4 w-4/5 mx-auto mt-16 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
+                    <div className='px-8 py-14 bg-white shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem] hover:-translate-y-3 hover:scale-105 duration-300 ease-linear text-center'>
+                        <div
+                            style={{ backgroundImage: `url(${talent})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-cover bg-center"
+                        />
+                        <h2 className='text-xl font-medium text-gray-600 mt-7 mb-3'>
+                            Talent on-demand
+                        </h2>
+                        <p className='text-base text-gray-500'>
+                            Hire a dedicated, skilled remote employee in less than 8 hours
+                        </p>
+                    </div>
+                    <div className='px-8 py-14 bg-white shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem] hover:-translate-y-3 hover:scale-105 duration-300 ease-linear text-center'>
+                        <div
+                            style={{ backgroundImage: `url(${money})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-cover bg-center"
+                        />
+                        <h2 className='text-xl font-medium text-gray-600 mt-7 mb-3'>
+                            Zero overheads
+                        </h2>
+                        <p className='text-base text-gray-500'>
+                            Say goodbye to profit-guzzling expenses like office rent, taxes, hardware, etc
+                        </p>
+                    </div>
+                    <div className='px-8 py-14 bg-white shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem] hover:-translate-y-3 hover:scale-105 duration-300 ease-linear text-center'>
+                        <div
+                            style={{ backgroundImage: `url(${support})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-cover bg-center"
+                        />
+                        <h2 className='text-xl font-medium text-gray-600 mt-7 mb-3'>
+                            24×7 support
+                        </h2>
+                        <p className='text-base text-gray-500'>
+                            No downtime, no being stranded midway in a project
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div className='flex items-center sm:gap-5 gap-3 sm:mb-10 mb-5'>
+            <hr className='w-full h-0.5 bg-blue-500' />
+            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
+            <div className='w-96 h-3 border-2 border-blue-500 rounded-full'></div>
+            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
+            <hr className='w-full h-0.5 bg-blue-500' />
+        </div>
+        <section className='py-16'>
+            <div>
+                <h1 className='mx-7 text-center md:text-5xl md:leading-snug text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                    360° Virtual Staffing Services
+                </h1>
+                <p className='md:text-lg text-base font-medium text-center text-gray-500'>
+                    Hire a remote employee in any domain
+                </p>
+                <div className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 w-4/5 mx-auto mt-12 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-16'>
+                    <div className=''>
+                        <div
+                            style={{ backgroundImage: `url(${outsourcing})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
+                        />
+                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
+                            IT Outsourcing
+                        </h2>
+                    </div>
+                    <div className=''>
+                        <div
+                            style={{ backgroundImage: `url(${app_development})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
+                        />
+                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
+                            Mobile Apps Development
+                        </h2>
+                    </div>
+                    <div className=''>
+                        <div
+                            style={{ backgroundImage: `url(${digital_marketing})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
+                        />
+                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
+                            Digital Marketing
+                        </h2>
+                    </div>
+                    <div className=''>
+                        <div
+                            style={{ backgroundImage: `url(${content_writing})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
+                        />
+                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
+                            Digital Marketing
+                        </h2>
+                    </div>
+                    <div className=''>
+                        <div
+                            style={{ backgroundImage: `url(${hr_recruitment})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
+                        />
+                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
+                            HR & Recruitment
+                        </h2>
+                    </div>
+                    <div className=''>
+                        <div
+                            style={{ backgroundImage: `url(${graphics_and_web})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
+                        />
+                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
+                            Graphics & Web Designing
+                        </h2>
+                    </div>
+                    <div className=''>
+                        <div
+                            style={{ backgroundImage: `url(${engineer})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
+                        />
+                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
+                            Engineering & Architecture
+                        </h2>
+                    </div>
+                    <div className=''>
+                        <div
+                            style={{ backgroundImage: `url(${technical_support})` }}
+                            className="w-[92px] h-[92px] mx-auto bg-no-repeat bg-center bg-cover"
+                        />
+                        <h2 className='mt-5 text-lg font-medium text-gray-600 text-center'>
+                            IT Technical Support
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div className='flex items-center sm:gap-5 gap-3 sm:mt-10 mt-5 sm:mb-10 mb-5'>
+            <hr className='w-full h-0.5 bg-blue-500' />
+            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
+            <div className='w-96 h-3 border-2 border-blue-500 rounded-full'></div>
+            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
+            <hr className='w-full h-0.5 bg-blue-500' />
+        </div>
+        <section className='py-16'>
+            <div>
+                <h1 className='mx-7 text-center md:text-5xl md:leading-snug text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                    Hiring Remote Staff Was Never This Easy
+                </h1>
+                <div className='2xl:w-[1200px] xl:w-[85%] lg:w-3/5 md:w-4/5 w-9/12 mx-auto grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10 mt-16'>
+                    <div
+                        className='px-8 py-14 shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem]'
+                    >
+                        <div className='relative -top-2 -left-[60px] w-max pl-10 pr-14 py-3 bg-blue-500 text-white text-lg font-medium uppercase rounded-r-full'>
+                            Step 01
+                            <span
+                                style={{ borderStyle: 'solid', borderWidth: '0 28px 28px 0', borderColor: 'transparent #2563EB transparent transparent' }}
+                                className='absolute -bottom-[28px] left-0 w-0 h-0'
+                            />
+                        </div>
+                        <div className='w-[8.5rem] h-[8.5rem] mx-auto my-10 p-8 border border-blue-600 rounded-full'>
+                            <span
+                                style={{ backgroundImage: `url(${briefUs})` }}
+                                className='w-full h-full inline-block bg-no-repeat bg-cover bg-center'
+                            />
+                        </div>
+                        <h2 className='text-xl font-medium text-gray-600 text-center'>
+                            Brief Us
+                        </h2>
+                    </div>
+                    <div
+                        className='px-8 py-14 shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem]'
+                    >
+                        <div className='relative -top-2 -left-[60px] w-max pl-10 pr-14 py-3 bg-purple-600 text-white text-lg font-medium uppercase rounded-r-full'>
+                            Step 02
+                            <span
+                                style={{ borderStyle: 'solid', borderWidth: '0 28px 28px 0', borderColor: 'transparent #7C21CB transparent transparent' }}
+                                className='absolute -bottom-[28px] left-0 w-0 h-0'
+                            />
+                        </div>
+                        <div className='w-[8.5rem] h-[8.5rem] mx-auto my-10 p-8 border border-purple-600 rounded-full'>
+                            <span
+                                style={{ backgroundImage: `url(${handPick})` }}
+                                className='w-full h-full inline-block bg-no-repeat bg-cover bg-center'
+                            />
+                        </div>
+                        <h2 className='text-xl font-medium text-gray-600 text-center'>
+                            Hand-pick Resources
+                        </h2>
+                    </div>
+                    <div
+                        className='px-8 py-14 shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem]'
+                    >
+                        <div className='relative -top-2 -left-[60px] w-max pl-10 pr-14 py-3 bg-[#1DBF73] text-white text-lg font-medium uppercase rounded-r-full'>
+                            Step 03
+                            <span
+                                style={{ borderStyle: 'solid', borderWidth: '0 28px 28px 0', borderColor: 'transparent #19a061 transparent transparent' }}
+                                className='absolute -bottom-[28px] left-0 w-0 h-0'
+                            />
+                        </div>
+                        <div className='w-[8.5rem] h-[8.5rem] mx-auto my-10 p-8 border border-[#1DBF73] rounded-full'>
+                            <span
+                                style={{ backgroundImage: `url(${chooseTeam})` }}
+                                className='w-full h-full inline-block bg-no-repeat bg-cover bg-center'
+                            />
+                        </div>
+                        <h2 className='text-xl font-medium text-gray-600 text-center'>
+                            Choose Your Team
+                        </h2>
+                    </div>
+                    <div
+                        className='px-8 py-14 shadow-[2px_5px_20px_10px_rgba(0,0,0,0.1)] rounded-md rounded-tr-[2rem] rounded-bl-[2rem]'
+                    >
+                        <div className='relative -top-2 -left-[60px] w-max pl-10 pr-14 py-3 bg-cyan-500 text-white text-lg font-medium uppercase rounded-r-full'>
+                            Step 04
+                            <span
+                                style={{ borderStyle: 'solid', borderWidth: '0 28px 28px 0', borderColor: 'transparent #0891B2 transparent transparent' }}
+                                className='absolute -bottom-[28px] left-0 w-0 h-0'
+                            />
+                        </div>
+                        <div className='w-[8.5rem] h-[8.5rem] mx-auto my-10 p-8 border border-cyan-500 rounded-full'>
+                            <span
+                                style={{ backgroundImage: `url(${getGoing})` }}
+                                className='w-full h-full inline-block bg-no-repeat bg-cover bg-center'
+                            />
+                        </div>
+                        <h2 className='text-xl font-medium text-gray-600 text-center'>
+                            Get Going
+                        </h2>
+                    </div>
+                </div>
+                <div className='grid place-items-center mt-20'>
+                    <Link
+                        to='/get-estimate'
+                        className='px-14 py-3 text-lg font-medium text-blue-600 hover:bg-blue-600 hover:text-white duration-300 border border-blue-600 rounded-tr-3xl rounded-bl-3xl'
+                    >
+                        Share Your Requirement
+                    </Link>
+                </div>
+            </div>
+        </section>
+        <div className='flex items-center sm:gap-5 gap-3 sm:mb-10 mb-5 sm:mt-14 mt-8'>
+            <hr className='w-full h-0.5 bg-blue-500' />
+            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
+            <div className='w-96 h-3 border-2 border-blue-500 rounded-full'></div>
+            <div className='w-6 h-3 border-2 border-blue-500 rounded-full'></div>
+            <hr className='w-full h-0.5 bg-blue-500' />
+        </div>
+        <section className='py-14'>
+            <div className='2xl:w-[1200px] lg:w-[90%] md:w-4/5 w-11/12 mx-auto'>
+                <h1 className='text-center md:text-[40px] md:leading-snug text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500'>
+                    Why Your Business Needs Digital Marketing
+                </h1>
+                <p className='md:text-lg text-base font-medium text-center text-gray-500 mt-3'>
+                    Engage More Clients and Rank High On Search Results
+                </p>
+                <div className='flex lg:flex-row flex-col-reverse items-center lg:gap-16 gap-10 xl:p-16 sm:p-10 p-7 mt-10 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl drop-shadow-[0px_10px_10px_rgba(0,100,255,0.45)]'>
+                    <div className='lg:w-1/2 w-full text-base text-gray-100'>
+                        <p>
+                            The importance of Digital Marketing cannot be overemphasized in today’s digitally-oriented world. A strong online presence gives you the advantage of reaching a prospective customer who is already searching the product/ service you offer. So, it is important that you strengthen your online visibility through a carefully planned digital marketing strategy that involves SEO, SMO, PPC, Email Marketing and much else. Remember, making your company visible is important for improving your brand image.
+                        </p>
+                        <p className='xl:mt-4 mt-2'>
+                            Don’t waste your investment in marketing techniques that do not deliver measurable results. Partner with Ecera System Internet Marketing Agency today and establish your market dominance with our targeted digital marketing solutions.
+                        </p>
+                    </div>
+                    <div className='lg:w-1/2 w-full'>
+                        <img src={seoBanner} alt="" className='w-full h-auto rounded-xl' />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section className='pb-20 pt-10'>
+            <div className='2xl:w-[1200px] xl:w-3/4 md:w-4/5 w-[90%] mx-auto flex lg:flex-row flex-col-reverse items-center lg:gap-10 gap-8'>
+                <div className='lg:w-1/2 w-full text-base text-gray-500'>
+                    <p>
+                        <span className='text-lg font-medium'>Ecera System</span> is a dynamic, versatile and full-service digital marketing agency that doesn’t rely on smoke and mirrors to attract new clients. Instead, Ecera System trusts its own search engine optimization (SEO) and marketing skills to drive new customers to our website.
+                    </p>
+                    <p className='mt-4'>
+                        We’re not a static company. We don’t limit ourselves to specific industries. We have the experience and professionals to build a custom website and use multiple digital marketing services to assist any size company in any industry.
+                    </p>
+                </div>
+                <div className='lg:w-1/2 w-full p-5'>
+                    <img src={gtco} alt="" className='w-max mx-auto h-auto' />
+                </div>
+            </div>
+            <div className='lg:w-[42rem] md:w-4/5 w-[90%] mx-auto text-base lg:text-center text-start text-gray-500 pb-10'>
+                <p>
+                    Ecera System works with you to produce customized digital marketing services and a
+                    plan that aligns with your unique business needs. We become an extension of your
+                    team, a partner that understands your market and goals, rather than just an agency
+                    that executes strategies blindly. Our reviews and testimonials speak volumes. We earn
+                    your business every day with month-to-month contracts.
+                </p>
+                <p className='mt-4'>
+                    Take a look below at the wide variety of digital marketing services Ecera System
+                    offers. Contact us today to learn more about how we can help your business!
+                </p>
             </div>
         </section>
         <section
