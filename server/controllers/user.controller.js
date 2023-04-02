@@ -3,20 +3,19 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const Users = require('../models/userModel');
 const Registration = require('../models/registrationModel');
-const { verifyEmail } = require('../middleware/emailSender');
+const { verifyEmail, resetPassEmail } = require('../middleware/emailSender');
 
-
-exports.uploadPassport = async (req, res, next) => {
-    try {
-        res.status(200).send(req.file);
-    } catch (err) {
-        next(err);
-    }
-};
 
 exports.registration = async (req, res, next) => {
     try {
-        const data = new Registration(req.body);
+        const data = new Registration({
+            passport: `/passport_files/${req.file.filename}`,
+            name: req.body.name,
+            phoneNumber: req.body.phoneNumber,
+            email: req.body.email,
+            role: req.body.role,
+            source: req.body.source,
+        });
         const result = await data.save();
         if (result) res.status(200).json(result);
     } catch (err) {
@@ -61,7 +60,6 @@ exports.activateEmail = async (req, res, next) => {
         if (result) res.status(200).json({ message: "Your account has been activated!" });
 
     } catch (err) {
-        console.log(err);
         if (err) return res.status(500).json({ message: "Activation link expired!" })
     }
 };
@@ -86,6 +84,55 @@ exports.login = async (req, res, next) => {
         if (err) return res.status(500).json({ message: "Something went wrong!" })
     }
 };
+
+exports.forgotPassword = async (req, res, next) => {
+    try {
+        const { email } = req.body;
+        const user = await Users.findOne({ email });
+        if (!user) return res.status(404).json({ message: "This email does not exist." });
+
+        const reset_token = jwt.sign(
+            { email: user.email },
+            process.env.ACTIVATION_TOKEN_SECRET,
+            { expiresIn: '5m' }
+        );
+        const url = `${process.env.CLIENT_URL}/user/reset-password/${reset_token}`;
+        resetPassEmail({ email, url });
+
+        res.status(200).json({ message: "Reset email sent successfully! Please check your email." });
+    } catch (error) {
+        console.log(error);
+        next(error)
+    }
+};
+
+exports.resetPassword = async (req, res, next) => {
+    try {
+        const { password } = req.body;
+        const authHeader = req.headers.authorization;
+        if (!authHeader) return res.status(401).send({ message: "Unauthorized access!" });
+
+        jwt.verify(authHeader, process.env.ACTIVATION_TOKEN_SECRET, async (err, decoded) => {
+            if (err) return res.status(403).send({ message: "Forbidden access!" });
+
+            const passwordHash = await bcrypt.hash(password, 12);
+
+            const user = await Users.updateOne(
+                { email: decoded.email },
+                {
+                    $set: {
+                        password: passwordHash
+                    }
+                }
+            );
+
+            user && res.status(200).json({ path: '/login' });
+        });
+
+    } catch (error) {
+        next(error)
+    }
+}
 
 exports.getSingleUser = async (req, res, next) => {
     try {

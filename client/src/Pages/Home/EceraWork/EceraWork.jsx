@@ -36,7 +36,7 @@ const EceraWork = () => {
                                 setIsOver('Ecera System helps your Business to setup Competitive and Interactive Websites and Mobile Apps incorporating the latest technology.')
                             }
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             Custom Website Design & Development
                         </li>
                         <li
@@ -45,7 +45,7 @@ const EceraWork = () => {
                                 setIsOver('Ecera System helps your business to establish a better Digital Reach via incorporating competitive Digital Marketing Services leveraging the highly used Social and Digital Media Platforms')
                             }
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             Revamp your Digital Reach
                         </li>
                         <li
@@ -54,7 +54,7 @@ const EceraWork = () => {
                                 setIsOver("Using Ecera System's Remote Employee services you can hire effective and efficient employees at an affordable rate")
                             }
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             Hire a Competitive Workforce
                         </li>
                         <li
@@ -63,7 +63,7 @@ const EceraWork = () => {
                                 setIsOver("Customize your plan to meet all your business needs. From Professional and Competitive Websites to a renewd Digital Presence to hiring a competitive work force that fits your budget. You want it, we probably got it !!")
                             }
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             A one Stop Solution to all your Business Needs
                         </li>
                     </ul>

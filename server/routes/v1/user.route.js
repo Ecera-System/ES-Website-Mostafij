@@ -6,18 +6,18 @@ const {
     login,
     getSingleUser,
     registration,
-    uploadPassport,
-    getPassport,
+    forgotPassword,
+    resetPassword
 } = require('../../controllers/user.controller');
 const uploader = require('../../middleware/uploader');
 const userAuthorize = require('../../middleware/userAuthorize');
 
-
-router.post('/upload-passport', uploader.single("passport"), uploadPassport);
-router.post('/registration', registration);
+router.post('/registration', uploader.single("passport"), registration);
 router.route('/signup').post(signup);
 router.route('/email/activate').post(activateEmail);
 router.route('/login').post(login);
+router.route('/forgot-password').post(forgotPassword);
+router.route('/reset-password').patch(resetPassword);
 router.route('/single').get(userAuthorize, getSingleUser);
 
 

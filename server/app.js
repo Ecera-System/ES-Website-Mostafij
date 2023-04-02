@@ -8,7 +8,7 @@ const errorHandler = require('./utils/errorHandler');
 app.use(cors());
 app.use('/api/v1/payment/stripe/webhook', express.raw({ type: "*/*" })); // Stripe webhook
 app.use(express.json());
-app.use(express.static("public"));
+app.use('/api/v1/', express.static("public"));
 
 
 
@@ -18,10 +18,10 @@ app.get('/api/v1', (req, res) => {
 });
 
 // Get passport file
-app.get('/api/v1/passport-file/:fileName', (req, res) => {
-    const { fileName } = req.params;
-    res.sendFile(__dirname + `/public/passport_files/${fileName}`)
-});
+// app.get('/api/v1/passport-file/:fileName', (req, res) => {
+//     const { fileName } = req.params;
+//     res.sendFile(__dirname + `/public/passport_files/${fileName}`)
+// });
 
 app.use('/api/v1/payment', require('./routes/v1/order.route'));
 app.use('/api/v1/user', require('./routes/v1/user.route'));

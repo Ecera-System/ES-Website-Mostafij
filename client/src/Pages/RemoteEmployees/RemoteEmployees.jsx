@@ -45,7 +45,7 @@ const RemoteEmployees = () => {
                             className='text-lg font-medium text-cyan-400 flex items-center gap-3'
                         >
                             <span className='text-4xl text-white'>
-                                <i class="fa-solid fa-users"></i>
+                                <i className="fa-solid fa-users"></i>
                             </span>
                             1500+ Employees
                         </li>
@@ -54,7 +54,7 @@ const RemoteEmployees = () => {
                             className='text-lg font-medium text-cyan-400 flex items-center gap-3'
                         >
                             <span className='text-4xl text-white'>
-                                <i class="fa-solid fa-globe"></i>
+                                <i className="fa-solid fa-globe"></i>
                             </span>
                             150+ Domains
                         </li>
@@ -63,7 +63,7 @@ const RemoteEmployees = () => {
                             className='text-lg font-medium text-cyan-400 flex items-center gap-3'
                         >
                             <span className='text-4xl text-white'>
-                                <i class="fa-solid fa-hourglass-start"></i>
+                                <i className="fa-solid fa-hourglass-start"></i>
                             </span>
                             Start Within 8 hours
                         </li>
@@ -93,13 +93,13 @@ const RemoteEmployees = () => {
                         className='2xl:w-[1200px] xl:w-4/5 lg:w-11/12 md:w-3/5 sm:w-4/5 w-11/12 mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5'
                     >
 
-                        <div class="group relative">
-                            <span class="absolute inset-0 border-2 border-dashed border-cyan-400" />
+                        <div className="group relative">
+                            <span className="absolute inset-0 border-2 border-dashed border-cyan-400" />
 
                             <div
-                                class="flex w-full h-full transform border-4 border-cyan-400 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
+                                className="flex w-full h-full transform border-4 border-cyan-400 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
                             >
-                                <div class="p-8">
+                                <div className="p-8">
                                     <img
                                         loading='lazy'
                                         src='/Images/Remote_Employees/img-icon1.png'
@@ -109,7 +109,7 @@ const RemoteEmployees = () => {
                                     <h4 className='text-xl font-bold uppercase mt-4 text-cyan-500 text-center'>
                                         Step 1
                                     </h4>
-                                    <h2 class="my-2 text-lg font-medium text-gray-700">
+                                    <h2 className="my-2 text-lg font-medium text-gray-700">
                                         Share us your requirements
                                     </h2>
                                     <p className='text-sm text-gray-600'>
@@ -118,13 +118,13 @@ const RemoteEmployees = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="group relative">
-                            <span class="absolute inset-0 border-2 border-dashed border-cyan-400" />
+                        <div className="group relative">
+                            <span className="absolute inset-0 border-2 border-dashed border-cyan-400" />
 
                             <div
-                                class="flex w-full h-full transform border-4 border-cyan-400 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
+                                className="flex w-full h-full transform border-4 border-cyan-400 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
                             >
-                                <div class="p-8">
+                                <div className="p-8">
                                     <img
                                         loading='lazy'
                                         src='/Images/Remote_Employees/img-icon2.png'
@@ -132,7 +132,7 @@ const RemoteEmployees = () => {
                                         className='w-[124px] h-[124px] mx-auto'
                                     />
                                     <h4 className='text-xl font-bold uppercase mt-4 text-cyan-500 text-center'>Step 2</h4>
-                                    <h2 class="my-2 text-lg font-medium text-gray-700">
+                                    <h2 className="my-2 text-lg font-medium text-gray-700">
                                         We select our skilled IT staff
                                     </h2>
                                     <p className='text-sm text-gray-600'>
@@ -141,13 +141,13 @@ const RemoteEmployees = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="group relative">
-                            <span class="absolute inset-0 border-2 border-dashed border-cyan-400" />
+                        <div className="group relative">
+                            <span className="absolute inset-0 border-2 border-dashed border-cyan-400" />
 
                             <div
-                                class="flex w-full h-full transform border-4 border-cyan-400 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
+                                className="flex w-full h-full transform border-4 border-cyan-400 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
                             >
-                                <div class="p-8">
+                                <div className="p-8">
                                     <img
                                         loading='lazy'
                                         src='/Images/Remote_Employees/img-icon3.png'
@@ -155,7 +155,7 @@ const RemoteEmployees = () => {
                                         className='w-[124px] h-[124px] mx-auto'
                                     />
                                     <h4 className='text-xl font-bold uppercase mt-4 text-cyan-500 text-center'>Step 3</h4>
-                                    <h2 class="my-2 text-lg font-medium text-gray-700">
+                                    <h2 className="my-2 text-lg font-medium text-gray-700">
                                         Dedicated staff will work exclusively for you
                                     </h2>
                                     <p className='text-sm text-gray-600'>
@@ -164,13 +164,13 @@ const RemoteEmployees = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="group relative">
-                            <span class="absolute inset-0 border-2 border-dashed border-cyan-400" />
+                        <div className="group relative">
+                            <span className="absolute inset-0 border-2 border-dashed border-cyan-400" />
 
                             <div
-                                class="flex w-full h-full transform border-4 border-cyan-400 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
+                                className="flex w-full h-full transform border-4 border-cyan-400 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
                             >
-                                <div class="p-8">
+                                <div className="p-8">
                                     <img
                                         loading='lazy'
                                         src='/Images/Remote_Employees/img-icon4.png'
@@ -178,7 +178,7 @@ const RemoteEmployees = () => {
                                         className='w-[124px] h-[124px] mx-auto'
                                     />
                                     <h4 className='text-xl font-bold uppercase mt-4 text-cyan-500 text-center'>Step 4</h4>
-                                    <h2 class="my-2 text-lg font-medium text-gray-700">
+                                    <h2 className="my-2 text-lg font-medium text-gray-700">
                                         We manage the entire operations
                                     </h2>
                                     <p className='text-sm text-gray-600'>

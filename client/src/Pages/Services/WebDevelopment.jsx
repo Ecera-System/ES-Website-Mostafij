@@ -66,11 +66,11 @@ const WebDevelopment = () => {
                         5 Star DesignRush Reviews
                     </p>
                     <span className='flex gap-2 text-xl text-yellow-400'>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
                     </span>
                 </div>
             </div>

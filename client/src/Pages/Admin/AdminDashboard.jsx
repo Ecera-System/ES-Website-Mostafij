@@ -33,7 +33,7 @@ const AdminDashboard = () => {
                                     'w-full px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300 flex items-center gap-3 rounded-md'
                                 )}
                             >
-                                <i class="fa-solid fa-users"></i> Manage Users
+                                <i className="fa-solid fa-users"></i> Manage Users
                             </NavLink>
                         </li>
                         <li>
@@ -45,7 +45,7 @@ const AdminDashboard = () => {
                                     'w-full px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300 flex items-center gap-3 rounded-md'
                                 )}
                             >
-                                <i class="fa-solid fa-list-ol"></i> Services Order
+                                <i className="fa-solid fa-list-ol"></i> Services Order
                             </NavLink>
                         </li>
                         <li>
@@ -57,7 +57,7 @@ const AdminDashboard = () => {
                                     'w-full px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300 flex items-center gap-3 rounded-md'
                                 )}
                             >
-                                <i class="fa-solid fa-id-card"></i> Registration Users
+                                <i className="fa-solid fa-id-card"></i> Registration Users
                             </NavLink>
                         </li>
                     </ul>

@@ -162,42 +162,42 @@ const DigitalMarketing = () => {
                             className={`hover:text-blue-700 duration-300 cursor-pointer flex items-start gap-2 ${isOver === 1 && 'text-blue-700 scale-105'}`}
                             onMouseOver={() => setIsOver(1)}
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             Data-driven Digital Marketing Services
                         </li>
                         <li
                             className={`hover:text-blue-700 duration-300 cursor-pointer flex items-start gap-2 ${isOver === 2 && 'text-blue-700 scale-105'}`}
                             onMouseOver={() => setIsOver(2)}
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             Industry Experts
                         </li>
                         <li
                             className={`hover:text-blue-700 duration-300 cursor-pointer flex items-start gap-2 ${isOver === 3 && 'text-blue-700 scale-105'}`}
                             onMouseOver={() => setIsOver(3)}
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             Custom Digital Marketing Framework
                         </li>
                         <li
                             className={`hover:text-blue-700 duration-300 cursor-pointer flex items-start gap-2 ${isOver === 4 && 'text-blue-700 scale-105'}`}
                             onMouseOver={() => setIsOver(4)}
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             Omnichannel Personalization
                         </li>
                         <li
                             className={`hover:text-blue-700 duration-300 cursor-pointer flex items-start gap-2 ${isOver === 5 && 'text-blue-700 scale-105'}`}
                             onMouseOver={() => setIsOver(5)}
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             Campaign Monitoring and Evaluation
                         </li>
                         <li
                             className={`hover:text-blue-700 duration-300 cursor-pointer flex items-start gap-2 ${isOver === 6 && 'text-blue-700 scale-105'}`}
                             onMouseOver={() => setIsOver(6)}
                         >
-                            <i class="fa-solid fa-arrow-left-long mt-1.5"></i>
+                            <i className="fa-solid fa-arrow-left-long mt-1.5"></i>
                             Competitive Pricing
                         </li>
                     </ul>

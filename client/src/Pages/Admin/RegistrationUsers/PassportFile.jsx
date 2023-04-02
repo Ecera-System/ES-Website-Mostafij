@@ -1,25 +1,6 @@
-import axios from 'axios';
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 const PassportFile = ({ openPassport, setOpenPassport }) => {
-    const [isPDF, setIsPDF] = useState(false);
-    const [loading, setLoading] = useState(true);
-
-    // <!-- Checking file extension ->
-    useEffect(() => {
-        axios.get(openPassport)
-            .then(res => {
-                setLoading(false);
-                if (res.headers.get('Content-Type') === 'application/pdf') {
-                    setIsPDF(true);
-                }
-            })
-            .catch(err => {
-                setLoading(false);
-            })
-    }, []);
 
     return (
         <div className='fixed inset-0 bg-black/70 flex items-start justify-center overflow-auto'>
@@ -35,19 +16,12 @@ const PassportFile = ({ openPassport, setOpenPassport }) => {
                 </svg>
 
             </div>
-            {
-                loading ?
-                    <div className='w-full h-screen flex items-center justify-center text-2xl text-white'>
-                        Loading...
-                    </div>
-                    :
-                    <div className='2xl:max-w-6xl xl:max-w-5xl h-screen overflow-auto'>
-                        <embed
-                            src={openPassport}
-                            className={`2xl:w-[72rem] xl:w-[64rem] ${isPDF ? 'h-screen' : 'h-auto'}`}
-                        />
-                    </div>
-            }
+            <object
+                data={openPassport}
+                className={`2xl:w-[1200px] xl:w-[80%] w-11/12 ${openPassport.endsWith(".pdf") ? 'h-full' : 'h-auto'}`}
+                download=''
+            >
+            </object>
 
         </div>
     );

@@ -51,3 +51,42 @@ exports.verifyEmail = ({ email, url }) => {
         `
     }, function (error, response) { });
 };
+
+exports.resetPassEmail = ({ email, url }) => {
+    smtpTransport.sendMail({
+        from: {
+            name: 'Ecera System',
+            address: process.env.SENDER_EMAIL
+        },
+        to: email,
+        subject: 'Reset your password',
+        html: `
+            <div style="width: 100%; background-color: #F1F5F9; padding: 40px 0; font-family: 'Lato',sans-serif;">
+        <style>
+            @media (max-width: 600px) {
+                #box{
+                    width: 95% !important;
+                    margin: 0 auto !important;
+                }
+            }
+        </style>
+        <div id="box" style='width: 500px; margin: 0 auto; border-radius: 8px; background-color: white; padding: 30px;'>
+            <h2 style='text-align: center; margin: 10px 0 30px 0; font-size: 26px; color: #1D4ED8;'>
+            Ecera System
+            </h2>
+            <div style='padding: 20px 0;'>
+                <h3 style="margin: 10px 0; text-align: center; font-size: 18px; font-weight: 500; color: #363636;">Hello, Forgot password "Not to worry, we get you! Let's get a new password"</h3>
+            </div>
+            <p style="text-align: center; margin-bottom: 20px">
+                <a href=${url}
+                    style='padding: 15px 20px; border-radius: 5px; background-color: #1D4ED8; text-decoration: none; color: #ffffff; font-size: 18px; font-weight: 500;'
+                    >
+                    Reset Password
+                </a>
+            </p>
+        </div>
+        <p style="text-align: center; color: #363636;">&copy; Ecera System</p>
+    </div>
+        `
+    }, function (error, response) { });
+};

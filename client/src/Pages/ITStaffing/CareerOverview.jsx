@@ -26,7 +26,7 @@ const CareerOverview = () => {
                 <div className='w-max'>
                     <h2 className='text-3xl font-medium text-blue-600'>
                         Quick Links
-                        <i class="fa-solid fa-link ml-2"></i>
+                        <i className="fa-solid fa-link ml-2"></i>
                     </h2>
                     <div className='w-full h-0.5 bg-gray-200 my-5' />
                     <ul className='flex flex-col gap-3 text-base font-medium text-gray-500'>

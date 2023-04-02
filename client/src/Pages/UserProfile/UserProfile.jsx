@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import useLoggedIn from '../../AuthHook/useLoggedIn';
 import Header from '../Shared/Header/Header';
 
 const UserProfile = () => {
+    const [isLoggedIn, setIsLogout] = useLoggedIn();
+
     return (<>
         <Header login={true} />
         <div className='w-full h-screen overflow-auto bg-blue-50 flex justify-center pt-5'>
@@ -16,6 +19,17 @@ const UserProfile = () => {
                             >
                                 <i className="fa-solid fa-tags"></i> Order History
                             </Link>
+                        </li>
+
+                        <li>
+                            <button
+                                onClick={() => {
+                                    setIsLogout(true)
+                                }}
+                                className='w-full px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 duration-300 flex items-center gap-3 rounded-md'
+                            >
+                                <i className="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                            </button>
                         </li>
                     </ul>
                 </aside>

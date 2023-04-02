@@ -35,6 +35,7 @@ import ManageUsers from "./Pages/Admin/ManageUsers";
 import ServicesOrder from "./Pages/Admin/ServicesOrder";
 import RegistrationUsers from "./Pages/Admin/RegistrationUsers/RegistrationUsers";
 import Testimonial from "./Pages/Testimonial/Testimonial";
+import ResetPassword from "./Pages/Auth/ResetPassword";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />
       <Route path='/user/activate/:activation_token' element={<ActivateEmail />} />
+      <Route path='/user/reset-password/:reset_token' element={<ResetPassword />} />
 
       {/* <!-- Admin --> */}
       <Route path="/admin" element={

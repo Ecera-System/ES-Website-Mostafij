@@ -51,48 +51,46 @@ const Registration = () => {
             setLoading(true);
             const formData = new FormData();
             formData.append('passport', passportValidate.passport);
+            formData.append('name', nameValidate.name);
+            formData.append('phoneNumber', phoneValidate.phone);
+            formData.append('email', emailValidate.email);
+            formData.append('role', 'user');
+            formData.append('source', 'Registration');
 
-            let passportData;
-            await axios.post(`${process.env.REACT_APP_API_V1_URL}/user/upload-passport`, formData)
+            // let passportData;
+            // await axios.post(`${process.env.REACT_APP_API_V1_URL}/user/upload-passport`, formData)
+            //     .then(res => {
+            //         passportData = res.data
+            //     })
+            //     .catch(err => {
+            //         setLoading(false);
+            //         return setResData({
+            //             ...resData, success: '', error: err.response.data
+            //         })
+            //     });
+
+            // if (passportData) {
+            await axios.post(`${process.env.REACT_APP_API_V1_URL}/user/registration`, formData)
                 .then(res => {
-                    passportData = res.data
+                    if (res.data) {
+                        setLoading(false);
+                        navigate('/invoice', {
+                            state: {
+                                registrationId: res.data._id,
+                                name: res.data.name,
+                                phoneNumber: res.data.phoneNumber,
+                                email: res.data.email,
+                            }
+                        })
+                    }
                 })
                 .catch(err => {
-                    setLoading(false);
-                    return setResData({
+                    err && setResData({
                         ...resData, success: '', error: err.response.data
-                    })
-                });
-
-            if (passportData) {
-                await axios.post(`${process.env.REACT_APP_API_V1_URL}/user/registration`, {
-                    name: nameValidate.name,
-                    phoneNumber: phoneValidate.phone,
-                    email: emailValidate.email,
-                    passport: passportData.filename,
-                    role: 'user',
-                    source: 'Registration',
-                })
-                    .then(res => {
-                        if (res.data) {
-                            setLoading(false);
-                            navigate('/invoice', {
-                                state: {
-                                    registrationId: res.data._id,
-                                    name: res.data.name,
-                                    phoneNumber: res.data.phoneNumber,
-                                    email: res.data.email,
-                                }
-                            })
-                        }
-                    })
-                    .catch(err => {
-                        err && setResData({
-                            ...resData, success: '', error: err.response.data
-                        });
-                        setLoading(false);
                     });
-            }
+                    setLoading(false);
+                });
+            // }
             setLoading(false);
         }
     };

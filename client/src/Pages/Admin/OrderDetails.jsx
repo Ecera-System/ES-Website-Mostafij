@@ -11,7 +11,7 @@ const OrderDetails = ({ openOrder, setOpenOrder }) => {
                     onClick={() => setOpenOrder('')}
                     className='inline-block px-2.5 text-gray-500 hover:text-gray-600 hover:bg-blue-50 duration-300 text-2xl leading-normal cursor-pointer rounded-full'
                 >
-                    <i class="fa-solid fa-xmark"></i>
+                    <i className="fa-solid fa-xmark"></i>
                 </div>
                 <ul className='w-full mx-2 mt-3 flex flex-col gap-5'>
                     <li className='flex items-center'>

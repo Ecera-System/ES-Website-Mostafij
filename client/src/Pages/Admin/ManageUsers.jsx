@@ -86,7 +86,7 @@ const ManageUsers = () => {
                                                 onClick={() => setIsConfirm({ id: user._id, type: 'delete' })}
                                                 className='text-xl hover:text-red-600 group/delete duration-300 relative'
                                             >
-                                                <i class="fa-regular fa-trash-can"></i>
+                                                <i className="fa-regular fa-trash-can"></i>
                                                 <span className='group-hover/delete:opacity-100 opacity-0 group-hover/delete:visible invisible duration-300 absolute top-8 left-1/2 -translate-x-1/2 z-30 py-1 px-2 rounded text-xs bg-black/80 text-white'>Delete</span>
                                             </button>
                                         }
