@@ -107,35 +107,47 @@ const PayInvoice = () => {
         </section>
         <section className='h-full w-full py-16 flex items-center justify-center'>
             <div className='md:w-[40rem] sm:w-4/5 w-11/12 mx-auto py-32 px-10 border flex md:flex-row flex-col items-center justify-center md:gap-12 gap-6 relative rounded-2xl'>
-                <div className='w-full'>
+                <div className='w-full flex flex-col justify-between items-center'>
                     <img
                         loading='lazy'
-                        src='/Images/Payment/stripe.png'
+                        src='/Images/Payment/INR.png'
                         alt="Stripe logo"
-                        className='w-auto mx-auto h-20'
+                        className='w-auto mx-auto h-20 my-[20px]'
                     />
-                    <button
+                    {/* <button
                         onClick={() => setOpenForm('stripe')}
                         disabled={loading}
                         className='text-lg font-medium py-3 w-full md:mt-3 rounded text-white bg-blue-600 hover:bg-blue-700 duration-300'
                     >
                         Pay with Stripe
-                    </button>
+                    </button> */}
+                    <a 
+                    href="https://razorpay.me/@ecerasystemprivatelimited"
+                    className='text-lg font-medium text-center py-3 w-full md:mt-3 rounded text-white bg-blue-600 hover:bg-blue-700 duration-300'
+                    >
+                        Pay in INR
+                    </a>
                 </div>
-                <div className='w-full'>
+                <div className='w-full flex flex-col justify-between items-center'>
                     <img
                         loading='lazy'
-                        src='/Images/Payment/razorpay.png'
+                        src='/Images/Payment/USD.png'
                         alt="Razorpay logo"
-                        className='w-auto mx-auto h-20'
+                        className='w-auto mx-auto h-20 my-[20px]'
                     />
-                    <button
+                    {/* <button
                         disabled={loading}
                         onClick={() => setOpenForm('razorpay')}
                         className='text-lg font-medium py-3 w-full md:mt-3 rounded text-white bg-blue-600 hover:bg-blue-700 duration-300'
                     >
                         Pay with Razorpay
-                    </button>
+                    </button> */}
+                    <a 
+                    href="https://pay-accept.americanexpress.com/ecerasystem"
+                    className='text-lg font-medium text-center py-3 w-full md:mt-3 rounded text-white bg-blue-600 hover:bg-blue-700 duration-300'
+                    >
+                        Pay in USD
+                    </a>
                 </div>
             </div>
         </section>
