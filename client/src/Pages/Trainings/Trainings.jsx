@@ -144,6 +144,7 @@ const Trainings = () => {
                   scroll ? "hover:text-blue-600" : "hover:text-blue-400"
                 }`}
               >
+                <Link to="/trainings/h1b-visa-process">H1B Visa Process</Link>
                 H1B visa process
               </li>
               <li

@@ -38,6 +38,7 @@ import Testimonial from "./Pages/Testimonial/Testimonial";
 import ResetPassword from "./Pages/Auth/ResetPassword";
 //
 import Trainings from "./Pages/Trainings/Trainings";
+import H1BVisaProcess from "./Pages/Trainings/H1BVisaProcess";
 
 function App() {
   return (
@@ -81,6 +82,7 @@ function App() {
       />
       {/*  */}
       <Route path="/trainings" element={<Trainings />} />
+      <Route path="/trainings/h1b-visa-process" element={<H1BVisaProcess />} />
       {/*  */}
       {/* <!-- Admin --> */}
       <Route
