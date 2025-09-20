@@ -457,7 +457,7 @@ const AboutUs = () => {
                                 Address
                             </h4>
                             <p className='text-base'>
-                                33405 Colony Park Drive Farmington Hills MI 48331
+                                29777 Telegraph Road, Suite 4200, Southfield, Michigan 48034, United States of America
                             </p>
                         </div>
                     </li>
